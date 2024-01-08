@@ -1,0 +1,10 @@
+{
+  "ignore": ["node_modules"],
+  "exec": "next dev",
+  "watch": [
+    "server",
+    ".next",
+    "./src/app/page.tsx",
+    "./src/app/page.module.css"
+  ]
+}
