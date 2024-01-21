@@ -1,7 +1,7 @@
 import { LabelFieldSize } from '@/helpers/types'
 import { FieldErrors } from 'react-hook-form'
 
-export const FormHelpers = () => {
+export const Helpers = () => {
   const getFormErrorMessage = (name: string, errors: FieldErrors<any>) => {
     return errors[name] ? (
       <small className="p-error">{errors[name]?.message?.toString()}</small>

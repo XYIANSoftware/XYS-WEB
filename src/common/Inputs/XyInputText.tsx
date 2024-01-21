@@ -7,10 +7,13 @@ import {
   RegisterOptions
 } from 'react-hook-form'
 import { FormHelpers } from '../FormHelpers'
+import { XyLabelField } from '..'
 interface XyInputTextProps {
   control: any
   name: string
   errors: FieldErrors<any>
+  label?: string
+  vertical?: boolean
   rules?:
     | Omit<
         RegisterOptions<FieldValues, string>,
@@ -23,7 +26,9 @@ export const XyInputText = ({
   control,
   name,
   errors,
-  rules
+  rules,
+  label,
+  vertical
 }: XyInputTextProps) => {
   const { getFormErrorMessage } = FormHelpers()
   return (
@@ -33,10 +38,11 @@ export const XyInputText = ({
       rules={rules}
       render={({ field, fieldState }) => (
         <>
-          <label
+          {/* <label
             htmlFor={field.name}
             className={classNames({ 'p-error': errors.value })}
           ></label>
+          <label htmlFor={field.name}>Name - Surname</label>
           <span className="p-float-label">
             <InputText
               id={field.name}
@@ -44,8 +50,19 @@ export const XyInputText = ({
               className={classNames({ 'p-invalid': fieldState.error })}
               onChange={e => field.onChange(e.target.value)}
             />
-            <label htmlFor={field.name}>Name - Surname</label>
-          </span>
+          </span> */}
+          <XyLabelField
+            label={label}
+            field={
+              <InputText
+                id={field.name}
+                value={field.value}
+                className={classNames({ 'p-invalid': fieldState.error })}
+                onChange={e => field.onChange(e.target.value)}
+              />
+            }
+            vertical={vertical}
+          />
           {getFormErrorMessage(field.name, errors)}
         </>
       )}
