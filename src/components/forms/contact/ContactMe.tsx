@@ -22,9 +22,13 @@ export const ContactMe = () => {
         console.log(data);
     };
     return (
-        <Panel header='Contact Form' className='w-full' toggleable>
+        <Panel
+            header='Contact Form'
+            className='w-full justify-content-center'
+            toggleable
+        >
             <form onSubmit={handleSubmit(onSubmit)} id='contact-form'>
-                <div className='grid'>
+                <div className='flex w-full flex-column align-content-center justify-content-center'>
                     <div>
                         <XyInputText
                             control={control}
