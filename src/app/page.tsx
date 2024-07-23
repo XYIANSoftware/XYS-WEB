@@ -5,11 +5,13 @@ import 'primereact/resources/themes/lara-dark-purple/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
 import { Panel } from 'primereact/panel';
+import { MenuModel } from '@/common/Menu/MenuModel';
 
 export default function Home() {
     return (
         <PrimeReactProvider>
             <main>
+                <MenuModel />
                 <Panel
                     toggleable
                     header={
