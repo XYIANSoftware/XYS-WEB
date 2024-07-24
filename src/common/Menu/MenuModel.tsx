@@ -9,7 +9,7 @@ export const MenuModel = () => {
         {
             label: 'About',
             items: [
-                { label: 'Mission', command: () => router.push('/contact') },
+                { label: 'Mission', command: () => router.push('/mission') },
                 { label: 'Company', command: () => router.push('/portfolio') },
                 { label: 'Our Team', command: () => router.push('/team') },
             ],
@@ -28,9 +28,9 @@ export const MenuModel = () => {
         {
             label: 'Contact',
             items: [
-                { label: 'Requests' },
-                { label: 'Social' },
-                { label: 'Support' },
+                { label: 'Requests', command: () => router.push('/contact') },
+                { label: 'Social', command: () => router.push('/social') },
+                { label: 'Support', command: () => router.push('/support') },
             ],
         },
     ];
