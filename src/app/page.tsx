@@ -12,17 +12,15 @@ export default function Home() {
         <PrimeReactProvider>
             <main>
                 <MenuModel />
-                <Panel
-                    toggleable
-                    header={
-                        <h1 className={styles.title}>XYIAN Example Site</h1>
-                    }
+                <div
+                    style={{
+                        padding: '6rem',
+                        display: 'flex',
+                        justifyContent: 'center',
+                    }}
                 >
-                    <div>
-                        <h2>This is an example of a basic web app. </h2>
-                    </div>
-                    <div>maybe</div>
-                </Panel>
+                    <h1 className=''>Xyian Software</h1>
+                </div>
             </main>
         </PrimeReactProvider>
     );

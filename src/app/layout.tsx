@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
+import 'primeicons/primeicons.css';
+
 // import Head from 'next/head';
 
 // import primeflex

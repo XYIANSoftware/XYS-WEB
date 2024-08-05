@@ -1,10 +1,15 @@
 'use client';
 import { useRouter } from 'next/navigation';
+import { Button } from 'primereact/button';
 import { Menu } from 'primereact/menu';
 import { MenuItem } from 'primereact/menuitem';
+import { Sidebar } from 'primereact/sidebar';
+import { useRef, useState } from 'react';
 
 export const MenuModel = () => {
     const router = useRouter();
+    const [visible, setVisible] = useState(false);
+
     const menuModel: MenuItem[] = [
         {
             label: 'About',
@@ -35,5 +40,29 @@ export const MenuModel = () => {
         },
     ];
 
-    return <Menu model={menuModel} />;
+    return (
+        <>
+            <Button
+                icon={'pi-bars'}
+                onClick={() => setVisible(true)}
+                style={{
+                    position: 'fixed',
+                    top: '2rem',
+                    right: '2rem',
+                    padding: '5px',
+                }}
+            />
+            <Sidebar
+                visible={visible}
+                onHide={() => setVisible(false)}
+                position='right'
+                className='flex justify-content-center align-content-center'
+            >
+                <Menu
+                    model={menuModel}
+                    className='w-full flex justify-content-center'
+                />
+            </Sidebar>
+        </>
+    );
 };
