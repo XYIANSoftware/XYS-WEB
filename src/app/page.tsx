@@ -11,7 +11,7 @@ export default function Home() {
     return (
         <PrimeReactProvider>
             <main>
-                <MenuModel />
+                {/* <MenuModel /> */}
                 <div
                     style={{
                         padding: '6rem',
@@ -20,6 +20,9 @@ export default function Home() {
                     }}
                 >
                     <h1 className=''>Xyian Software</h1>
+                    <p>
+                        Site is under new construction, please come back later.
+                    </p>
                 </div>
             </main>
         </PrimeReactProvider>
