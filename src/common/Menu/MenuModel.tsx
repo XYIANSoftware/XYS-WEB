@@ -39,7 +39,12 @@ export const MenuModel = () => {
             ],
         },
     ];
-
+    const tempMenu: MenuItem[] = [
+        {
+            label: 'Contact',
+            items: [{ label: 'Social', command: () => router.push('/social') }],
+        },
+    ];
     return (
         <>
             <Button
@@ -59,7 +64,7 @@ export const MenuModel = () => {
                 className='flex justify-content-center align-content-center'
             >
                 <Menu
-                    model={menuModel}
+                    model={tempMenu}
                     className='w-full flex justify-content-center'
                 />
             </Sidebar>

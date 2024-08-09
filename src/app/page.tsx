@@ -13,7 +13,7 @@ export default function Home() {
     return (
         <PrimeReactProvider>
             <main>
-                {/* <MenuModel /> */}
+                <MenuModel />
 
                 <div
                     className='flex flex-column p-6 justify-content-center text-center align-items-center gap-3'
