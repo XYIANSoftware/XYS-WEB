@@ -266,7 +266,7 @@ ul li a:hover:nth-child(4) {
   background-image: -webkit-gradient(linear,
                                      left bottom,
                                      left top,
-                                     color-stop(0.44, rgb(122, 153, 217)),
-                                     color-stop(0.72, rgb(73, 125, 189)),
-                                     color-stop(0.86, rgb(28, 58, 148)));
+                                     color-stop(0.44, #3d4c41),
+                                     color-stop(0.72, #d4d3d3),
+                                     color-stop(0.86, #3d4c41));
 }
