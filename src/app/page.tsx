@@ -8,6 +8,7 @@ import { PrimeReactProvider, PrimeReactContext } from 'primereact/api';
 import 'primereact/resources/themes/lara-dark-purple/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
+import { MenuModel } from '@/common/Menu/MenuModel';
 // import { Panel } from 'primereact/panel';
 // import { MenuModel } from '@/common/Menu/MenuModel';
 // import { Image } from 'primereact/image';
@@ -17,7 +18,6 @@ export default function Home() {
     return (
         <PrimeReactProvider>
             <main>
-
                 {/* <div className='flex flex-column p-6 justify-content-center text-center align-items-center header'>
                         temp remove header for production
                 </div> */}
