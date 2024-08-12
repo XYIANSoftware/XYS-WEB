@@ -63,7 +63,7 @@ export default function Home() {
                             <li>
                                 <a
                                     className='twitter'
-                                    href=''
+                                    href='https://x.com/XYIANSoftware'
                                     target='_blank'
                                     rel='noopener noreferrer'
                                 >
