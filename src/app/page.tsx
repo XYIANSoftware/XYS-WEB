@@ -17,12 +17,11 @@ export default function Home() {
     return (
         <PrimeReactProvider>
             <main>
-
                 {/* <div className='flex flex-column p-6 justify-content-center text-center align-items-center header'>
                         temp remove header for production
                 </div> */}
 
-                <MenuModel />
+                {/* <MenuModel /> Keep this removed in main*/}
 
                 <div
                     className='flex flex-column p-6 justify-content-center text-center align-items-center gap-3 mainBody'
