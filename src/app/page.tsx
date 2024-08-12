@@ -1,15 +1,15 @@
 import Image from 'next/image';
 import styles from './page.module.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faFile } from "@fortawesome/free-regular-svg-icons/faFile";
-import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faFile } from '@fortawesome/free-regular-svg-icons/faFile';
+import { faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import { PrimeReactProvider, PrimeReactContext } from 'primereact/api';
 import 'primereact/resources/themes/lara-dark-purple/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
 // import { Panel } from 'primereact/panel';
-import { MenuModel } from '@/common/Menu/MenuModel';
+// import { MenuModel } from '@/common/Menu/MenuModel';
 // import { Image } from 'primereact/image';
 
 export default function Home() {
@@ -18,9 +18,10 @@ export default function Home() {
         <PrimeReactProvider>
             <main>
                 {/* <MenuModel /> */}
-                <div className='flex flex-column p-6 justify-content-center text-center align-items-center header'>
-
-                </div>
+                {/* <div className='flex flex-column p-6 justify-content-center text-center align-items-center header'>
+                        temp remove header for production
+                </div> */}
+                {/* <MenuModel /> use this in dev and eventually move to master once contact page is set  */}
                 <div
                     className='flex flex-column p-6 justify-content-center text-center align-items-center gap-3 mainBody'
                     style={{
@@ -38,33 +39,57 @@ export default function Home() {
                     </p>
                 </div>
                 <div className='flex flex-column p-6 justify-content-center text-center align-items-center footer'>
-                    <div className="z-50">
+                    <div className='z-50'>
                         <ul>
                             <li>
-                                <a className="linkedIn" href="https://www.linkedin.com/company/104131290/admin/dashboard/" target="_blank" rel="noopener noreferrer">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <FontAwesomeIcon className='iconLogoSizes' icon={faLinkedin} />
+                                <a
+                                    className='linkedIn'
+                                    href='https://www.linkedin.com/company/104131290/admin/dashboard/'
+                                    target='_blank'
+                                    rel='noopener noreferrer'
+                                >
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <FontAwesomeIcon
+                                        className='iconLogoSizes'
+                                        icon={faLinkedin}
+                                    />
                                 </a>
                             </li>
                             <li>
-                                <a className="twitter"  href="" target="_blank" rel="noopener noreferrer">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <FontAwesomeIcon className='iconLogoSizes' icon={faXTwitter} />
+                                <a
+                                    className='twitter'
+                                    href=''
+                                    target='_blank'
+                                    rel='noopener noreferrer'
+                                >
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <FontAwesomeIcon
+                                        className='iconLogoSizes'
+                                        icon={faXTwitter}
+                                    />
                                 </a>
                             </li>
                             <li>
-                                <a className="github" href="https://github.com/XYIAN" target="_blank" rel="noopener noreferrer">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <FontAwesomeIcon className='iconLogoSizes' icon={faGithub} />
+                                <a
+                                    className='github'
+                                    href='https://github.com/XYIAN'
+                                    target='_blank'
+                                    rel='noopener noreferrer'
+                                >
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <FontAwesomeIcon
+                                        className='iconLogoSizes'
+                                        icon={faGithub}
+                                    />
                                 </a>
                             </li>
                         </ul>
