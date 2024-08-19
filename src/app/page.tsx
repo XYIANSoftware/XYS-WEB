@@ -46,7 +46,7 @@ export default function Home() {
                             <li>
                                 <a
                                     className='linkedIn'
-                                    href='https://www.linkedin.com/company/104131290/admin/dashboard/'
+                                    href='https://www.linkedin.com/company/xyian/'
                                     target='_blank'
                                     rel='noopener noreferrer'
                                 >
