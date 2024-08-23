@@ -3,16 +3,34 @@ import { NextPage } from 'next';
 import { PrimeReactProvider } from 'primereact/api';
 
 interface Props {}
-
+const LISTOVERRIDE: React.CSSProperties = {
+    all: 'unset',
+};
+const LIST_ITEM: React.CSSProperties = {
+    padding: '.2rem 0 0 0',
+};
 const Privacy: NextPage<Props> = ({}) => {
+    const Email = () => {
+        return (
+            <>
+                &nbsp;
+                <a
+                    href='mailto:support@xyian.com'
+                    className='underline text-blue-400'
+                >
+                    support@xyian.com
+                </a>
+            </>
+        );
+    };
     return (
         <PrimeReactProvider>
             <main>
                 <MenuModel />
-                <div className='flex justify-content-center pt-6'>
+                <div className='flex flex-column justify-content-center pt-6'>
                     <h4>Privacy Policy</h4>
                     <p>
-                        <strong>Effective Date:</strong> [Insert Date]
+                        <strong>Effective Date:</strong> January, 1 2024
                     </p>
                     <p>
                         XYIAN Software (&quot;Company,&quot; &quot;we,&quot;
@@ -46,15 +64,25 @@ const Privacy: NextPage<Props> = ({}) => {
                     <p>
                         We may use your information for the following purposes:
                     </p>
-                    <ul>
-                        <li>To provide, operate, and maintain our Services.</li>
-                        <li>To improve our website and Services.</li>
-                        <li>
-                            To communicate with you, including customer support
-                            and notifications.
+                    <ul style={LISTOVERRIDE}>
+                        <li style={LIST_ITEM}>
+                            &nbsp;-To provide, operate, and maintain our
+                            Services.
                         </li>
-                        <li>To process payments and fulfill transactions.</li>
-                        <li>To enforce our terms, conditions, and policies.</li>
+                        <li style={LIST_ITEM}>
+                            &nbsp;-To improve our website and Services.
+                        </li>
+                        <li style={LIST_ITEM}>
+                            &nbsp;-To communicate with you, including customer
+                            support and notifications.
+                        </li>
+                        <li style={LIST_ITEM}>
+                            &nbsp;-To process payments and fulfill transactions.
+                        </li>
+                        <li style={LIST_ITEM}>
+                            &nbsp;-To enforce our terms, conditions, and
+                            policies.
+                        </li>
                     </ul>
 
                     <h4>3. Sharing of Information</h4>
@@ -62,12 +90,14 @@ const Privacy: NextPage<Props> = ({}) => {
                         We do not sell or rent your personal information to
                         third parties. We may share your information with:
                     </p>
-                    <ul>
-                        <li>
+                    <ul style={LISTOVERRIDE}>
+                        <li style={LIST_ITEM}>
+                            &nbsp;-
                             <strong>Service Providers:</strong> Third parties
                             that help us provide and maintain the Services.
                         </li>
-                        <li>
+                        <li style={LIST_ITEM}>
+                            &nbsp;-
                             <strong>Legal Compliance:</strong> When required by
                             law or to protect our rights.
                         </li>
@@ -84,20 +114,22 @@ const Privacy: NextPage<Props> = ({}) => {
 
                     <h4>5. Your Rights</h4>
                     <p>You have the right to:</p>
-                    <ul>
-                        <li>
-                            Access, correct, or delete your personal
+                    <ul style={LISTOVERRIDE}>
+                        <li style={LIST_ITEM}>
+                            &nbsp;-Access, correct, or delete your personal
                             information.
                         </li>
-                        <li>Opt-out of marketing communications.</li>
-                        <li>
-                            Restrict or object to processing of your personal
-                            data.
+                        <li style={LIST_ITEM}>
+                            &nbsp;-Opt-out of marketing communications.
+                        </li>
+                        <li style={LIST_ITEM}>
+                            &nbsp;-Restrict or object to processing of your
+                            personal data.
                         </li>
                     </ul>
                     <p>
                         To exercise any of these rights, please contact us at
-                        [your email].
+                        <Email />.
                     </p>
 
                     <h4>6. Changes to This Policy</h4>
@@ -113,13 +145,14 @@ const Privacy: NextPage<Props> = ({}) => {
                         please contact us at:
                     </p>
                     <p>
-                        Email: [your email]<br></br>
-                        Address: XYIAN Software, [Your Address], California, USA
+                        Email: <Email />
+                        <br></br>
+                        Address: XYIAN Software, Irvine, California, USA
                     </p>
 
                     <h4>Terms of Use</h4>
                     <p>
-                        <strong>Effective Date:</strong> [Insert Date]
+                        <strong>Effective Date:</strong> January 1, 2024
                     </p>
                     <p>
                         These Terms of Use (&quot;Terms&quot;) govern your
@@ -143,18 +176,18 @@ const Privacy: NextPage<Props> = ({}) => {
                         You agree to use the Services in compliance with these
                         Terms and all applicable laws. You must not:
                     </p>
-                    <ul>
-                        <li>
-                            Use the Services for any illegal or unauthorized
-                            purpose.
+                    <ul style={LISTOVERRIDE}>
+                        <li style={LIST_ITEM}>
+                            &nbsp;-Use the Services for any illegal or
+                            unauthorized purpose.
                         </li>
-                        <li>
-                            Access or tamper with non-public areas of the
+                        <li style={LIST_ITEM}>
+                            &nbsp;-Access or tamper with non-public areas of the
                             Services.
                         </li>
-                        <li>
-                            Interfere with or disrupt the integrity of the
-                            Services.
+                        <li style={LIST_ITEM}>
+                            &nbsp;-Interfere with or disrupt the integrity of
+                            the Services.
                         </li>
                     </ul>
 
@@ -230,8 +263,10 @@ const Privacy: NextPage<Props> = ({}) => {
                         contact us at:
                     </p>
                     <p>
-                        Email: [your email]<br></br>
-                        Address: XYIAN Software, [Your Address], California, USA
+                        Email:
+                        <Email />
+                        <br></br>
+                        Address: XYIAN Software, Irvine, California, USA
                     </p>
                 </div>
             </main>

@@ -16,7 +16,7 @@ export const MobileMenu = () => {
                 label='Home'
                 onClick={() => handleNavigateClick('')}
             />
-            <Button
+            {/* <Button
                 className={BUTTON_SYLE}
                 label='Contact'
                 onClick={() => handleNavigateClick('social')}
@@ -25,7 +25,7 @@ export const MobileMenu = () => {
                 className={BUTTON_SYLE}
                 label='Services'
                 onClick={() => handleNavigateClick('portfolio')}
-            />
+            /> */}
             <Button
                 className={BUTTON_SYLE}
                 label='Privacy & Terms'

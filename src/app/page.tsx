@@ -36,10 +36,11 @@ export default function Home() {
                 >
                     <Image src={backgroundImage} alt='Image' width='250' />
 
-                    <h1 className='text-center'>Xyian Software</h1>
+                    <h1 className='text-center'>XYIAN</h1>
                     <p>
-                        Site is under new construction<br></br> Please come back
-                        later.
+                        Cutting-edge software development committed to
+                        transforming innovative ideas into powerful digital
+                        solutions.
                     </p>
                 </div>
                 <MainLinks />
