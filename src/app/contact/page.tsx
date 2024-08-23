@@ -6,7 +6,7 @@ export default function Contact() {
         <main>
             <MobileMenu />
             <div className='flex flex-column justify-content-center w-full align-items-center'>
-                <h1>Contact Me</h1>
+                <h1>Contact XYIAN</h1>
                 <ContactMe />
             </div>
         </main>
