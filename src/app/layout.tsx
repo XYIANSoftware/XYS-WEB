@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import 'primeicons/primeicons.css';
 import '/node_modules/primeflex/primeflex.css';
+import Script from 'next/script';
 
 // import Head from 'next/head';
 
@@ -21,6 +22,21 @@ export default function RootLayout({
 }) {
     return (
         <html lang='en'>
+            <head>
+                {/* Google Tag Manager */}
+                <Script
+                    async
+                    src={`https://www.googletagmanager.com/gtag/js?id=G-QNGPYK520K`}
+                />
+                <Script id='gtag-init' strategy='afterInteractive'>
+                    {`
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){dataLayer.push(arguments);}
+                        gtag('js', new Date());
+                        gtag('config', 'G-QNGPYK520K');
+                    `}
+                </Script>
+            </head>
             <body className={inter.className}>{children}</body>
         </html>
     );
