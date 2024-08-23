@@ -5,6 +5,7 @@ import { Menu } from 'primereact/menu';
 import { MenuItem } from 'primereact/menuitem';
 import { Sidebar } from 'primereact/sidebar';
 import { useRef, useState } from 'react';
+import { MobileMenu } from './MobileMenu';
 
 export const MenuModel = () => {
     const router = useRouter();
@@ -48,7 +49,7 @@ export const MenuModel = () => {
     return (
         <>
             <Button
-                icon={'pi-bars'}
+                icon={'fa-solid fa-bars'}
                 onClick={() => setVisible(true)}
                 style={{
                     position: 'fixed',
@@ -63,10 +64,11 @@ export const MenuModel = () => {
                 position='right'
                 className='flex justify-content-center align-content-center'
             >
-                <Menu
+                {/* <Menu
                     model={tempMenu}
                     className='w-full flex justify-content-center'
-                />
+                /> */}
+                <MobileMenu />
             </Sidebar>
         </>
     );
