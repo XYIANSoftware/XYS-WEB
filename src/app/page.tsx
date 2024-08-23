@@ -26,6 +26,7 @@ export default function Home() {
                         temp remove header for production
                 </div> */}
                 <MenuModel />
+
                 <div
                     className='flex flex-column p-4 justify-content-center text-center align-items-center gap-3 mainBody'
                     style={{
@@ -53,6 +54,63 @@ export default function Home() {
                         className='p-2 gap-2 bg-white animated-button'
                         icon='fa-solid fa-envelope'
                     />
+
+                <div className='flex flex-column p-6 justify-content-center text-center align-items-center footer'>
+                    <div className='z-50'>
+                        <ul>
+                            <li>
+                                <a
+                                    className='linkedIn'
+                                    href='https://www.linkedin.com/company/104131290/admin/dashboard/'
+                                    target='_blank'
+                                    rel='noopener noreferrer'
+                                >
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <FontAwesomeIcon
+                                        className='iconLogoSizes'
+                                        icon={faLinkedin}
+                                    />
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    className='twitter'
+                                    href='https://x.com/XYIANSoftware'
+                                    target='_blank'
+                                    rel='noopener noreferrer'
+                                >
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <FontAwesomeIcon
+                                        className='iconLogoSizes'
+                                        icon={faXTwitter}
+                                    />
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    className='github'
+                                    href='https://github.com/XYIAN'
+                                    target='_blank'
+                                    rel='noopener noreferrer'
+                                >
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <FontAwesomeIcon
+                                        className='iconLogoSizes'
+                                        icon={faGithub}
+                                    />
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </main>
         </PrimeReactProvider>
