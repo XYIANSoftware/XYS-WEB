@@ -1,11 +1,11 @@
 'use client'; // This marks the entire file as a Client Component
 import Image from 'next/image';
-import styles from './page.module.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faFile } from '@fortawesome/free-regular-svg-icons/faFile';
-import { faXTwitter } from '@fortawesome/free-brands-svg-icons';
-import { PrimeReactProvider, PrimeReactContext } from 'primereact/api';
+// import styles from './page.module.css';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+// import { faFile } from '@fortawesome/free-regular-svg-icons/faFile';
+// import { faXTwitter } from '@fortawesome/free-brands-svg-icons';
+import { PrimeReactProvider } from 'primereact/api';
 import 'primereact/resources/themes/md-dark-indigo/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
