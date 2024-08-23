@@ -13,6 +13,11 @@ export const MobileMenu = () => {
         <div className='flex flex-column p-1 mobileMenu gap-3'>
             <Button
                 className={BUTTON_SYLE}
+                label='Home'
+                onClick={() => handleNavigateClick('')}
+            />
+            <Button
+                className={BUTTON_SYLE}
                 label='Contact'
                 onClick={() => handleNavigateClick('social')}
             />
