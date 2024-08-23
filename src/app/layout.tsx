@@ -3,8 +3,11 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import 'primeicons/primeicons.css';
 import '/node_modules/primeflex/primeflex.css';
+import 'primereact/resources/primereact.min.css';
+import 'primeicons/primeicons.css';
 // import Head from 'next/head';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import { PrimeReactProvider } from 'primereact/api';
 // import Head from 'next/head';
 // import primeflex
 const inter = Inter({ subsets: ['latin'] });

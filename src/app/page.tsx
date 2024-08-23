@@ -11,6 +11,8 @@ import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
 import { MenuModel } from '@/common/Menu/MenuModel';
 import { Button } from 'primereact/button';
+import { MainLinks } from '@/common/links/MainLinks';
+import '../common/styles/buttonHover.scss';
 // import { Panel } from 'primereact/panel';
 // import { MenuModel } from '@/common/Menu/MenuModel';
 // import { Image } from 'primereact/image';
@@ -23,11 +25,9 @@ export default function Home() {
                 {/* <div className='flex flex-column p-6 justify-content-center text-center align-items-center header'>
                         temp remove header for production
                 </div> */}
-
                 <MenuModel />
-
                 <div
-                    className='flex flex-column p-6 justify-content-center text-center align-items-center gap-3 mainBody'
+                    className='flex flex-column p-4 justify-content-center text-center align-items-center gap-3 mainBody'
                     style={{
                         backgroundImage: `url(${backgroundImage})`,
                         // backgroundSize: 'cover',
@@ -42,70 +42,14 @@ export default function Home() {
                         later.
                     </p>
                 </div>
-                <div className='flex flex-column p-6 justify-content-center text-center align-items-center footer'>
-                    <div className='z-50'>
-                        <ul>
-                            <li>
-                                <a
-                                    className='linkedIn'
-                                    href='https://www.linkedin.com/company/xyian/'
-                                    target='_blank'
-                                    rel='noopener noreferrer'
-                                >
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <FontAwesomeIcon
-                                        className='iconLogoSizes'
-                                        icon={faLinkedin}
-                                    />
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    className='twitter'
-                                    href='https://x.com/XYIANSoftware'
-                                    target='_blank'
-                                    rel='noopener noreferrer'
-                                >
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <FontAwesomeIcon
-                                        className='iconLogoSizes'
-                                        icon={faXTwitter}
-                                    />
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    className='github'
-                                    href='https://github.com/XYIAN'
-                                    target='_blank'
-                                    rel='noopener noreferrer'
-                                >
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <FontAwesomeIcon
-                                        className='iconLogoSizes'
-                                        icon={faGithub}
-                                    />
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                <MainLinks />
                 <div className='p-3 flex justify-content-center'>
                     <Button
                         label='Contact Email'
                         onClick={() =>
                             (window.location.href = 'mailto:support@xyian.com')
                         }
-                        className='p-2 gap-2 bg-white'
+                        className='p-2 gap-2 bg-white animated-button'
                         icon='fa-solid fa-envelope'
                     />
                 </div>

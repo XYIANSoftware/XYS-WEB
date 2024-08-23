@@ -110,7 +110,7 @@ a {
 }
 
 .mainBody {
-    height: 79vh !important;
+    /* height: 79vh !important; */
     overflow-y: auto;
     background-color: #000000;
 }

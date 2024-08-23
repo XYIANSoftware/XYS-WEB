@@ -1,14 +1,20 @@
-import { NextPage } from 'next';
+'use client'; // This marks the entire file as a Client Component
+import { PrimeReactProvider } from 'primereact/api';
+import 'primereact/resources/themes/md-dark-indigo/theme.css';
+import 'primereact/resources/primereact.min.css';
+import 'primeicons/primeicons.css';
+import { MenuModel } from '@/common/Menu/MenuModel';
 
-interface Props {}
-
-const Social: NextPage<Props> = ({}) => {
+export default function Social() {
     return (
-        <div>
-            <h3>Social Links</h3>
-            <p>Get in touch with us</p>
-        </div>
+        <PrimeReactProvider>
+            <main>
+                <MenuModel />
+                <div className='flex justify-content-center pt-6'>
+                    <h1>Get In Touch</h1>
+                    <div></div>
+                </div>
+            </main>
+        </PrimeReactProvider>
     );
-};
-
-export default Social;
+}
