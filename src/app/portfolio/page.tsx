@@ -1,3 +1,4 @@
+'use client'; // This marks the entire file as a Client Component
 import { MenuModel } from '@/common/Menu/MenuModel';
 import { PrimeReactProvider } from 'primereact/api';
 
