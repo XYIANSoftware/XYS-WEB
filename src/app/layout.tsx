@@ -8,7 +8,8 @@ import 'primeicons/primeicons.css';
 // import Head from 'next/head';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import { PrimeReactProvider } from 'primereact/api';
-// import Head from 'next/head';
+import Head from 'next/head';
+import Script from 'next/script';
 // import primeflex
 const inter = Inter({ subsets: ['latin'] });
 
@@ -24,12 +25,22 @@ export default function RootLayout({
 }) {
     return (
         <html lang='en'>
-            {/* <Head>
-                <script
-                    src='https://kit.fontawesome.com/aaa02456f5.js'
-                    crossorigin='anonymous'
-                ></script>
-            </Head> */}
+            <head>
+                {/* Google Tag Manager */}
+                <Script
+                    async
+                    src={`https://www.googletagmanager.com/gtag/js?id=G-QNGPYK520K`}
+                />
+                <Script id='gtag-init' strategy='afterInteractive'>
+                    {`
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){dataLayer.push(arguments);}
+                        gtag('js', new Date());
+                        gtag('config', 'G-QNGPYK520K');
+                    `}
+                </Script>
+            </head>
+
             <body className={inter.className}>{children}</body>
         </html>
     );
