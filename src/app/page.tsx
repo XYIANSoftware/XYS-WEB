@@ -39,10 +39,11 @@ export default function Home() {
 
                     <h1 className='text-center'>XYIAN</h1>
                     <p>
-                        Cutting-edge software development committed to
-                        transforming innovative ideas into powerful digital
-                        solutions.
+                        Transforming innovative ideas into powerful digital
+                        solutions. Serving USA-based companies and small
+                        businesses. Limited availability.
                     </p>
+                    <p>Full site launching soon. Follow us for updates!</p>
                 </div>
                 <MainLinks />
                 <div className='p-3 flex justify-content-center'>
@@ -54,63 +55,6 @@ export default function Home() {
                         className='p-2 gap-2 bg-white animated-button'
                         icon='fa-solid fa-envelope'
                     />
-
-                <div className='flex flex-column p-6 justify-content-center text-center align-items-center footer'>
-                    <div className='z-50'>
-                        <ul>
-                            <li>
-                                <a
-                                    className='linkedIn'
-                                    href='https://www.linkedin.com/company/104131290/admin/dashboard/'
-                                    target='_blank'
-                                    rel='noopener noreferrer'
-                                >
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <FontAwesomeIcon
-                                        className='iconLogoSizes'
-                                        icon={faLinkedin}
-                                    />
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    className='twitter'
-                                    href='https://x.com/XYIANSoftware'
-                                    target='_blank'
-                                    rel='noopener noreferrer'
-                                >
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <FontAwesomeIcon
-                                        className='iconLogoSizes'
-                                        icon={faXTwitter}
-                                    />
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    className='github'
-                                    href='https://github.com/XYIAN'
-                                    target='_blank'
-                                    rel='noopener noreferrer'
-                                >
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <FontAwesomeIcon
-                                        className='iconLogoSizes'
-                                        icon={faGithub}
-                                    />
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
                 </div>
             </main>
         </PrimeReactProvider>
