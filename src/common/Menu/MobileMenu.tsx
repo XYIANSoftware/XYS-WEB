@@ -28,8 +28,8 @@ export const MobileMenu = () => {
             />
             <Button
                 className={BUTTON_SYLE}
-                label='Public Works'
-                onClick={() => handleNavigateClick('webApps')}
+                label='Privacy & Terms'
+                onClick={() => handleNavigateClick('privacy')}
             />
         </div>
     );
