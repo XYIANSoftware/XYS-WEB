@@ -1,3 +1,4 @@
+'use client'; // This marks the entire file as a Client Component
 import Image from 'next/image';
 import styles from './page.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -5,10 +6,11 @@ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faFile } from '@fortawesome/free-regular-svg-icons/faFile';
 import { faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import { PrimeReactProvider, PrimeReactContext } from 'primereact/api';
-import 'primereact/resources/themes/lara-dark-purple/theme.css';
+import 'primereact/resources/themes/md-dark-indigo/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
 import { MenuModel } from '@/common/Menu/MenuModel';
+import { Button } from 'primereact/button';
 // import { Panel } from 'primereact/panel';
 // import { MenuModel } from '@/common/Menu/MenuModel';
 // import { Image } from 'primereact/image';
@@ -96,6 +98,16 @@ export default function Home() {
                             </li>
                         </ul>
                     </div>
+                </div>
+                <div className='p-3 flex justify-content-center'>
+                    <Button
+                        label='Contact Email'
+                        onClick={() =>
+                            (window.location.href = 'mailto:support@xyian.com')
+                        }
+                        className='p-2 gap-2 bg-white'
+                        icon='fa-solid fa-envelope'
+                    />
                 </div>
             </main>
         </PrimeReactProvider>

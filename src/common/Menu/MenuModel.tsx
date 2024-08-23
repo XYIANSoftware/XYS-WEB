@@ -48,7 +48,7 @@ export const MenuModel = () => {
     return (
         <>
             <Button
-                icon={'pi-bars'}
+                icon={'fa-solid fa-bars'}
                 onClick={() => setVisible(true)}
                 style={{
                     position: 'fixed',
