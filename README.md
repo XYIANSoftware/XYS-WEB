@@ -1,4 +1,6 @@
-![Primary](https://github.com/user-attachments/assets/3230aa1a-f4c2-46d9-860d-793f4c93cdae)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/3230aa1a-f4c2-46d9-860d-793f4c93cdae" alt="Primary" />
+</p>
 
 # XYIAN Software Official Site 
 
