@@ -36,8 +36,8 @@ const Privacy: NextPage<Props> = ({}) => {
                     <p>
                         XYIAN Software (&quot;Company,&quot; &quot;we,&quot;
                         &quot;us,&quot; or &quot;our&quot;) operates the website
-                        [yourwebsite.com] (the &quot;Site&quot;) and provides
-                        software products and services (collectively, the
+                        XYIAN.com (the &quot;Site&quot;) and provides software
+                        products and services (collectively, the
                         &quot;Services&quot;). We value your privacy and are
                         committed to protecting your personal information.
                     </p>
