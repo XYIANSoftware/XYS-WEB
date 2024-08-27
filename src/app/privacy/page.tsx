@@ -41,6 +41,7 @@ const Privacy: NextPage<Props> = ({}) => {
                         &quot;Services&quot;). We value your privacy and are
                         committed to protecting your personal information.
                     </p>
+
                     <p>
                         This Privacy Policy explains how we collect, use,
                         disclose, and safeguard your information when you use

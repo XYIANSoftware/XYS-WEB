@@ -7,6 +7,7 @@ import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import Script from 'next/script';
+import { PrimeReactProvider } from 'primereact/api';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
@@ -36,7 +37,9 @@ export default function RootLayout({
                     `}
                 </Script>
             </head>
-            <body className={inter.className}>{children}</body>
+            <PrimeReactProvider>
+                <body className={inter.className}>{children}</body>
+            </PrimeReactProvider>
         </html>
     );
 }
