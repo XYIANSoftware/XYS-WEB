@@ -28,7 +28,7 @@ const Privacy: NextPage<Props> = ({}) => {
         <PrimeReactProvider>
             <main>
                 <MenuModel />
-                <div className='flex flex-column justify-content-center pt-6'>
+                <div className='flex flex-column justify-content-center pt-5 m-5'>
                     <h4>Privacy Policy</h4>
                     <p>
                         <strong>Effective Date:</strong> January, 1 2024
