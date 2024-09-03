@@ -11,42 +11,76 @@ const PROJECT_LIST: ProjectModel[] = [
         title: 'XYIAN Software',
         description:
             'This is an example of a basic description that should be about this long with minimal details. ',
-        imgSrc: undefined, //use one from logo?
-        url: 'xyian.com',
+        imgSrc: "/images/XYIAN_BANNER.png", //use one from logo?
+        url: 'https://xyian.com/',
     },
     {
         id: 2,
         title: 'XYIAN Software2',
         description:
             'This is an example of a basic description that should be about this long with minimal details. ',
-        imgSrc: undefined, //use one from logo?
-        url: 'xyian.com',
+        imgSrc: "/images/XYIAN_BANNER.png", //use one from logo?
+        url: 'https://xyian.com/',
     },
     {
         id: 3,
         title: 'XYIAN Software3',
         description:
             'This is an example of a basic description that should be about this long with minimal details. ',
-        imgSrc: undefined, //use one from logo?
-        url: 'xyian.com',
+        imgSrc: "/images/XYIAN_BANNER.png", //use one from logo?
+        url: 'https://xyian.com/',
+    },
+    {
+        id: 4,
+        title: 'XYIAN Software',
+        description:
+            'This is an example of a basic description that should be about this long with minimal details. ',
+        imgSrc: "/images/XYIAN_BANNER.png", //use one from logo?
+        url: 'https://xyian.com/',
+    },
+    {
+        id: 5,
+        title: 'XYIAN Software2',
+        description:
+            'This is an example of a basic description that should be about this long with minimal details. ',
+        imgSrc: "/images/XYIAN_BANNER.png", //use one from logo?
+        url: 'https://xyian.com/',
+    },
+    {
+        id: 6,
+        title: 'XYIAN Software3',
+        description:
+            'This is an example of a basic description that should be about this long with minimal details. ',
+        imgSrc: "/images/XYIAN_BANNER.png", //use one from logo?
+        url: 'https://xyian.com/',
+    },
+    {
+        id: 7,
+        title: 'XYIAN Software2',
+        description:
+            'This is an example of a basic description that should be about this long with minimal details. ',
+        imgSrc: "/images/XYIAN_BANNER.png", //use one from logo?
+        url: 'https://xyian.com/',
+    },
+    {
+        id: 8,
+        title: 'XYIAN Software3',
+        description:
+            'This is an example of a basic description that should be about this long with minimal details. ',
+        imgSrc: "/images/XYIAN_BANNER.png", //use one from logo?
+        url: 'https://xyian.com/',
     },
 ];
 export default function ProjectGallery() {
     return (
         <main>
             <MenuModel />
-
-            <div className='flex flex-column justify-content-center w-full align-items-center'>
-                <h1>Project Gallery</h1>
+            <div className='flex flex-column justify-content-center w-full align-items-center w-screen h-screen'>
+                <h1 className='mb-6'>Project Gallery</h1>
                 <div>
-                    {PROJECT_LIST.map((project) => {
-                        return (
-                            <ProjectDisplay
-                                project={project}
-                                key={project.id}
-                            />
-                        );
-                    })}
+                    <ProjectDisplay
+                        project={PROJECT_LIST}
+                    />
                 </div>
             </div>
         </main>
