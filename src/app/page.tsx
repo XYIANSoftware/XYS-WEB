@@ -1,21 +1,9 @@
-'use client'; // This marks the entire file as a Client Component
+'use client';
 import Image from 'next/image';
-// import styles from './page.module.css';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-// import { faFile } from '@fortawesome/free-regular-svg-icons/faFile';
-// import { faXTwitter } from '@fortawesome/free-brands-svg-icons';
-// import { PrimeReactProvider } from 'primereact/api';
-// import 'primereact/resources/themes/md-dark-indigo/theme.css';
-// import 'primereact/resources/primereact.min.css';
-// import 'primeicons/primeicons.css';
 import { MenuModel } from '@/common/Menu/MenuModel';
 import { Button } from 'primereact/button';
 import { MainLinks } from '@/common/links/MainLinks';
 import '../common/styles/buttonHover.scss';
-// import { Panel } from 'primereact/panel';
-// import { MenuModel } from '@/common/Menu/MenuModel';
-// import { Image } from 'primereact/image';
 
 export default function Home() {
     const backgroundImage = require('../../public/Primary.png');
