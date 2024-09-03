@@ -14,6 +14,22 @@ const PROJECT_LIST: ProjectModel[] = [
         imgSrc: undefined, //use one from logo?
         url: 'xyian.com',
     },
+    {
+        id: 2,
+        title: 'XYIAN Software2',
+        description:
+            'This is an example of a basic description that should be about this long with minimal details. ',
+        imgSrc: undefined, //use one from logo?
+        url: 'xyian.com',
+    },
+    {
+        id: 3,
+        title: 'XYIAN Software3',
+        description:
+            'This is an example of a basic description that should be about this long with minimal details. ',
+        imgSrc: undefined, //use one from logo?
+        url: 'xyian.com',
+    },
 ];
 export default function ProjectGallery() {
     return (
