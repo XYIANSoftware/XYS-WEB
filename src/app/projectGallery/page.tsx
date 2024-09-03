@@ -1,8 +1,9 @@
 'use client'; // This marks the entire file as a Client Component
 import { ProjectModel } from '@/common';
-import { MainLinks } from '@/common/links/MainLinks';
-import { MobileMenu } from '@/common/Menu/MobileMenu';
+// import { MainLinks } from '@/common/links/MainLinks';
+// import { MobileMenu } from '@/common/Menu/MobileMenu';
 import { ProjectDisplay } from './components/ProjectDisplay';
+import { MenuModel } from '@/common/Menu/MenuModel';
 
 const PROJECT_LIST: ProjectModel[] = [
     {
@@ -16,7 +17,8 @@ const PROJECT_LIST: ProjectModel[] = [
 export default function ProjectGallery() {
     return (
         <main>
-            <MobileMenu />
+            <MenuModel />
+
             <div className='flex flex-column justify-content-center w-full align-items-center'>
                 <h1>Project Gallery</h1>
                 <div>
