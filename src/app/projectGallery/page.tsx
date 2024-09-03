@@ -8,10 +8,11 @@ import { MenuModel } from '@/common/Menu/MenuModel';
 const PROJECT_LIST: ProjectModel[] = [
     {
         id: 1,
-        title: 'Project 1 Example',
-        description: 'filler desc',
-        imgSrc: undefined,
-        url: 'example.com',
+        title: 'XYIAN Software',
+        description:
+            'This is an example of a basic description that should be about this long with minimal details. ',
+        imgSrc: undefined, //use one from logo?
+        url: 'xyian.com',
     },
 ];
 export default function ProjectGallery() {
