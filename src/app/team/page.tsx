@@ -13,21 +13,21 @@ const TEAM_INFORMATION: MemberDetail[] = [
         id: 1,
         imageSrc: 'filler',
         position: 'Founder & Developer',
-        bio: '',
+        bio: 'example bio',
     },
     {
         name: 'Rogelio Rodriguez',
         id: 2,
         imageSrc: 'filler',
         position: 'Co Founder & Developer',
-        bio: '',
+        bio: 'example bio',
     },
     {
         name: 'Joel Sandoval',
         id: 3,
         imageSrc: 'filler',
         position: 'Sales & Marketing',
-        bio: '',
+        bio: 'example bio',
     },
 ];
 
@@ -36,9 +36,9 @@ const Team: NextPage<Props> = ({}) => {
         <PrimeReactProvider>
             <main>
                 <MenuModel />
-                <div className='flex justify-content-center pt-6'>
+                <div className='flex justify-content-center pt-6 flex-column'>
                     <h1>Meet Our Team</h1>
-                    <div>
+                    <div className='flex flex-column p-2 justify-content-center align-items-center'>
                         {TEAM_INFORMATION.map((person) => {
                             return (
                                 <PersonDisplay

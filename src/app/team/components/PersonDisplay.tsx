@@ -7,6 +7,10 @@ interface PersonDisplayProps {
 }
 
 export const PersonDisplay = ({ memberDetails }: PersonDisplayProps) => {
-    const { name, imageSrc } = memberDetails;
-    return <Card header={name}>Filler</Card>;
+    const { name, imageSrc, position, bio } = memberDetails;
+    return (
+        <Card title={<h2>{name}</h2>} subTitle={bio}>
+            Filler
+        </Card>
+    );
 };
