@@ -11,65 +11,65 @@ const PROJECT_LIST: ProjectModel[] = [
         title: 'XYIAN Software',
         description:
             'This is an example of a basic description that should be about this long with minimal details. ',
-        imgSrc: "/images/XYIAN_BANNER.png", //use one from logo?
+        imgSrc: '/images/XYIAN_BANNER.png', //use one from logo?
         url: 'https://xyian.com/',
     },
     {
         id: 2,
-        title: 'XYIAN Software2',
+        title: 'Looks Delivered ',
         description:
             'This is an example of a basic description that should be about this long with minimal details. ',
-        imgSrc: "/images/XYIAN_BANNER.png", //use one from logo?
-        url: 'https://xyian.com/',
+        imgSrc: '/images/XYIAN_BANNER.png', //use one from logo?
+        url: 'https://looksdelivered.com.com/',
     },
     {
         id: 3,
-        title: 'XYIAN Software3',
+        title: 'C# Template',
         description:
             'This is an example of a basic description that should be about this long with minimal details. ',
-        imgSrc: "/images/XYIAN_BANNER.png", //use one from logo?
+        imgSrc: '/images/XYIAN_BANNER.png', //use one from logo?
         url: 'https://xyian.com/',
     },
     {
         id: 4,
-        title: 'XYIAN Software',
+        title: 'Expo Template',
         description:
             'This is an example of a basic description that should be about this long with minimal details. ',
-        imgSrc: "/images/XYIAN_BANNER.png", //use one from logo?
+        imgSrc: '/images/XYIAN_BANNER.png', //use one from logo?
         url: 'https://xyian.com/',
     },
     {
         id: 5,
-        title: 'XYIAN Software2',
+        title: 'NextJS 15 Template',
         description:
             'This is an example of a basic description that should be about this long with minimal details. ',
-        imgSrc: "/images/XYIAN_BANNER.png", //use one from logo?
+        imgSrc: '/images/XYIAN_BANNER.png', //use one from logo?
         url: 'https://xyian.com/',
     },
     {
         id: 6,
-        title: 'XYIAN Software3',
+        title: 'React Native Template',
         description:
             'This is an example of a basic description that should be about this long with minimal details. ',
-        imgSrc: "/images/XYIAN_BANNER.png", //use one from logo?
+        imgSrc: '/images/XYIAN_BANNER.png', //use one from logo?
         url: 'https://xyian.com/',
     },
-    {
-        id: 7,
-        title: 'XYIAN Software2',
-        description:
-            'This is an example of a basic description that should be about this long with minimal details. ',
-        imgSrc: "/images/XYIAN_BANNER.png", //use one from logo?
-        url: 'https://xyian.com/',
-    },
-    {
-        id: 8,
-        title: 'XYIAN Software3',
-        description:
-            'This is an example of a basic description that should be about this long with minimal details. ',
-        imgSrc: "/images/XYIAN_BANNER.png", //use one from logo?
-        url: 'https://xyian.com/',
-    },
+    // {
+    //     id: 7,
+    //     title: '',
+    //     description:
+    //         'This is an example of a basic description that should be about this long with minimal details. ',
+    //     imgSrc: "/images/XYIAN_BANNER.png", //use one from logo?
+    //     url: 'https://xyian.com/',
+    // },
+    // {
+    //     id: 8,
+    //     title: 'XYIAN Software3',
+    //     description:
+    //         'This is an example of a basic description that should be about this long with minimal details. ',
+    //     imgSrc: "/images/XYIAN_BANNER.png", //use one from logo?
+    //     url: 'https://xyian.com/',
+    // },
 ];
 export default function ProjectGallery() {
     return (
@@ -78,9 +78,7 @@ export default function ProjectGallery() {
             <div className='flex flex-column justify-content-center w-full align-items-center w-screen h-screen'>
                 <h1 className='mb-6'>Project Gallery</h1>
                 <div>
-                    <ProjectDisplay
-                        project={PROJECT_LIST}
-                    />
+                    <ProjectDisplay project={PROJECT_LIST} />
                 </div>
             </div>
         </main>

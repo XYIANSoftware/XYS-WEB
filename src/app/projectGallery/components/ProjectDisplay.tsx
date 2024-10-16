@@ -5,6 +5,8 @@ interface ProjectDisplayProps {
 }
 
 export const ProjectDisplay = ({ project }: ProjectDisplayProps) => {
+    //TODO add projects and template examples
+    //Add templates section or page?
     return (
         <div className='gallery'>
             {project.map((proj, index) => (
