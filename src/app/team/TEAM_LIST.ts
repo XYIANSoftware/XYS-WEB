@@ -25,4 +25,12 @@ export const TEAM_LIST: MemberDetail[] = [
         position: 'Sales & Marketing',
         bio: 'Knack for driving growth, building strong client relationships, and crafting innovative strategies that boost brand visibility and revenue.',
     },
+    {
+        name: 'Gabriel Villadpuda',
+        id: 3,
+        imageSrc:
+            'https://github.com/XYIANSoftware/images/blob/main/XYIAN_Primary.png?raw=true',
+        position: 'Sales & Marketing',
+        bio: 'Knack for driving growth, building strong client relationships, and crafting innovative strategies that boost brand visibility and revenue.',
+    },
 ];
