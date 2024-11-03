@@ -1,6 +1,21 @@
 /** @type {import('next').NextConfig} */
-const withImages = require('next-images')
+const withImages = require('next-images');
 
-const nextConfig = {}
-
-module.exports = nextConfig
+module.exports = {
+    images: {
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'raw.githubusercontent.com',
+                port: '',
+                pathname: '/XYIANSoftware/images/**',
+            },
+            {
+                protocol: 'https',
+                hostname: 'github.com',
+                port: '',
+                pathname: '/XYIANSoftware/images/**',
+            },
+        ],
+    },
+};

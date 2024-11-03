@@ -22,6 +22,8 @@ export const ProjectDisplay = ({ project }: ProjectDisplayProps) => {
                         <Image
                             src={proj.imgSrc ? proj.imgSrc : ''}
                             alt={`Gallery image ${index + 1}`}
+                            width={500}
+                            height={500}
                         />
                     </a>
                 </span>
