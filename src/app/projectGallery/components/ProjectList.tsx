@@ -11,6 +11,8 @@ interface AccordionHeaderProps {
     iconUrl?: string;
 }
 const ProjectList = ({ projects }: ProjectListProps) => {
+    //TODO create clean header
+    //TODO design tab layout + add thumbnail
     const AccordionHeader = ({ title, iconUrl }: AccordionHeaderProps) => {
         return (
             <div className='flex align-items-center justify-content-center'>

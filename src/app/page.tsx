@@ -37,7 +37,8 @@ export default function Home() {
             <MainLinks />
             <div className='p-3 flex justify-content-center'>
                 <Button
-                    label='Contact Email'
+                    label='Support@XYIAN.com'
+                    //tooltip='Contact us now! Click here to email us.'
                     onClick={() =>
                         (window.location.href = 'mailto:support@xyian.com')
                     }
