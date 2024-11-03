@@ -5,3 +5,8 @@ export interface MemberDetail {
     position: string;
     bio: string;
 }
+export interface AboutUsModel {
+    id: number;
+    text: string;
+    type: 'primary' | 'secondary';
+}
