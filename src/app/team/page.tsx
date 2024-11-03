@@ -4,6 +4,7 @@ import { NextPage } from 'next';
 import { PrimeReactProvider } from 'primereact/api';
 import OurTeam from './components/OurTeam';
 import AboutUs from './components/AboutUs';
+import { ScrollTop } from 'primereact/scrolltop';
 
 interface Props {}
 
@@ -13,11 +14,20 @@ const Team: NextPage<Props> = ({}) => {
             <main>
                 <MenuModel />
                 <div className='flex justify-content-center pt-8 flex-column'>
-                    <h2 className='text-center pb-2'>About XYIAN</h2>
-                    <AboutUs type={'primary'} />{' '}
-                    <h2 className='text-center pb-3 pt-5'>Meet Our Team</h2>
+                    <h2 className='text-center pb-3 pt-3'>Meet Our Team</h2>
                     <OurTeam />
-                    <AboutUs type={'secondary'} />
+                    <h2 className='text-center pb-2 pt-5'>About XYIAN</h2>
+                    <AboutUs type={'primary'} /> <AboutUs type={'secondary'} />
+                    <ScrollTop
+                        className=''
+                        pt={{
+                            root: {
+                                style: {
+                                    backgroundColor: 'rgba(240, 240, 240,.5)',
+                                },
+                            },
+                        }}
+                    />
                 </div>
             </main>
         </PrimeReactProvider>

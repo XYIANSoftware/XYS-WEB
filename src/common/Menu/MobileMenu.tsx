@@ -7,6 +7,7 @@ import {
     SetStateAction,
 } from 'react';
 import { useRouter } from 'next/navigation';
+import { Ripple } from 'primereact/ripple';
 
 const BUTTON_SYLE = 'p-2 font-bold bg-white	w-11';
 interface MenuItem {
@@ -50,7 +51,17 @@ export const MobileMenu = ({ setIsLoading }: MobileMenuProps) => {
                             className={BUTTON_SYLE}
                             label={page.label}
                             onClick={() => handleNavigateClick(page.route)}
-                        />
+                        >
+                            <Ripple
+                                pt={{
+                                    root: {
+                                        style: {
+                                            background: 'rgba(0, 14, 0, .4)',
+                                        },
+                                    },
+                                }}
+                            />
+                        </Button>
                     </div>
                 );
             })}

@@ -2,20 +2,20 @@ import { MemberDetail } from '@/common';
 
 export const TEAM_LIST: MemberDetail[] = [
     {
-        name: 'Joel Sandoval',
-        id: 3,
-        imageSrc:
-            'https://github.com/XYIANSoftware/images/blob/main/XYIAN_Primary.png?raw=true',
-        position: 'Sales & Marketing',
-        bio: 'Dynamic Sales and Marketing pro focused on driving growth and connecting with customers through innovative, results-oriented strategies.',
-    },
-    {
         name: 'Gabriel Villadpudua',
         id: 4,
         imageSrc:
             'https://github.com/XYIANSoftware/images/blob/main/XYIAN_Primary.png?raw=true',
         position: 'Sales & Marketing',
         bio: 'Knack for driving growth, building strong client relationships, and crafting innovative strategies that boost brand visibility and revenue.',
+    },
+    {
+        name: 'Joel Sandoval',
+        id: 3,
+        imageSrc:
+            'https://github.com/XYIANSoftware/images/blob/main/XYIAN_Primary.png?raw=true',
+        position: 'Sales & Marketing',
+        bio: 'Dynamic Sales and Marketing pro focused on driving growth and connecting with customers through innovative, results-oriented strategies.',
     },
     {
         name: 'Rogelio Rodriguez',

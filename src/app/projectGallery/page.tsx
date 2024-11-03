@@ -1,6 +1,4 @@
-'use client'; // This marks the entire file as a Client Component
-// import { MainLinks } from '@/common/links/MainLinks';
-// import { MobileMenu } from '@/common/Menu/MobileMenu';
+'use client';
 import { ProjectDisplay } from './components/ProjectDisplay';
 import { MenuModel } from '@/common/Menu/MenuModel';
 import { PROJECT_LIST } from './constants/projectList';
