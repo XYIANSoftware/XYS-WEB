@@ -1,13 +1,13 @@
 import { ProjectModel } from '@/common';
 import Image from 'next/image';
 interface ProjectDisplayProps {
-    project: ProjectModel[];
+    projects: ProjectModel[];
 }
 
-export const ProjectDisplay = ({ project }: ProjectDisplayProps) => {
+export const ProjectDisplay = ({ projects }: ProjectDisplayProps) => {
     return (
         <div className='gallery'>
-            {project.map((proj, index) => (
+            {projects.map((proj, index) => (
                 <span
                     key={index}
                     style={{ '--i': index + 1 } as React.CSSProperties}
