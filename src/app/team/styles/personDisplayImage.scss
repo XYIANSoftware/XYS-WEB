@@ -1,0 +1,9 @@
+.personDisplayImage {
+    max-width: 50%;
+}
+@media (max-width: 768px) {
+    /* For mobile screens */
+    .personDisplayImage {
+        max-width: 30%; /* 70% smaller */
+    }
+}

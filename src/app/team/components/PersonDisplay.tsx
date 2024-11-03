@@ -3,6 +3,7 @@ import { MemberDetail } from '@/common';
 import { Image } from 'primereact/image';
 import { Card } from 'primereact/card';
 import '../../../common/styles/displayCard.scss';
+import '../../../common/styles/displayImage.scss';
 interface PersonDisplayProps {
     memberDetails: MemberDetail;
 }
@@ -13,9 +14,10 @@ export const PersonDisplay = ({ memberDetails }: PersonDisplayProps) => {
         return (
             <div className='flex justify-content-center align-content-center'>
                 <Image
+                    className='displayImage'
                     alt={name}
                     src={imageSrc}
-                    imageStyle={{ maxWidth: '100%', objectFit: 'cover' }}
+                    //imageStyle={{ maxWidth: '100%', objectFit: 'cover' }}
                 />
             </div>
         );

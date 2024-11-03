@@ -4,7 +4,7 @@ import { MenuModel } from '@/common/Menu/MenuModel';
 import { NextPage } from 'next';
 import { PrimeReactProvider } from 'primereact/api';
 import { PersonDisplay } from './components/PersonDisplay';
-import { TEAM_LIST } from './TEAM_LIST';
+import { TEAM_LIST } from './constants/TEAM_LIST';
 
 interface Props {}
 

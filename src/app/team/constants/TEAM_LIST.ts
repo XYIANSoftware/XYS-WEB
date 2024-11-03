@@ -27,7 +27,7 @@ export const TEAM_LIST: MemberDetail[] = [
     },
     {
         name: 'Gabriel Villadpudua',
-        id: 3,
+        id: 4,
         imageSrc:
             'https://github.com/XYIANSoftware/images/blob/main/XYIAN_Primary.png?raw=true',
         position: 'Sales & Marketing',
