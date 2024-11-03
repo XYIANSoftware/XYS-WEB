@@ -1,51 +1,19 @@
 'use client';
-import { useRouter } from 'next/navigation';
 import { Button } from 'primereact/button';
-import { Menu } from 'primereact/menu';
-import { MenuItem } from 'primereact/menuitem';
 import { Sidebar } from 'primereact/sidebar';
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 import { MobileMenu } from './MobileMenu';
+import { useRouter } from 'next/router';
+import LoadMask from '../LoadMask';
 
 export const MenuModel = () => {
-    const router = useRouter();
     const [visible, setVisible] = useState(false);
-
-    const menuModel: MenuItem[] = [
-        {
-            label: 'About',
-            items: [
-                { label: 'Mission', command: () => router.push('/mission') },
-                { label: 'Company', command: () => router.push('/portfolio') },
-                { label: 'Our Team', command: () => router.push('/team') },
-            ],
-        },
-        {
-            label: 'Services',
-            items: [
-                { label: 'Web Apps', command: () => router.push('/webApps') },
-                {
-                    label: 'Mobile Apps',
-                    command: () => router.push('/mobileApps'),
-                },
-                { label: 'Software', command: () => router.push('/software') },
-            ],
-        },
-        {
-            label: 'Contact',
-            items: [
-                { label: 'Requests', command: () => router.push('/contact') },
-                { label: 'Social', command: () => router.push('/social') },
-                { label: 'Support', command: () => router.push('/support') },
-            ],
-        },
-    ];
-    const tempMenu: MenuItem[] = [
-        {
-            label: 'Contact',
-            items: [{ label: 'Social', command: () => router.push('/social') }],
-        },
-    ];
+    const [isLoading, setIsLoading] = useState(false);
+    // const router = useRouter();
+    // const handleNavigateClick = (to: string) => {
+    //     setIsLoading(true);
+    //     router.push(`/${to}`);
+    // };
     return (
         <>
             <Button
@@ -57,6 +25,13 @@ export const MenuModel = () => {
                     right: '2rem',
                     padding: '5px',
                 }}
+                pt={{
+                    root: {
+                        style: {
+                            backgroundColor: 'white',
+                        },
+                    },
+                }}
             />
             <Sidebar
                 visible={visible}
@@ -64,11 +39,8 @@ export const MenuModel = () => {
                 position='right'
                 className='flex justify-content-center align-content-center'
             >
-                {/* <Menu
-                    model={tempMenu}
-                    className='w-full flex justify-content-center'
-                /> */}
-                <MobileMenu />
+                <MobileMenu setIsLoading={setIsLoading} />
+                <LoadMask loading={isLoading} />
             </Sidebar>
         </>
     );

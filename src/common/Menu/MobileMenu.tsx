@@ -1,55 +1,59 @@
 import { Button } from 'primereact/button';
-import { useEffect, useState, ReactNode } from 'react';
+import {
+    useEffect,
+    useState,
+    ReactNode,
+    Dispatch,
+    SetStateAction,
+} from 'react';
 import { useRouter } from 'next/navigation';
 
-const BUTTON_SYLE = 'p-2 font-bold';
+const BUTTON_SYLE = 'p-2 font-bold bg-white	w-11';
 interface MenuItem {
     label: string;
-    page: string;
+    route: string;
 }
-const MENU: MenuItem[] = [
-    { label: 'Home', page: '' },
-    { label: 'Project Gallery', page: 'projectGallery' },
-    { label: 'Our Team', page: 'team' },
-    { label: 'Privacy & Terms', page: 'privacy' },
-];
-export const MobileMenu = () => {
+interface MobileMenuProps {
+    setIsLoading: Dispatch<SetStateAction<boolean>>;
+}
+export const MobileMenu = ({ setIsLoading }: MobileMenuProps) => {
     const router = useRouter();
     const handleNavigateClick = (to: string) => {
+        setIsLoading(true);
         router.push(`/${to}`);
     };
+    const MENU: MenuItem[] = [
+        { label: 'Home', route: '' },
+        {
+            label: 'Project Gallery',
+            route: 'projectGallery',
+        },
+        {
+            label: 'Our Team',
+            route: 'team',
+        },
+        {
+            label: 'Privacy & Terms',
+            route: 'privacy',
+        },
+    ];
     return (
-        <div className='flex flex-column p-1 mobileMenu gap-3'>
-            <Button
-                className={BUTTON_SYLE}
-                label='Home'
-                onClick={() => handleNavigateClick('')}
-            />
-            <Button
-                className={BUTTON_SYLE}
-                label='Project Gallery'
-                onClick={() => handleNavigateClick('projectGallery')}
-            />
-            <Button
-                className={BUTTON_SYLE}
-                label='Our Team'
-                onClick={() => handleNavigateClick('team')}
-            />
-            {/* <Button
-                className={BUTTON_SYLE}
-                label='Contact'
-                onClick={() => handleNavigateClick('social')}
-            />
-            <Button
-                className={BUTTON_SYLE}
-                label='Services'
-                onClick={() => handleNavigateClick('portfolio')}
-            /> */}
-            <Button
-                className={BUTTON_SYLE}
-                label='Privacy & Terms'
-                onClick={() => handleNavigateClick('privacy')}
-            />
+        <div className='flex flex-column p-1 mobileMenu gap-4 justify-content-center align-content-center'>
+            {MENU.map((page) => {
+                return (
+                    <div
+                        key={page.route}
+                        className='flex justify-content-center align-items-center'
+                    >
+                        <Button
+                            key={page.route + '-x'}
+                            className={BUTTON_SYLE}
+                            label={page.label}
+                            onClick={() => handleNavigateClick(page.route)}
+                        />
+                    </div>
+                );
+            })}
         </div>
     );
 };

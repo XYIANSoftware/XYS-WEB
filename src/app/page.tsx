@@ -28,9 +28,11 @@ export default function Home() {
                 <p>
                     Transforming innovative ideas into powerful digital
                     solutions. Serving USA-based companies and small businesses.
-                    Limited availability.
                 </p>
-                <p>Full site launching soon. Follow us for updates!</p>
+                <p className='p-2'>
+                    Existing Customers:&nbsp;
+                    <strong>Please use your custom url</strong>
+                </p>
             </div>
             <MainLinks />
             <div className='p-3 flex justify-content-center'>
