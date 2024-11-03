@@ -1,11 +1,21 @@
 import React from 'react';
 import { ABOUT_US } from '../constants/ABOUT_US';
-const AboutUs = (type?: 'primary' | 'secondary') => {
+import { XYType } from '@/common/types/common';
+interface AboutUsProps {
+    type: XYType;
+}
+const AboutUs = ({ type }: AboutUsProps) => {
     return (
-        <div>
-            <div>
+        <div className='flex w-full justify-content-center align-content-center'>
+            <div className='w-9 text-center '>
                 {ABOUT_US.map((entry) => {
-                    return <p key={entry.id}>{entry.text}</p>;
+                    if (type === entry.type) {
+                        return (
+                            <p key={entry.id} className='line-height-3 text-lg	'>
+                                {entry.text}
+                            </p>
+                        );
+                    }
                 })}
             </div>
         </div>

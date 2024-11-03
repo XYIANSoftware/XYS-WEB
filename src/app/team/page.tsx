@@ -2,7 +2,6 @@
 import { MenuModel } from '@/common/Menu/MenuModel';
 import { NextPage } from 'next';
 import { PrimeReactProvider } from 'primereact/api';
-
 import OurTeam from './components/OurTeam';
 import AboutUs from './components/AboutUs';
 
@@ -14,9 +13,11 @@ const Team: NextPage<Props> = ({}) => {
             <main>
                 <MenuModel />
                 <div className='flex justify-content-center pt-8 flex-column'>
-                    <h1 className='text-center'>Meet Our Team</h1>
-                    <AboutUs />
+                    <h2 className='text-center pb-2'>About XYIAN</h2>
+                    <AboutUs type={'primary'} />{' '}
+                    <h2 className='text-center pb-3 pt-5'>Meet Our Team</h2>
                     <OurTeam />
+                    <AboutUs type={'secondary'} />
                 </div>
             </main>
         </PrimeReactProvider>

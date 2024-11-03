@@ -1,3 +1,5 @@
+import { XYType } from './common';
+
 export interface MemberDetail {
     id: number;
     name: string;
@@ -8,5 +10,5 @@ export interface MemberDetail {
 export interface AboutUsModel {
     id: number;
     text: string;
-    type: 'primary' | 'secondary';
+    type: XYType;
 }
