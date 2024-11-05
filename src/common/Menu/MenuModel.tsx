@@ -3,17 +3,11 @@ import { Button } from 'primereact/button';
 import { Sidebar } from 'primereact/sidebar';
 import { useState } from 'react';
 import { MobileMenu } from './MobileMenu';
-import { useRouter } from 'next/router';
 import LoadMask from '../LoadMask';
-
+import SVGBackground from '../backgrounds/svg/SVGBackground';
 export const MenuModel = () => {
     const [visible, setVisible] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
-    // const router = useRouter();
-    // const handleNavigateClick = (to: string) => {
-    //     setIsLoading(true);
-    //     router.push(`/${to}`);
-    // };
     return (
         <>
             <Button
@@ -37,9 +31,11 @@ export const MenuModel = () => {
                 visible={visible}
                 onHide={() => setVisible(false)}
                 position='right'
-                className='flex justify-content-center align-content-center'
+                className='flex justify-content-center align-content-center sideMenu bg-black-alpha-90'
             >
+                <SVGBackground />
                 <MobileMenu setIsLoading={setIsLoading} />
+
                 <LoadMask loading={isLoading} />
             </Sidebar>
         </>

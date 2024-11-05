@@ -1,3 +1,4 @@
+import SVGBackground from '@/common/backgrounds/svg/SVGBackground';
 import { MenuModel } from '@/common/Menu/MenuModel';
 import { NextPage } from 'next';
 import { PrimeReactProvider } from 'primereact/api';
@@ -9,10 +10,7 @@ const Mission: NextPage<Props> = ({}) => {
         <PrimeReactProvider>
             <main>
                 <MenuModel />
-                <div className='flex justify-content-center pt-6'>
-                    <h1>Our Mission</h1>
-                    <div></div>
-                </div>
+                <SVGBackground />
             </main>
         </PrimeReactProvider>
     );

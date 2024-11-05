@@ -8,8 +8,9 @@ import {
 } from 'react';
 import { useRouter } from 'next/navigation';
 import { Ripple } from 'primereact/ripple';
+import XYButton from '../Inputs/XYButton';
 
-const BUTTON_SYLE = 'p-2 font-bold bg-white	w-11';
+const BUTTON_SYLE = 'p-2 font-bold w-11';
 interface MenuItem {
     label: string;
     route: string;
@@ -46,11 +47,12 @@ export const MobileMenu = ({ setIsLoading }: MobileMenuProps) => {
                         key={page.route}
                         className='flex justify-content-center align-items-center'
                     >
-                        <Button
+                        <XYButton
                             key={page.route + '-x'}
                             className={BUTTON_SYLE}
                             label={page.label}
                             onClick={() => handleNavigateClick(page.route)}
+                            xyType='transparent'
                         >
                             <Ripple
                                 pt={{
@@ -61,7 +63,7 @@ export const MobileMenu = ({ setIsLoading }: MobileMenuProps) => {
                                     },
                                 }}
                             />
-                        </Button>
+                        </XYButton>
                     </div>
                 );
             })}
