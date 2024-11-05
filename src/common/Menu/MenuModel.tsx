@@ -1,13 +1,18 @@
 'use client';
 import { Button } from 'primereact/button';
 import { Sidebar } from 'primereact/sidebar';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { MobileMenu } from './MobileMenu';
 import LoadMask from '../LoadMask';
 import SVGBackground from '../backgrounds/svg/SVGBackground';
 export const MenuModel = () => {
     const [visible, setVisible] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
+    const onClose = () => {
+        setVisible(false);
+        setIsLoading(true);
+    };
+
     return (
         <>
             <Button
@@ -34,7 +39,7 @@ export const MenuModel = () => {
                 className='flex justify-content-center align-content-center sideMenu bg-black-alpha-90'
             >
                 <SVGBackground />
-                <MobileMenu setIsLoading={setIsLoading} />
+                <MobileMenu onClose={onClose} />
 
                 <LoadMask loading={isLoading} />
             </Sidebar>

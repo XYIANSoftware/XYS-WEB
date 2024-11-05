@@ -1,8 +1,9 @@
 import { Button, ButtonProps } from 'primereact/button';
 import React from 'react';
-
+import '../styles/buttonHover.scss';
 export interface XYButtonProps extends ButtonProps {
     xyType?: 'transparent';
+    // xyAnimate?: boolean;
 }
 
 // const DEFAULT_STYLE = ''
@@ -18,6 +19,7 @@ const XYButton = ({ xyType, ...other }: XYButtonProps) => {
                 return other?.style;
         }
     };
+
     return <Button {...other} style={determineStyle()}></Button>;
 };
 

@@ -1,11 +1,3 @@
-import { Button } from 'primereact/button';
-import {
-    useEffect,
-    useState,
-    ReactNode,
-    Dispatch,
-    SetStateAction,
-} from 'react';
 import { useRouter } from 'next/navigation';
 import { Ripple } from 'primereact/ripple';
 import XYButton from '../Inputs/XYButton';
@@ -16,13 +8,13 @@ interface MenuItem {
     route: string;
 }
 interface MobileMenuProps {
-    setIsLoading: Dispatch<SetStateAction<boolean>>;
+    onClose: () => void;
 }
-export const MobileMenu = ({ setIsLoading }: MobileMenuProps) => {
+export const MobileMenu = ({ onClose }: MobileMenuProps) => {
     const router = useRouter();
     const handleNavigateClick = (to: string) => {
-        setIsLoading(true);
         router.push(`/${to}`);
+        onClose();
     };
     const MENU: MenuItem[] = [
         { label: 'Home', route: '' },
