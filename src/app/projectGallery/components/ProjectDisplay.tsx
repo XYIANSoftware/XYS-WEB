@@ -5,6 +5,7 @@ interface ProjectDisplayProps {
 }
 
 export const ProjectDisplay = ({ projects }: ProjectDisplayProps) => {
+    //TODO eventually add skeleton and lazy loading
     return (
         <div className='gallery'>
             {projects.map((proj, index) => (
