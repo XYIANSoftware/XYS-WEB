@@ -1,5 +1,5 @@
 import { Button, ButtonProps } from 'primereact/button';
-import React from 'react';
+import React, { useState } from 'react';
 import '../styles/buttonHover.scss';
 export interface XYButtonProps extends ButtonProps {
     xyType?: 'transparent';
@@ -8,19 +8,27 @@ export interface XYButtonProps extends ButtonProps {
 
 // const DEFAULT_STYLE = ''
 const XYButton = ({ xyType, ...other }: XYButtonProps) => {
+    const [classType, setClassType] = useState<'whiteButton' | 'blackButton'>();
+
     const determineStyle = (): React.CSSProperties | undefined => {
         switch (xyType) {
             case 'transparent':
+                if (classType !== 'whiteButton') setClassType('whiteButton');
                 return {
                     ...other?.style,
-                    backgroundColor: 'rgba(255, 255, 255, 0.8)',
                 };
             default:
                 return other?.style;
         }
     };
 
-    return <Button {...other} style={determineStyle()}></Button>;
+    return (
+        <Button
+            {...other}
+            style={determineStyle()}
+            className={`${classType} ${other.className}`}
+        ></Button>
+    );
 };
 
 export default XYButton;

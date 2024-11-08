@@ -5,7 +5,11 @@ interface CloudBackgroundProps {
 }
 
 const CloudBackground: React.FC<CloudBackgroundProps> = ({ children }) => {
-    return <div className='center fixed-background'>{children}</div>;
+    return (
+        <div className='cloud-wrapper'>
+            <div className='center fixed-background'>{children}</div>
+        </div>
+    );
 };
 
 export default CloudBackground;

@@ -10,6 +10,34 @@ export const PROJECT_LIST: ProjectModel[] = [
         url: 'https://xyian.com/',
     },
     {
+        id: 12,
+        title: 'XYIAN Fitness',
+        description: 'XYIAN Software Example Fitness application',
+        imgSrc: '/images/XYIAN_BANNER.png', //use one from logo?
+        url: 'https://xyian.com/',
+    },
+    {
+        id: 13,
+        title: 'XYIAN Portfolio',
+        description: 'XYIAN Software Example for a personal portfolio. ',
+        imgSrc: '/images/XYIAN_BANNER.png', //use one from logo?
+        url: 'https://xyian.com/',
+    },
+    {
+        id: 14,
+        title: 'XYIAN Photography',
+        description: 'XYIAN Software Photography / art portfolio Example',
+        imgSrc: '/images/XYIAN_BANNER.png', //use one from logo?
+        url: 'https://xyian.com/',
+    },
+    {
+        id: 15,
+        title: 'XYIAN AI',
+        description: 'XYIAN Software basic AI integration Example',
+        imgSrc: '/images/XYIAN_BANNER.png', //use one from logo?
+        url: 'https://xyian.com/',
+    },
+    {
         id: 2,
         title: 'Looks Delivered',
         description:
@@ -22,7 +50,7 @@ export const PROJECT_LIST: ProjectModel[] = [
         title: 'Personal Portfolio',
         description:
             'Basic personal site for things lik job applications, freelancing, blogging etc. ',
-        imgSrc: 'https://github.com/XYIANSoftware/images/blob/main/kxd_logos/KXD_LOGO_GOLD.png?raw=true', //use one from logo?
+        imgSrc: '/images/XYIAN_BANNER.png', //use one from logo?
         url: 'https://kyledilbeck.com/',
     },
     {
