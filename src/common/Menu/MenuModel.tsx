@@ -8,6 +8,8 @@ import SVGBackground from '../backgrounds/svg/SVGBackground';
 import { Toolbar } from 'primereact/toolbar';
 import XYButton from '../Inputs/XYButton';
 export const MenuModel = () => {
+    //TODO create desktop menu
+    //TODO after desktop menu add media switch from desktop to mobile
     const [visible, setVisible] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
     const onClose = () => {
