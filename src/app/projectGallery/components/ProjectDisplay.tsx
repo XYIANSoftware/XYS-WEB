@@ -27,6 +27,15 @@ export const ProjectDisplay = ({ projects }: ProjectDisplayProps) => {
                             height={500}
                         />
                     </a>
+                    <h1
+                        className=' title-element absolute bottom-0 right-0 left-0 text-center'
+                        style={{
+                            color: 'white',
+                            transform: 'translateY(3.3rem)',
+                        }}
+                    >
+                        {proj.title || `Project ${index + 1}`}
+                    </h1>
                 </span>
             ))}
         </div>

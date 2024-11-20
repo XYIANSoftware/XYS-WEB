@@ -24,7 +24,7 @@ export default function Home() {
             >
                 <Image src={backgroundImage} alt='Image' width='250' />
 
-                <h1 className='text-center'>XYIAN</h1>
+                <h1 className='text-center'>XYIAN Software</h1>
                 <p>
                     Transforming innovative ideas into powerful digital
                     solutions. Serving USA-based companies and small businesses.
