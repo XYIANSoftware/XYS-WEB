@@ -4,34 +4,29 @@ import { MenuModel } from '@/common/Menu/MenuModel';
 import { Button } from 'primereact/button';
 import { MainLinks } from '@/common/links/MainLinks';
 import '../common/styles/buttonHover.scss';
+import LoginLink from '@/common/links/LoginLink';
 
 export default function Home() {
     const backgroundImage = require('../../public/Primary.png');
+
     return (
         <main>
-            {/* <div className='flex flex-column p-6 justify-content-center text-center align-items-center header'>
-                        temp remove header for production
-                </div> */}
             <MenuModel />
-
             <div
                 className='flex flex-column p-4 justify-content-center text-center align-items-center gap-3 mainBody'
                 style={{
                     backgroundImage: `url(${backgroundImage})`,
-                    // backgroundSize: 'cover',
-                    // backgroundPosition: 'center',
                 }}
             >
                 <Image src={backgroundImage} alt='Image' width='250' />
-
                 <h1 className='text-center'>XYIAN Software</h1>
-                <p>
+                <p className='w-7'>
                     Transforming innovative ideas into powerful digital
                     solutions. Serving USA-based companies and small businesses.
                 </p>
-                <p className='p-2'>
+                <p className='p-2 flex align-items-center justify-content-center'>
                     Existing Customers:&nbsp;
-                    <strong>Please use your custom url</strong>
+                    <LoginLink />
                 </p>
             </div>
             <MainLinks />

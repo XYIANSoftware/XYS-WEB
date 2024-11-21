@@ -44,7 +44,7 @@ export const MobileMenu = ({ onClose }: MobileMenuProps) => {
                             className={BUTTON_SYLE}
                             label={page.label}
                             onClick={() => handleNavigateClick(page.route)}
-                            xyType='transparent'
+                            xyType='transparentWhite'
                         >
                             <Ripple
                                 pt={{
