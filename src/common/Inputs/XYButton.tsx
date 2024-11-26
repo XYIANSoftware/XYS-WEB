@@ -35,7 +35,7 @@ const XYButton = ({ xyType, ...other }: XYButtonProps) => {
         <Button
             {...other}
             style={determineStyle()}
-            className={`${classType} ${other.className} p-1`}
+            className={`${classType} ${other.className} p-1 gap-1`}
         />
     );
 };
