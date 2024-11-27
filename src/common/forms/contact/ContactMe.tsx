@@ -1,8 +1,8 @@
 'use client';
 import { Panel } from 'primereact/panel';
-import { XyInputText } from '@/common/Inputs/XyInputText';
+// import { XyInputText } from '@/common/Inputs/XyInputText';
 import { useForm } from 'react-hook-form';
-import { XyButton } from '@/common/XyButton';
+// import { XyButton } from '@/common/XyButton';
 export interface ContactModel {
     firstName: string;
     lastName: string;
@@ -27,7 +27,7 @@ export const ContactMe = () => {
             className='w-full justify-content-center'
             toggleable
         >
-            <form onSubmit={handleSubmit(onSubmit)} id='contact-form'>
+            {/* <form onSubmit={handleSubmit(onSubmit)} id='contact-form'>
                 <div className='flex w-full flex-column align-content-center justify-content-center'>
                     <div>
                         <XyInputText
@@ -56,7 +56,7 @@ export const ContactMe = () => {
                     />
                     <XyButton type='submit' label='Submit' />
                 </div>
-            </form>
+            </form> */}
         </Panel>
     );
 };
