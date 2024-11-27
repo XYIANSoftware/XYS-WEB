@@ -3,7 +3,7 @@ import { useRouter } from 'next/navigation';
 import React from 'react';
 import XYButton from '../Inputs/XYButton';
 
-const LoginLink = () => {
+export const EmailLink = () => {
     const router = useRouter();
     const handleNavigateClick = (to: string) => {
         router.push(`/${to}`);
@@ -18,5 +18,3 @@ const LoginLink = () => {
         </XYButton>
     );
 };
-
-export default LoginLink;
