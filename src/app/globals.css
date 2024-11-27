@@ -321,19 +321,32 @@ h4 {
 .title-element{
     color: white;
 }
+/* for phones  */
 @media screen and (max-width: 600px) {
     .gallery{
+        /* images position */
         position:relative;
         width: 200px;
         height: 100px;
         animation:rotate 35s linear infinite;
-        
+        top: -150px;
     }
+    /* project gallery title position up for phone */
+    .titleProjectGallery{
+        position: absolute;
+        top:100px;
+    }
+    /* this closes the gap the smaller the translateZ
+     is the smaller the gap is regular 380px*/
+    .gallery span{
+        transform:rotateY(calc(var(--i) * 45deg)) translateZ(250px);
+      }
     .title-element{
-        /* border: 1px solid red; */
-        height: 100px;
+        /* adjust title size and positon */
+        height: 50px;
         width: 200px;
         padding-top: 500px;
+        font-size: 25px;
     }
     @keyframes rotate{
         from{

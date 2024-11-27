@@ -9,7 +9,7 @@ export default function ProjectGallery() {
         <main>
             <MenuModel />
             <div className='flex flex-column justify-content-center w-full align-items-center w-screen h-screen'>
-                <h1 className='mb-6'>Project Gallery</h1>
+                <h1 className='mb-6 titleProjectGallery'>Project Gallery</h1>
                 <div>
                     <ProjectDisplay projects={PROJECT_LIST} />
                 </div>
