@@ -28,9 +28,8 @@ export const ProjectDisplay = ({ projects }: ProjectDisplayProps) => {
                         />
                     </a>
                     <h1
-                        className=' title-element absolute bottom-0 right-0 left-0 text-center'
+                        className='title-element absolute bottom-0 right-0 left-0 text-center'
                         style={{
-                            color: 'white',
                             transform: 'translateY(3.3rem)',
                         }}
                     >
