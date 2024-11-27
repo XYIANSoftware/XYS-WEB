@@ -29,7 +29,9 @@ export const MenuModel = () => {
     //         />
     //     );
     // };
-
+    useEffect(() => {
+        console.log('current location: ', window.location.pathname);
+    }, []);
     return (
         <>
             <Button

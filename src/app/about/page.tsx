@@ -10,12 +10,10 @@ const AboutXYS: NextPage<Props> = ({}) => {
     return (
         <main>
             <MenuModel />
-            <div className='flex flex-column justify-content-center w-full align-items-center w-screen h-screen'>
-                <h1 className='mb-6'>About XYS</h1>
+            <div className='flex flex-column justify-content-center w-full align-items-center w-full h-full p-1'>
+                <h1 className='mb-2 pt-7'>About XYS</h1>
             </div>
-            <div>
-                <AboutUs type={'primary'} /> <AboutUs type={'secondary'} />
-            </div>
+            <AboutUs type={'primary'} /> <AboutUs type={'secondary'} />
         </main>
     );
 };

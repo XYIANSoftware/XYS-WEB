@@ -11,11 +11,13 @@ interface MobileMenuProps {
     onClose: () => void;
 }
 export const MobileMenu = ({ onClose }: MobileMenuProps) => {
+    const currentRoute = window.location.pathname;
     const router = useRouter();
     const handleNavigateClick = (to: string) => {
         router.push(`/${to}`);
         onClose();
     };
+
     const MENU: MenuItem[] = [
         { label: 'Home', route: '' },
         {
@@ -27,13 +29,30 @@ export const MobileMenu = ({ onClose }: MobileMenuProps) => {
             route: 'team',
         },
         {
+            label: 'About XYS',
+            route: 'about',
+        },
+        {
             label: 'Privacy & Terms',
             route: 'privacy',
         },
     ];
+    function filterMenuByLabel(
+        menu: MenuItem[],
+        labelToRemove: string
+    ): MenuItem[] {
+        return menu.filter(
+            (item) =>
+                item.label !== labelToRemove && item.route !== labelToRemove
+        );
+    }
+    const MENU_WITHOUT_CURRENT_ROUTE: MenuItem[] = filterMenuByLabel(
+        MENU,
+        currentRoute
+    );
     return (
         <div className='flex flex-column p-1 mobileMenu gap-4 justify-content-center align-content-center'>
-            {MENU.map((page) => {
+            {MENU_WITHOUT_CURRENT_ROUTE.map((page) => {
                 return (
                     <div
                         key={page.route}
