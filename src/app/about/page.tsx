@@ -1,8 +1,7 @@
-import SVGBackground from '@/common/backgrounds/svg/SVGBackground';
 import { MenuModel } from '@/common/Menu/MenuModel';
 import { NextPage } from 'next';
-import { PrimeReactProvider } from 'primereact/api';
-import AboutUs from '../team/components/AboutUs';
+import AboutUs from './components/AboutUs';
+import { XYSToTop } from '@/common';
 
 interface Props {}
 
@@ -14,6 +13,7 @@ const AboutXYS: NextPage<Props> = ({}) => {
                 <h1 className='mb-2 pt-7'>About XYS</h1>
             </div>
             <AboutUs type={'primary'} /> <AboutUs type={'secondary'} />
+            <XYSToTop />
         </main>
     );
 };
