@@ -42,8 +42,7 @@ export const MobileMenu = ({ onClose }: MobileMenuProps) => {
         labelToRemove: string
     ): MenuItem[] {
         return menu.filter(
-            (item) =>
-                item.label !== labelToRemove && item.route !== labelToRemove
+            (item) => item.route !== labelToRemove.replace('/', '')
         );
     }
     const MENU_WITHOUT_CURRENT_ROUTE: MenuItem[] = filterMenuByLabel(
