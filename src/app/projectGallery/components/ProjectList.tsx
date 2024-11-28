@@ -21,7 +21,7 @@ const ProjectList = ({ projects }: ProjectListProps) => {
         );
     };
     return (
-        <Accordion>
+        <Accordion activeIndex={0}>
             {projects.map((project) => {
                 return (
                     <AccordionTab
