@@ -17,6 +17,9 @@ export default function ProjectGallery() {
             <div>
                 <ProjectList projects={PROJECT_LIST} />
             </div>
+            <div>
+                <h1>Details</h1>
+            </div>
         </main>
     );
 }
