@@ -7,9 +7,14 @@ import {
     faXTwitter,
 } from '@fortawesome/free-brands-svg-icons';
 
-export const MainLinks = () => {
+export interface MainLinksProps {
+    className?: string;
+}
+export const MainLinks = ({ className }: MainLinksProps) => {
     return (
-        <div className='flex flex-column p-4 justify-content-center text-center align-items-center footer'>
+        <div
+            className={`flex flex-column p-4 justify-content-center text-center align-items-center footer ${className}`}
+        >
             <div className='z-50'>
                 <ul className='links justify-content-center'>
                     <li className='links-list'>
