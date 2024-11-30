@@ -1,9 +1,8 @@
 'use client';
 import Image from 'next/image';
 import { MenuModel } from '@/common/Menu/MenuModel';
-import { Button } from 'primereact/button';
 import { MainLinks } from '@/common/links/MainLinks';
-import '../common/styles/buttonHover.scss';
+import '../common/styles/inputs/buttonHover.scss';
 import LoginLink from '@/common/links/LoginLink';
 import XYButton from '@/common/Inputs/XYButton';
 

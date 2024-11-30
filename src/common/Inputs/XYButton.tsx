@@ -1,6 +1,6 @@
 import { Button, ButtonProps } from 'primereact/button';
 import React, { useState } from 'react';
-import '../styles/buttonHover.scss';
+import '../styles/inputs/buttonHover.scss';
 
 export type XYButtonColor =
     | undefined

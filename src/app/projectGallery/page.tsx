@@ -14,11 +14,18 @@ export default function ProjectGallery() {
                     <ProjectDisplay projects={PROJECT_LIST} />
                 </div>
             </div>
-            <div>
+            {/* <div>
                 <ProjectList projects={PROJECT_LIST} />
-            </div>
-            <div>
-                <h1>Details</h1>
+            </div> */}
+            <div
+                className='flex w-full p-2 justify-content-center align-items-center text-center absolute'
+                style={{ transform: 'translateY(-45vh)' }}
+            >
+                <p style={{ color: 'white' }} className='bold'>
+                    Project examples, descriptions, existing products and
+                    completed client projects coming soon as we seek approval
+                    from clients and remove sensitive data & functions.
+                </p>
             </div>
         </main>
     );

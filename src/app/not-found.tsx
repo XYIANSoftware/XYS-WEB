@@ -3,7 +3,8 @@ import React from 'react';
 import Image from 'next/image';
 
 const NotFound = () => {
-    const backgroundImage = require('../../public/Primary.png');
+    const backgroundImage = '../../public/Primary.png';
+    // const backgroundImage = require('../../public/Primary.png');
 
     return (
         <div className='w-full h-full justify-content-center align-items-center'>
