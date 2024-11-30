@@ -18,12 +18,11 @@ export default function Login() {
                 <MenuModel />
                 <h1 className='text-center pt-8'>XYS Client Portal</h1>
                 <div className='card flex justify-content-center flex-column align-items-center'>
-                    {/* <XYPassword toggleMask feedback /> */}
                     <div>
                         <Password
-                            placeholder='Password'
+                            placeholder='Enter XYS Token'
                             toggleMask
-                            feedback
+                            feedback={false}
                             value={temp}
                             onChange={(e) => setTemp(e.target.value)}
                             pt={{
@@ -56,17 +55,6 @@ export default function Login() {
                                 },
                             }}
                         />
-                    </div>
-                    <div>
-                        {/* <div className='login-container'>
-                            <div className='login-form'>
-                                <XYPassword
-                                    toggleMask
-                                    feedback
-                                    labelModel={labelModel}
-                                />
-                            </div>
-                        </div> */}
                     </div>
                 </div>
             </main>
