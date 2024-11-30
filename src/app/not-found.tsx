@@ -1,16 +1,21 @@
 'use client';
+
 import React from 'react';
 import Image from 'next/image';
+import XYButton from '@/common/Inputs/XYButton';
+import { useRouter } from 'next/navigation';
 
 const NotFound = () => {
-    const backgroundImage = '../../public/Primary.png';
-    // const backgroundImage = require('../../public/Primary.png');
+    const router = useRouter();
+    const returnToHome = () => {
+        router.push('/');
+    };
 
     return (
-        <div className='w-full h-full justify-content-center align-items-center'>
-            <Image src={backgroundImage} alt='Image' width='250' />
+        <div className='pt-4 flex flex-col w-full h-full justify-center items-center gap-2'>
+            <Image src='/Primary.png' alt='Image' width={250} height={250} />
             <h2>Uh-Oh! 404 Page Not Found.</h2>
-            <p></p>
+            <XYButton xyType='transparentWhite' text onClick={returnToHome} />
         </div>
     );
 };
