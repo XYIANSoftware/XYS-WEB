@@ -13,24 +13,25 @@ export default function Home() {
         <main>
             <MenuModel />
             <div
-                className='flex flex-column p-4 justify-content-center text-center align-items-center gap-3 mainBody'
+                className='flex flex-column pt-6 justify-content-center text-center align-items-center gap-3 mainBody m-0'
                 style={{
                     backgroundImage: `url(${backgroundImage})`,
+                    padding: '0rem 2rem',
                 }}
             >
                 <Image src={backgroundImage} alt='Image' width='250' />
-                <h1 className='text-center'>XYIAN Software</h1>
-                <p className='w-11'>
+                <h1 className='text-center m-0'>XYIAN Software</h1>
+                <p className='m-0 p-0 w-full'>
                     Transforming innovative ideas into powerful digital
                     solutions. Serving USA-based companies and small businesses.
                 </p>
-                <p className='p-2 flex align-items-center justify-content-center'>
+                <p className=' flex align-items-center justify-content-center m-0 pb-1'>
                     Existing Customers:&nbsp;
                     <LoginLink />
                 </p>
             </div>
             <MainLinks />
-            <div className='p-3 flex justify-content-center'>
+            <div className='flex justify-content-center m-0'>
                 <XYButton
                     text
                     xyType='white'

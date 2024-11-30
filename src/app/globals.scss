@@ -75,19 +75,16 @@
         --card-border-rgb: 200, 200, 200;
     }
 }
-
 * {
     box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+    //padding: 0;
+    //margin: 0;
 }
-
 html,
 body {
     max-width: 100vw;
     overflow-x: hidden;
 }
-
 body {
     color: rgb(var(--foreground-rgb));
     background: linear-gradient(
@@ -97,169 +94,156 @@ body {
         )
         rgb(var(--background-start-rgb));
 }
-
 a {
     color: inherit;
     text-decoration: none;
 }
-
 @media (prefers-color-scheme: dark) {
     html {
         color-scheme: dark;
     }
 }
+// .mainBody {
+//     /* height: 79vh !important; */
+//     overflow-y: auto;
+//     background-color: #000000;
+// }
 
-.mainBody {
-    /* height: 79vh !important; */
-    overflow-y: auto;
-    background-color: #000000;
-}
-.header {
-    height: 10.5vh !important;
-    min-height: 10.5vh !important;
-    background-color: #000000;
-}
-.footer {
-    height: 10.5vh !important;
-    min-height: 10.5vh !important;
-    background-color: #000000;
-}
+// ul {
+//     position: relative;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//     margin: 0;
+//     padding: 0;
+//     display: flex;
+//     /* flex-wrap: wrap; */
+//     bottom: -30px;
+// }
+// ul li {
+//     list-style: none;
+// }
+// ul li a {
+//     display: block;
+//     position: relative;
+//     width: 50px;
+//     height: 70px;
+//     line-height: 80px;
+//     font-size: 30px;
+//     text-align: center;
+//     text-decoration: none;
+//     color: aliceblue;
+//     margin: 0 30px;
+//     transition: 0.5s;
+// }
 
-ul {
-    position: relative;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin: 0;
-    padding: 0;
-    display: flex;
-    /* flex-wrap: wrap; */
-    bottom: -30px;
-}
-ul li {
-    list-style: none;
-}
-ul li a {
-    display: block;
-    position: relative;
-    width: 50px;
-    height: 70px;
-    line-height: 80px;
-    font-size: 30px;
-    text-align: center;
-    text-decoration: none;
-    color: aliceblue;
-    margin: 0 30px;
-    transition: 0.5s;
-}
+// .iconLogoSizes {
+//     height: 40px;
+//     width: 40px;
+// }
 
-.iconLogoSizes {
-    height: 40px;
-    width: 40px;
-}
+// ul li a span {
+//     position: absolute;
+//     transition: transform 0.5s;
+// }
+// ul li a span:nth-child(1),
+// ul li a span:nth-child(3) {
+//     width: 100%;
+//     height: 3px;
+//     background: aliceblue;
+// }
+// ul li a span:nth-child(1) {
+//     top: 0;
+//     left: 0;
+//     transform-origin: right;
+// }
+// ul li a:hover span:nth-child(1) {
+//     transform: scaleX(0);
+//     transform-origin: left;
+//     transition: transform 0.5s;
+// }
 
-ul li a span {
-    position: absolute;
-    transition: transform 0.5s;
-}
-ul li a span:nth-child(1),
-ul li a span:nth-child(3) {
-    width: 100%;
-    height: 3px;
-    background: aliceblue;
-}
-ul li a span:nth-child(1) {
-    top: 0;
-    left: 0;
-    transform-origin: right;
-}
-ul li a:hover span:nth-child(1) {
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.5s;
-}
+// ul li a span:nth-child(3) {
+//     bottom: 0;
+//     left: 0;
+//     transform-origin: left;
+// }
+// ul li a:hover span:nth-child(3) {
+//     transform: scaleX(0);
+//     transform-origin: right;
+//     transition: transform 0.5s;
+// }
 
-ul li a span:nth-child(3) {
-    bottom: 0;
-    left: 0;
-    transform-origin: left;
-}
-ul li a:hover span:nth-child(3) {
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.5s;
-}
+// ul li a span:nth-child(2),
+// ul li a span:nth-child(4) {
+//     width: 3px;
+//     height: 100%;
+//     background: #afafaf;
+// }
+// ul li a span:nth-child(2) {
+//     top: 0;
+//     left: 0;
+//     transform: scale(0);
+//     transform-origin: bottom;
+// }
+// ul li a:hover span:nth-child(2) {
+//     transform: scale(1);
+//     transform-origin: top;
+//     transition: transform 0.5s;
+// }
+// ul li a span:nth-child(4) {
+//     top: 0;
+//     right: 0;
+//     transform: scale(0);
+//     transform-origin: top;
+// }
+// ul li a:hover span:nth-child(4) {
+//     transform: scale(1);
+//     transform-origin: bottom;
+//     transition: transform 0.5s;
+// }
 
-ul li a span:nth-child(2),
-ul li a span:nth-child(4) {
-    width: 3px;
-    height: 100%;
-    background: #afafaf;
-}
-ul li a span:nth-child(2) {
-    top: 0;
-    left: 0;
-    transform: scale(0);
-    transform-origin: bottom;
-}
-ul li a:hover span:nth-child(2) {
-    transform: scale(1);
-    transform-origin: top;
-    transition: transform 0.5s;
-}
-ul li a span:nth-child(4) {
-    top: 0;
-    right: 0;
-    transform: scale(0);
-    transform-origin: top;
-}
-ul li a:hover span:nth-child(4) {
-    transform: scale(1);
-    transform-origin: bottom;
-    transition: transform 0.5s;
-}
-
-.linkedIn:hover {
-    color: #3b5998;
-}
-.linkedIn:hover span {
-    background: #3b5998;
-}
-.twitter:hover {
-    color: #1da1f2;
-}
-.twitter:hover span {
-    background: #1da1f2;
-}
-.github:hover {
-    color: #c32aa3;
-}
-.github:hover span {
-    background: #c32aa3;
-}
-.instagram:hover {
-    color: #dd4b39;
-}
-.instagram:hover span {
-    background: #dd4b39;
-}
-.google:hover {
-    color: #dd4b39;
-}
-.google:hover span {
-    background: #dd4b39;
-}
-ul li a .twitter {
-    color: #1da1f2;
-}
-ul li a:hover:nth-child(3) {
-    color: #c32aa3;
-}
-ul li a:hover:nth-child(4) {
-    color: #dd4b39;
-}
-h4 {
-    padding: 1rem 1rem 1rem 0;
-}
+// .linkedIn:hover {
+//     color: #3b5998;
+// }
+// .linkedIn:hover span {
+//     background: #3b5998;
+// }
+// .twitter:hover {
+//     color: #1da1f2;
+// }
+// .twitter:hover span {
+//     background: #1da1f2;
+// }
+// .github:hover {
+//     color: #c32aa3;
+// }
+// .github:hover span {
+//     background: #c32aa3;
+// }
+// .instagram:hover {
+//     color: #dd4b39;
+// }
+// .instagram:hover span {
+//     background: #dd4b39;
+// }
+// .google:hover {
+//     color: #dd4b39;
+// }
+// .google:hover span {
+//     background: #dd4b39;
+// }
+// ul li a .twitter {
+//     color: #1da1f2;
+// }
+// ul li a:hover:nth-child(3) {
+//     color: #c32aa3;
+// }
+// ul li a:hover:nth-child(4) {
+//     color: #dd4b39;
+// }
+// h4 {
+//     padding: 1rem 1rem 1rem 0;
+// }
 ::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     background-color: #f5f5f5;

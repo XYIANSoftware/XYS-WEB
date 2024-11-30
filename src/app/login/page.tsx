@@ -18,7 +18,7 @@ export default function Login() {
                 <MenuModel />
                 <h1 className='text-center pt-8'>XYS Client Portal</h1>
                 <div className='card flex justify-content-center flex-column align-items-center'>
-                    <XYPassword toggleMask feedback />
+                    {/* <XYPassword toggleMask feedback /> */}
                     <div>
                         <Password
                             placeholder='Password'
@@ -58,7 +58,7 @@ export default function Login() {
                         />
                     </div>
                     <div>
-                        <div className='login-container'>
+                        {/* <div className='login-container'>
                             <div className='login-form'>
                                 <XYPassword
                                     toggleMask
@@ -66,7 +66,7 @@ export default function Login() {
                                     labelModel={labelModel}
                                 />
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </main>

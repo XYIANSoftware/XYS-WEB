@@ -6,6 +6,7 @@ import {
     faLinkedin,
     faXTwitter,
 } from '@fortawesome/free-brands-svg-icons';
+import '../styles/linkStyles.scss';
 
 export interface MainLinksProps {
     className?: string;
@@ -13,7 +14,7 @@ export interface MainLinksProps {
 export const MainLinks = ({ className }: MainLinksProps) => {
     return (
         <div
-            className={`flex flex-column p-4 justify-content-center text-center align-items-center footer ${className}`}
+            className={`mainLinks flex flex-column p-4 justify-content-center text-center align-items-center footer ${className}`}
         >
             <div className='z-50'>
                 <ul className='links justify-content-center'>
