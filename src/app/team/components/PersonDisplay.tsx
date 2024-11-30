@@ -25,11 +25,11 @@ export const PersonDisplay = ({ memberDetails }: PersonDisplayProps) => {
     return (
         <Card
             header={<CardHeaderImage />}
-            title={<h2>{name}</h2>}
+            title={<h3>{name}</h3>}
             subTitle={position}
             className='w-full m-3 p-3 custom-card'
         >
-            <p className='pt-4 pb-1'>{bio}</p>
+            <p className='pt-2 pb-1'>{bio}</p>
         </Card>
     );
 };
