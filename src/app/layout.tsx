@@ -1,12 +1,18 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import './globals.css';
+import './globals.scss';
 import 'primeicons/primeicons.css';
 import '/node_modules/primeflex/primeflex.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import 'primereact/resources/themes/md-dark-indigo/theme.css';
+import 'primereact/resources/primereact.min.css';
+import 'primeicons/primeicons.css';
 import Script from 'next/script';
+import { PrimeReactProvider } from 'primereact/api';
+import XYConfirmDialog from '@/common/popups/XYConfirmDialog';
+
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
@@ -36,7 +42,12 @@ export default function RootLayout({
                     `}
                 </Script>
             </head>
-            <body className={inter.className}>{children}</body>
+            <PrimeReactProvider>
+                <body className={inter.className}>
+                    {children}
+                    <XYConfirmDialog />
+                </body>
+            </PrimeReactProvider>
         </html>
     );
 }
