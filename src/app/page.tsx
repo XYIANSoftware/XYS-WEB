@@ -1,7 +1,12 @@
 'use client';
+'use client';
 import Image from 'next/image';
 import { MenuModel } from '@/common/Menu/MenuModel';
 import { MainLinks } from '@/common/links/MainLinks';
+import '../common/styles/inputs/buttonHover.scss';
+import LoginLink from '@/common/links/LoginLink';
+
+const BOTTOM_PADDING = ` pb-4`;
 import '../common/styles/inputs/buttonHover.scss';
 import LoginLink from '@/common/links/LoginLink';
 
