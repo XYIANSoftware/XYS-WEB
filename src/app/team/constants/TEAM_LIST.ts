@@ -13,7 +13,7 @@ export const TEAM_LIST: MemberDetail[] = [
         name: 'Joel Sandoval',
         id: 3,
         imageSrc:
-            'https://github.com/XYIANSoftware/images/blob/main/XYIAN_Primary.png?raw=true',
+            'https://media.licdn.com/dms/image/v2/C5603AQEBK58WD5IfhQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516777231990?e=1738800000&v=beta&t=gH94QalvxNVUYHlZ1VmzAoUcHCAUpN-p88NYwWaFjig',
         position: 'Sales & Marketing',
         bio: 'Dynamic Sales and Marketing pro focused on driving growth and connecting with customers through innovative, results-oriented strategies.',
     },
