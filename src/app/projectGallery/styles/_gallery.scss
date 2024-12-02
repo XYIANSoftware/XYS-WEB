@@ -1,0 +1,98 @@
+.galleryDescriptionTemporary {
+    position: fixed !important;
+    bottom: 0;
+    .temp-message p {
+        padding: 0 1.2rem;
+        color: white;
+    }
+}
+.gallery-wrapper {
+    //transform: translateY(-1);
+    transition: all 2s ease;
+    height: 96vh !important;
+}
+@media (min-width: 768px) {
+    .gallery-wrapper {
+        transform: translateY(-3rem);
+    }
+}
+@media (min-width: 1024px) {
+    .gallery-wrapper {
+        transform: translateY(-5rem);
+    }
+}
+
+.gallery {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    transform-style: preserve-3d;
+    animation: rotate 38s linear infinite;
+}
+
+.gallery span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(380px);
+}
+
+.gallery span img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.title-element {
+    color: white;
+}
+/* for phones  */
+@media screen and (max-width: 768px) {
+    .gallery {
+        /* images position */
+        position: relative;
+        width: 200px;
+        height: 100px;
+        animation: rotate 35s linear infinite;
+        top: -120px;
+    }
+    /* project gallery title position up for phone */
+    .titleProjectGallery {
+        position: absolute;
+        top: 100px;
+    }
+    /* this closes the gap the smaller the translateZ
+     is the smaller the gap is regular 380px*/
+    .gallery span {
+        transform: rotateY(calc(var(--i) * 45deg)) translateZ(250px); /*gap size*/
+    }
+    .title-element {
+        /* adjust title size and positon */
+        height: 50px;
+        width: 200px;
+        padding-top: 500px;
+        font-size: 25px;
+    }
+    @keyframes rotate {
+        from {
+            transform: perspective(2000px) rotateY(0deg);
+        }
+
+        to {
+            transform: perspective(2000px) rotateY(360deg);
+        }
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: perspective(2000px) rotateY(0deg);
+    }
+
+    to {
+        transform: perspective(2000px) rotateY(360deg);
+    }
+}
