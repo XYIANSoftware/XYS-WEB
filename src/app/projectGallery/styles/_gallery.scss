@@ -13,7 +13,7 @@
 }
 @media (min-width: 768px) {
     .gallery-wrapper {
-        transform: translateY(-2rem);
+        transform: translateY(-3rem);
     }
 }
 @media (min-width: 1024px) {
@@ -27,7 +27,7 @@
     width: 300px;
     height: 200px;
     transform-style: preserve-3d;
-    animation: rotate 35s linear infinite;
+    animation: rotate 38s linear infinite;
 }
 
 .gallery span {
@@ -50,7 +50,7 @@
     color: white;
 }
 /* for phones  */
-@media screen and (max-width: 690px) {
+@media screen and (max-width: 768px) {
     .gallery {
         /* images position */
         position: relative;
