@@ -4,9 +4,7 @@ import { NextPage } from 'next';
 import { PrimeReactProvider } from 'primereact/api';
 
 interface Props {}
-const LISTOVERRIDE: React.CSSProperties = {
-    all: 'unset',
-};
+const LISTOVERRIDE: React.CSSProperties | undefined = undefined;
 const LIST_ITEM: React.CSSProperties = {
     padding: '.2rem 0 0 0',
 };
@@ -68,22 +66,20 @@ const Privacy: NextPage<Props> = ({}) => {
                     </p>
                     <ul style={LISTOVERRIDE}>
                         <li style={LIST_ITEM}>
-                            &nbsp;-To provide, operate, and maintain our
-                            Services.
+                            To provide, operate, and maintain our Services.
                         </li>
                         <li style={LIST_ITEM}>
-                            &nbsp;-To improve our website and Services.
+                            To improve our website and Services.
                         </li>
                         <li style={LIST_ITEM}>
-                            &nbsp;-To communicate with you, including customer
-                            support and notifications.
+                            To communicate with you, including customer support
+                            and notifications.
                         </li>
                         <li style={LIST_ITEM}>
-                            &nbsp;-To process payments and fulfill transactions.
+                            To process payments and fulfill transactions.
                         </li>
                         <li style={LIST_ITEM}>
-                            &nbsp;-To enforce our terms, conditions, and
-                            policies.
+                            To enforce our terms, conditions, and policies.
                         </li>
                     </ul>
 
@@ -94,12 +90,10 @@ const Privacy: NextPage<Props> = ({}) => {
                     </p>
                     <ul style={LISTOVERRIDE}>
                         <li style={LIST_ITEM}>
-                            &nbsp;-
                             <strong>Service Providers:</strong> Third parties
                             that help us provide and maintain the Services.
                         </li>
                         <li style={LIST_ITEM}>
-                            &nbsp;-
                             <strong>Legal Compliance:</strong> When required by
                             law or to protect our rights.
                         </li>
@@ -118,15 +112,15 @@ const Privacy: NextPage<Props> = ({}) => {
                     <p>You have the right to:</p>
                     <ul style={LISTOVERRIDE}>
                         <li style={LIST_ITEM}>
-                            &nbsp;-Access, correct, or delete your personal
+                            Access, correct, or delete your personal
                             information.
                         </li>
                         <li style={LIST_ITEM}>
-                            &nbsp;-Opt-out of marketing communications.
+                            Opt-out of marketing communications.
                         </li>
                         <li style={LIST_ITEM}>
-                            &nbsp;-Restrict or object to processing of your
-                            personal data.
+                            Restrict or object to processing of your personal
+                            data.
                         </li>
                     </ul>
                     <p>
@@ -180,16 +174,16 @@ const Privacy: NextPage<Props> = ({}) => {
                     </p>
                     <ul style={LISTOVERRIDE}>
                         <li style={LIST_ITEM}>
-                            &nbsp;-Use the Services for any illegal or
-                            unauthorized purpose.
+                            Use the Services for any illegal or unauthorized
+                            purpose.
                         </li>
                         <li style={LIST_ITEM}>
-                            &nbsp;-Access or tamper with non-public areas of the
+                            Access or tamper with non-public areas of the
                             Services.
                         </li>
                         <li style={LIST_ITEM}>
-                            &nbsp;-Interfere with or disrupt the integrity of
-                            the Services.
+                            Interfere with or disrupt the integrity of the
+                            Services.
                         </li>
                     </ul>
 
