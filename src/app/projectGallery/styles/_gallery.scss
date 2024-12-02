@@ -7,9 +7,10 @@
     }
 }
 .gallery-wrapper {
-    //transform: translateY(-1);
     transition: all 2s ease;
     height: 96vh !important;
+    z-index: -100;
+    position: sticky;
 }
 @media (min-width: 768px) {
     .gallery-wrapper {
