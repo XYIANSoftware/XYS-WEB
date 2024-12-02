@@ -2,15 +2,15 @@
 import { ProjectDisplay } from './components/ProjectDisplay';
 import { MenuModel } from '@/common/Menu/MenuModel';
 import { PROJECT_LIST } from './constants/projectList';
-import ProjectList from './components/ProjectList';
+// import ProjectList from './components/ProjectList';
 
 export default function ProjectGallery() {
     return (
         <main>
             <MenuModel />
             <div
-                className=' flex flex-column justify-content-center w-full align-items-center '
-                style={{ height: '98vh !important' }}
+                className=' flex flex-column justify-content-center align-items-center h-screen w-screen'
+                //style={{ height: '98vh !important' }}
             >
                 <h1 className='mb-6 titleProjectGallery'>Project Gallery</h1>
                 <div>

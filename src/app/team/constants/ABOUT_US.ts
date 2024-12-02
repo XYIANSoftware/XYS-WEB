@@ -6,7 +6,12 @@ export const ABOUT_US: AboutUsModel[] = [
         type: 'primary',
         text: `At XYIAN Software, we're passionate about helping
         businesses—especially small businesses—unlock their
-        potential through transformative digital solutions. Founded
+        potential through transformative digital solutions. `,
+    },
+    {
+        id: 3,
+        type: 'primary',
+        text: `Founded
         with a vision to make innovative technology accessible and
         practical, we combine our skills in custom software, mobile
         app development, web solutions, cloud integration, and AI to
@@ -39,7 +44,7 @@ export const ABOUT_US: AboutUsModel[] = [
         excellence and our proven track record.`,
     },
     {
-        id: 3,
+        id: 4,
         type: 'secondary',
         text: `We’re here to be your trusted partner in building impactful
         software solutions that drive results. Let’s connect and see

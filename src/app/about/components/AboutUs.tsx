@@ -7,7 +7,10 @@ interface AboutUsProps {
 const AboutUs = ({ type }: AboutUsProps) => {
     return (
         <div className='flex w-full justify-content-center align-content-center'>
-            <div className='p-4 text-center '>
+            <div
+                className=' text-center '
+                style={{ padding: '0 2rem !important' }}
+            >
                 {ABOUT_US.map((entry) => {
                     if (type === entry.type) {
                         return (
