@@ -5,6 +5,7 @@ import { MainLinks } from '@/common/links/MainLinks';
 import '../common/styles/inputs/buttonHover.scss';
 import LoginLink from '@/common/links/LoginLink';
 
+const BOTTOM_PADDING = ` pb-4`;
 export default function Home() {
     const backgroundImage = require('../../public/Primary.png');
 
@@ -18,9 +19,16 @@ export default function Home() {
                     padding: '0rem 2rem',
                 }}
             >
-                <Image src={backgroundImage} alt='Image' width='250' />
-                <h1 className='text-center m-0'>XYIAN Software</h1>
-                <p className='m-0 p-0 w-full'>
+                <Image
+                    src={backgroundImage}
+                    alt='Image'
+                    width='250'
+                    className={` ${BOTTOM_PADDING}`}
+                />
+                <h1 className={`text-center m-0 ${BOTTOM_PADDING}`}>
+                    XYIAN Software
+                </h1>
+                <p className={`m-0 p-0 w-full ${BOTTOM_PADDING}`}>
                     Transforming innovative ideas into powerful digital
                     solutions. Serving USA-based companies and small businesses.
                 </p>
