@@ -7,16 +7,17 @@ export type XYButtonColor =
     | 'transparentWhite'
     | 'white'
     | 'black'
-    | 'cyan';
+    | 'cyan'
+    | 'whiteBlack';
 export interface XYButtonProps extends ButtonProps {
     xyType?: XYButtonColor;
     // xyAnimate?: boolean;
 }
 
-// const DEFAULT_STYLE = ''
 const XYButton = ({ xyType, ...other }: XYButtonProps) => {
-    const [classType, setClassType] = useState<XYButtonColor>();
-
+    //?class type changes the scss imports used
+    const [classType, setClassType] = useState<XYButtonColor | undefined>();
+    //?style is the pt override
     const determineStyle = (): React.CSSProperties | undefined => {
         switch (xyType) {
             case 'transparentWhite':
@@ -25,7 +26,18 @@ const XYButton = ({ xyType, ...other }: XYButtonProps) => {
                 return other?.style;
             case 'white':
                 if (classType !== 'white') setClassType('white');
-                return other?.style;
+                return {
+                    // backgroundColor: 'white',
+                    // color: 'black',
+                    ...other?.style,
+                };
+            case 'whiteBlack':
+                if (classType !== 'whiteBlack') setClassType('whiteBlack');
+                return {
+                    backgroundColor: 'white',
+                    color: 'black',
+                    ...other?.style,
+                };
             default:
                 return other?.style;
         }

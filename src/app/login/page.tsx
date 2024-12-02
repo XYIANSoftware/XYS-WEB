@@ -1,16 +1,32 @@
 'use client'; // This marks the entire file as a Client Component
 import { XYLabelModel } from '@/common';
+import XYButton from '@/common/Inputs/XYButton';
 import { XYPassword } from '@/common/Inputs/XYPassword';
 import { MenuModel } from '@/common/Menu/MenuModel';
 import { PrimeReactProvider } from 'primereact/api';
+import { confirmDialog } from 'primereact/confirmdialog';
 import { Password } from 'primereact/password';
-import { useState } from 'react';
+import { MouseEventHandler, useState } from 'react';
 
 export default function Login() {
     const labelModel: XYLabelModel = {
         text: 'PassWord',
     };
     const [temp, setTemp] = useState('');
+    const handleLoginClick = () => {
+        confirmDialog({
+            message: (
+                <p className='text-center bold'>
+                    The token you entered is not associated with any client
+                    portals. Please try again or contact{' '}
+                    <a href='mailto:support@xyian.com'>support@xyian.com</a>
+                </p>
+            ),
+            header: 'Invalid Client Token',
+            acceptLabel: 'OKAY',
+            rejectClassName: 'hidden',
+        });
+    };
 
     return (
         <PrimeReactProvider>
@@ -18,7 +34,7 @@ export default function Login() {
                 <MenuModel />
                 <h1 className='text-center pt-8'>XYS Client Portal</h1>
                 <div className='card flex justify-content-center flex-column align-items-center'>
-                    <div>
+                    <div className='flex justify-content-center align-content-center gap-2'>
                         <Password
                             placeholder='Enter XYS Token'
                             toggleMask
@@ -54,6 +70,11 @@ export default function Login() {
                                     },
                                 },
                             }}
+                        />
+                        <XYButton
+                            xyType='whiteBlack'
+                            label='Login'
+                            onClick={() => handleLoginClick()}
                         />
                     </div>
                 </div>

@@ -11,6 +11,7 @@ import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
 import Script from 'next/script';
 import { PrimeReactProvider } from 'primereact/api';
+import { ConfirmDialog } from 'primereact/confirmdialog';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
@@ -41,7 +42,10 @@ export default function RootLayout({
                 </Script>
             </head>
             <PrimeReactProvider>
-                <body className={inter.className}>{children}</body>
+                <body className={inter.className}>
+                    {children}
+                    <ConfirmDialog />
+                </body>
             </PrimeReactProvider>
         </html>
     );

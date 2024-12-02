@@ -11,7 +11,8 @@ const LoginLink = () => {
     return (
         <XYButton
             xyType='white'
-            link
+            //link
+            text
             onClick={() => handleNavigateClick('login')}
         >
             <strong>Login HERE</strong>
