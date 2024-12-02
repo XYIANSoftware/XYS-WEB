@@ -29,7 +29,7 @@ export const TEAM_LIST: MemberDetail[] = [
         name: 'Kyle Dilbeck',
         id: 1,
         imageSrc:
-            'https://github.com/XYIANSoftware/images/blob/main/XYIAN_Primary.png?raw=true',
+            'https://github.com/XYIANSoftware/images/blob/main/kxd_logos/kx2.jpg?raw=true',
         position: 'Founder & Developer',
         bio: 'Passion for building cutting-edge solutions, driving technical innovation, and leading teams to deliver high-quality products.',
     },

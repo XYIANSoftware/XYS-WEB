@@ -5,6 +5,12 @@
 .custom-card {
     width: 70%;
     max-width: 70%; /* Default full-width for mobile */
+    .p-card-content {
+        padding: 0 !important;
+    }
+    .p-card-title {
+        margin: 0 !important;
+    }
 }
 
 .custom-image {
