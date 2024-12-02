@@ -1,5 +1,4 @@
 'use client';
-'use client';
 import Image from 'next/image';
 import { MenuModel } from '@/common/Menu/MenuModel';
 import { MainLinks } from '@/common/links/MainLinks';
