@@ -1,12 +1,11 @@
 'use client';
 import { Button } from 'primereact/button';
-import { Sidebar, SidebarProps } from 'primereact/sidebar';
-import { ReactNode, useEffect, useState } from 'react';
+import { Sidebar } from 'primereact/sidebar';
+import { useState } from 'react';
 import { MobileMenu } from './MobileMenu';
 import LoadMask from '../LoadMask';
 import SVGBackground from '../backgrounds/svg/SVGBackground';
-import { Toolbar } from 'primereact/toolbar';
-import XYButton from '../Inputs/XYButton';
+
 export const MenuModel = () => {
     //TODO create desktop menu
     //TODO after desktop menu add media switch from desktop to mobile

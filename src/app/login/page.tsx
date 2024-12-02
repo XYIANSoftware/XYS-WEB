@@ -1,12 +1,11 @@
 'use client'; // This marks the entire file as a Client Component
 import { XYLabelModel } from '@/common';
 import XYButton from '@/common/Inputs/XYButton';
-import { XYPassword } from '@/common/Inputs/XYPassword';
 import { MenuModel } from '@/common/Menu/MenuModel';
 import { PrimeReactProvider } from 'primereact/api';
 import { confirmDialog } from 'primereact/confirmdialog';
 import { Password } from 'primereact/password';
-import { MouseEventHandler, useState } from 'react';
+import { useState } from 'react';
 
 export default function Login() {
     const labelModel: XYLabelModel = {
@@ -75,6 +74,16 @@ export default function Login() {
                             xyType='whiteBlack'
                             label='Login'
                             onClick={() => handleLoginClick()}
+                            disabled={temp.length > 3 ? false : true}
+                            tooltipOptions={{
+                                showOnDisabled: true,
+                                position: 'bottom',
+                            }}
+                            tooltip={
+                                temp.length > 3
+                                    ? 'Enter XYS Unique Token'
+                                    : 'XYS Tokens must be 4 keys or more.'
+                            }
                         />
                     </div>
                 </div>
