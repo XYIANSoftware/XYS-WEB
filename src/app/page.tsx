@@ -8,9 +8,7 @@ import LoginLink from '@/common/links/LoginLink';
 
 const BOTTOM_PADDING = ` pb-4`;
 import '../common/styles/inputs/buttonHover.scss';
-import LoginLink from '@/common/links/LoginLink';
 
-const BOTTOM_PADDING = ` pb-4`;
 export default function Home() {
     const backgroundImage = require('../../public/Primary.png');
 
