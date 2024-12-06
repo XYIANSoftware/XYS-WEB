@@ -22,7 +22,8 @@ export const TEAM_LIST: MemberDetail[] = [
         name: 'Rogelio Rodriguez',
         id: 2,
         imageSrc:
-            'https://github.com/XYIANSoftware/images/blob/main/IMG_9974.jpeg?raw=true',
+            'https://github.com/XYIANSoftware/images/blob/main/r2yedit.jpg?raw=true',
+
         position: 'Co Founder & Developer',
         bio: 'Expertise in crafting robust software solutions, collaborating on product vision, and bringing ideas to life through code.',
     },
