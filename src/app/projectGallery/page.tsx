@@ -13,7 +13,7 @@ export default function ProjectGallery() {
                 //style={{ height: '98vh !important' }}
             >
                 <h1 className='mb-6 titleProjectGallery'>Project Gallery</h1>
-                <div>
+                <div style={{ zIndex: 9 }}>
                     <ProjectDisplay projects={PROJECT_LIST} />
                 </div>
             </div>
