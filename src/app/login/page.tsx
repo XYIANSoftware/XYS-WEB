@@ -18,7 +18,12 @@ export default function Login() {
                 <p className='text-center bold'>
                     The token you entered is not associated with any client
                     portals. Please try again or contact{' '}
-                    <a href='mailto:support@xyian.com'>support@xyian.com</a>
+                    <a
+                        href='mailto:support@xyian.com'
+                        className='underline cursor-pointer'
+                    >
+                        support@xyian.com
+                    </a>
                 </p>
             ),
             header: 'Invalid Client Token',
