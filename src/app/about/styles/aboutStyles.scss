@@ -5,3 +5,18 @@
     place-items: center;
     font: 2vw system-ui;
 }
+@font-face {
+    font-family: 'Rocher';
+    src: url(https://assets.codepen.io/9632/RocherColorGX.woff2);
+  }
+
+@font-palette-values --Mint {
+    font-family: Rocher;
+    base-palette: 7;
+  }
+.mint {
+    font-palette: --Mint;
+    font-family: 'Rocher';
+    text-align: center;
+    font-size: 50px;
+  }
