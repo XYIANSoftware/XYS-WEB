@@ -14,7 +14,7 @@ export const MenuModel = () => {
     const onClose = () => {
         if (!isLoading && visible) {
             setVisible(false);
-            setIsLoading(true);
+            //setIsLoading(true);
         }
     };
     // const SideBarHeader = (props: SidebarProps): ReactNode => {
