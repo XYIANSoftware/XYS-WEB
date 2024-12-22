@@ -1,6 +1,6 @@
 import { useRouter } from 'next/navigation';
 import { Ripple } from 'primereact/ripple';
-import XYButton from '../Inputs/XYButton';
+import XYButton from '../inputs/XYButton';
 
 const BUTTON_SYLE = 'p-2 font-bold w-11';
 interface MenuItem {
