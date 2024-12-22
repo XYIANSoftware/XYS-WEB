@@ -2,7 +2,7 @@ import { Card } from 'primereact/card';
 import React from 'react';
 import XYButton from '../Inputs/XYButton';
 import Image from 'next/image';
-import { Item } from '@/app/store/types';
+import { Item } from '@/types';
 
 export interface StoreCardProps {
     item: Item;
