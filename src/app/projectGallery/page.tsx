@@ -1,6 +1,6 @@
 'use client';
 import { ProjectDisplay } from './components/ProjectDisplay';
-import { MenuModel } from '@/components/menu/MenuModel';
+import { MenuModel } from '@/components';
 import { PROJECT_LIST } from '@/constants';
 import '../../styles/_gallery.scss';
 export default function ProjectGallery() {
@@ -12,7 +12,7 @@ export default function ProjectGallery() {
                 //style={{ height: '98vh !important' }}
             >
                 <h1 className='mb-6 titleProjectGallery'>Project Gallery</h1>
-                <div style={{ zIndex: 9 }}>
+                <div>
                     <ProjectDisplay projects={PROJECT_LIST} />
                 </div>
             </div>
