@@ -1,14 +1,25 @@
-import React from 'react';
+'use client';
+import { NextPage } from 'next';
 
-export const Welcome = () => {
+interface Props {}
+
+const Welcome: NextPage<Props> = ({}) => {
     return (
         <div>
             <h1>Welcome to XYS</h1>
             <p>
-                Thank you for your interest in XYS! Keep an eye out, a member of
-                our team will contact you shortly using the email or phone
-                number you just used.
+                So now what? Xyian will send you periodic information as it
+                becomes avaiable or needed.
             </p>
+            <ul>
+                <li>Project Outline</li>
+                <li>Consultation Request</li>
+                <li>Software Policy and Privacy Agreenement</li>
+                <li>Timeline / Expected ETA</li>
+                <li>XYS Free Goodie Bag sent after first payment</li>
+            </ul>
         </div>
     );
 };
+
+export default Welcome;
