@@ -1,6 +1,6 @@
 'use client'; // This marks the entire file as a Client Component
 import CloudBackground from '@/components/backgrounds/cloud/CloudBackground';
-import { MenuModel } from '@/components/Menu/MenuModel';
+import { MenuModel } from '@/components/menu/MenuModel';
 
 export default function Contact() {
     return (

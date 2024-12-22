@@ -1,2 +1,2 @@
-// export * from './XyInputText';
 export * from './XYPassword';
+export * from './XYButton';

@@ -1,7 +1,7 @@
 import React from 'react';
-import '../../styles/';
 import { ConfirmDialog } from 'primereact/confirmdialog';
-const XYConfirmDialog = () => {
+
+export const XYConfirmDialog = () => {
     return (
         <ConfirmDialog
             className='XYConfirmDialog'
@@ -18,5 +18,3 @@ const XYConfirmDialog = () => {
         />
     );
 };
-
-export default XYConfirmDialog;

@@ -1,7 +1,5 @@
-export interface MenuItem {
-    label: string;
-    route: string;
-}
+import { MenuItem } from '@/types';
+
 export const MENU: MenuItem[] = [
     { label: 'Home', route: '' },
     {

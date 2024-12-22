@@ -2,9 +2,9 @@
 import { Button } from 'primereact/button';
 import { Sidebar } from 'primereact/sidebar';
 import { useState } from 'react';
-import { MobileMenu } from './MobileMenu';
 // import LoadMask from '../LoadMask';
 import SVGBackground from '../backgrounds/svg/SVGBackground';
+import { MobileMenu } from './MobileMenu';
 
 export const MenuModel = () => {
     const [visible, setVisible] = useState(false);

@@ -11,8 +11,7 @@ import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
 import Script from 'next/script';
 import { PrimeReactProvider } from 'primereact/api';
-import XYConfirmDialog from '@/components/popups/XYConfirmDialog';
-import { MenuModel } from '@/components/Menu/MenuModel';
+import { MenuModel, XYConfirmDialog } from '@/components';
 
 const inter = Inter({ subsets: ['latin'] });
 
