@@ -10,7 +10,7 @@ export const STORE_ITEMS: Item[] = [
         description:
             'Stylish and durable leather jacket perfect for any occasion.',
         longDescription:
-            'This vintage leather jacket is crafted from premium-quality leather and features a sleek design that pairs well with casual or formal outfits. Available in various sizes, it’s perfect for all seasons.',
+            'This vintage leather jacket is crafted from premium-quality leather and features a sleek design that pairs well with casual or formal outfits. Available in various sizes, itâ€™s perfect for all seasons.',
         size: 'large',
     },
     {
@@ -44,7 +44,7 @@ export const STORE_ITEMS: Item[] = [
         imageUrl: 'https://via.placeholder.com/300x400?text=Graphic+T-Shirt',
         description: 'Soft and breathable cotton t-shirt with a trendy design.',
         longDescription:
-            'Made from 100% premium cotton, this graphic t-shirt combines style and comfort. Available in multiple colors and sizes, it’s perfect for casual outings.',
+            'Made from 100% premium cotton, this graphic t-shirt combines style and comfort. Available in multiple colors and sizes, itâ€™s perfect for casual outings.',
         size: 'medium',
     },
     {
