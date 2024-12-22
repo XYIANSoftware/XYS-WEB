@@ -1,12 +1,11 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useEffect, useState, ReactNode } from 'react';
 import {
     faGithub,
     faInstagram,
     faLinkedin,
     faXTwitter,
 } from '@fortawesome/free-brands-svg-icons';
-import '../styles/linkStyles.scss';
+import '../../styles/linkStyles.scss';
 
 export interface MainLinksProps {
     className?: string;

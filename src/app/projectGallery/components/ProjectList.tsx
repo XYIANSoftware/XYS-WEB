@@ -1,8 +1,8 @@
-import { ProjectModel } from '@/common';
+import { ProjectModel } from '@/types';
 import React from 'react';
 import { Accordion, AccordionTab } from 'primereact/accordion';
 import Image from 'next/image';
-import '../../../common/styles/accordionOverride.scss';
+import '../../../styles/accordionOverride.scss';
 interface ProjectListProps {
     projects: ProjectModel[];
 }

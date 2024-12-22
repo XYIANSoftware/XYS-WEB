@@ -1,4 +1,4 @@
-import { ProjectModel } from '@/common';
+import { ProjectModel } from '@/types';
 
 export const PROJECT_LIST: ProjectModel[] = [
     {
