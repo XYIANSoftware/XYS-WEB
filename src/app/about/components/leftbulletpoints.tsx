@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import '../styles/bulletpoints.scss';
-import '../../../';
 import Image from 'next/image';
 
 interface bulletPointProps {

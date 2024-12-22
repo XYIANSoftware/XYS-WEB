@@ -3,8 +3,8 @@ import { NextPage } from 'next';
 import { XYSToTop } from '@/common';
 import LeftBulletPoints from './components/leftbulletpoints';
 import RightBulletPoints from './components/rightbulletpoints';
-import '../../styles/aboutStyles.scss';
 import { ABOUT_US } from '../team/constants/ABOUT_US';
+import './styles/aboutStyles.scss';
 
 interface Props {}
 

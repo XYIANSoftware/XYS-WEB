@@ -3,19 +3,19 @@ import { Button } from 'primereact/button';
 import { Sidebar } from 'primereact/sidebar';
 import { useState } from 'react';
 import { MobileMenu } from './MobileMenu';
-import LoadMask from '../LoadMask';
+// import LoadMask from '../LoadMask';
 import SVGBackground from '../backgrounds/svg/SVGBackground';
 
 export const MenuModel = () => {
-    //TODO create desktop menu
-    //TODO after desktop menu add media switch from desktop to mobile
     const [visible, setVisible] = useState(false);
-    const [isLoading, setIsLoading] = useState(false);
+    // const [isLoading, setIsLoading] = useState(false);
     const onClose = () => {
-        if (!isLoading && visible) {
-            setVisible(false);
-            //setIsLoading(true);
-        }
+        // if (!isLoading && visible) {
+        //     setVisible(false);
+        //     setIsLoading(true);
+        // }
+        //alert('hit');
+        setVisible(false);
     };
     // const SideBarHeader = (props: SidebarProps): ReactNode => {
     //     //const {} = props;
@@ -65,7 +65,7 @@ export const MenuModel = () => {
             >
                 <SVGBackground />
                 <MobileMenu onClose={onClose} />
-                <LoadMask loading={isLoading} />
+                {/* <LoadMask loading={isLoading} /> */}
             </Sidebar>
         </>
     );

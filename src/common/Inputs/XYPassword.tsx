@@ -1,7 +1,7 @@
 import { Password, PasswordProps } from 'primereact/password';
 import React from 'react';
 import { FloatLabel } from 'primereact/floatlabel';
-import { XYLabelModel } from '../types';
+import { XYLabelModel } from '@/types';
 interface PassProps extends PasswordProps {
     hideFloatLabel?: boolean | undefined;
     inputSize?: number;
