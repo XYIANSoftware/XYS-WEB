@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 
-export const OrderConfirmation = () => {
+export const Confirmation = () => {
     return (
         <div className='w-full flex justify-content-center align-items-center'>
             <h2>Order Confirmation</h2>

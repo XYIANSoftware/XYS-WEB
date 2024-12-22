@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/_confirmDialog.scss';
+import '../../styles/';
 import { ConfirmDialog } from 'primereact/confirmdialog';
 const XYConfirmDialog = () => {
     return (
