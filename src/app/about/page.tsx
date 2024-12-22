@@ -4,7 +4,7 @@ import { XYSToTop } from '@/common';
 import LeftBulletPoints from './components/leftbulletpoints';
 import RightBulletPoints from './components/rightbulletpoints';
 import { ABOUT_US } from '../team/constants/ABOUT_US';
-import './styles/aboutStyles.scss';
+import '../../styles/about/aboutStyles.scss';
 
 interface Props {}
 
