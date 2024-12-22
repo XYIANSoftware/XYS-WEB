@@ -1,6 +1,6 @@
-import { MenuModel } from '@/common/Menu/MenuModel';
+import { MenuModel } from '@/components/Menu/MenuModel';
 import { NextPage } from 'next';
-import { XYSToTop } from '@/common';
+import { XYSToTop } from '@/components';
 import LeftBulletPoints from './components/leftbulletpoints';
 import RightBulletPoints from './components/rightbulletpoints';
 import { ABOUT_US } from '../team/constants/ABOUT_US';

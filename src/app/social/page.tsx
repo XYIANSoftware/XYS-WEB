@@ -3,7 +3,7 @@ import { PrimeReactProvider } from 'primereact/api';
 import 'primereact/resources/themes/md-dark-indigo/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
-import { MenuModel } from '@/common/Menu/MenuModel';
+import { MenuModel } from '@/components/Menu/MenuModel';
 
 export default function Social() {
     return (

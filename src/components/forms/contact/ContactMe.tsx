@@ -1,8 +1,8 @@
 'use client';
 import { Panel } from 'primereact/panel';
-// import { XyInputText } from '@/common/Inputs/XyInputText';
+// import { XyInputText } from '@/components/Inputs/XyInputText';
 import { useForm } from 'react-hook-form';
-// import { XyButton } from '@/common/XyButton';
+// import { XyButton } from '@/components/XyButton';
 export interface ContactModel {
     firstName: string;
     lastName: string;
