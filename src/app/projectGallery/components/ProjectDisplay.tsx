@@ -1,4 +1,4 @@
-import { ProjectModel } from '@/common';
+import { ProjectModel } from '@/types';
 import Image from 'next/image';
 interface ProjectDisplayProps {
     projects: ProjectModel[];

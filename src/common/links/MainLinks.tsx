@@ -1,5 +1,4 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useEffect, useState, ReactNode } from 'react';
 import {
     faGithub,
     faInstagram,

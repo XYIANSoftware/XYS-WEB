@@ -1,9 +1,9 @@
-import { MemberDetail } from '@/common';
+import { MemberDetail } from '@/types';
 // import Image from 'next/image';
 import { Image } from 'primereact/image';
 import { Card } from 'primereact/card';
-import '../../../common/styles/displayCard.scss';
-import '../../../common/styles/displayImage.scss';
+import '../../../styles/displayCard.scss';
+import '../../../styles/displayImage.scss';
 interface PersonDisplayProps {
     memberDetails: MemberDetail;
 }

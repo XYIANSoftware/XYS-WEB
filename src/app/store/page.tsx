@@ -1,5 +1,5 @@
 'use client';
-import './_store.scss';
+
 import { NextPage } from 'next';
 interface Props {}
 

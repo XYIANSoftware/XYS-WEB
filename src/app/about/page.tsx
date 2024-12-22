@@ -1,17 +1,14 @@
 import { MenuModel } from '@/common/Menu/MenuModel';
 import { NextPage } from 'next';
-import AboutUs from './components/AboutUs';
 import { XYSToTop } from '@/common';
-import BulletPoints from './components/leftbulletpoints';
 import LeftBulletPoints from './components/leftbulletpoints';
 import RightBulletPoints from './components/rightbulletpoints';
-import './styles/aboutStyles.scss'
+import '../../styles/aboutStyles.scss';
 import { ABOUT_US } from '../team/constants/ABOUT_US';
 
 interface Props {}
 
 const AboutXYS: NextPage<Props> = ({}) => {
-
     return (
         <main className='p-6'>
             <MenuModel />
@@ -23,10 +20,16 @@ const AboutXYS: NextPage<Props> = ({}) => {
                     <div key={item.id}>
                         {item.id % 2 === 0 ? (
                             // Render RightBulletPoints if the id is even
-                            <RightBulletPoints message={item.text} src={item.imageSrc} />
+                            <RightBulletPoints
+                                message={item.text}
+                                src={item.imageSrc}
+                            />
                         ) : (
                             // Render LeftBulletPoints if the id is odd
-                            <LeftBulletPoints message={item.text} src={item.imageSrc} />
+                            <LeftBulletPoints
+                                message={item.text}
+                                src={item.imageSrc}
+                            />
                         )}
                     </div>
                 ))}

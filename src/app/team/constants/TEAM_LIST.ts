@@ -1,4 +1,4 @@
-import { MemberDetail } from '@/common';
+import { MemberDetail } from '@/types';
 
 export const TEAM_LIST: MemberDetail[] = [
     {
