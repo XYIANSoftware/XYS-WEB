@@ -36,6 +36,10 @@ export const MobileMenu = ({ onClose }: MobileMenuProps) => {
             label: 'Client Portal',
             route: 'login',
         },
+        {
+            label: 'Store',
+            route: 'store',
+        },
 
         {
             label: 'Privacy & Terms',
