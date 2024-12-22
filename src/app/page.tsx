@@ -13,7 +13,7 @@ export default function Home() {
 
     return (
         <main>
-            <MenuModel />
+            {/* <MenuModel /> */}
             <div
                 className='flex flex-column pt-6 justify-content-center text-center align-items-center gap-3 mainBody m-0'
                 style={{

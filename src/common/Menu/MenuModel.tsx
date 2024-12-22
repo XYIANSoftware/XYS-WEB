@@ -12,8 +12,10 @@ export const MenuModel = () => {
     const [visible, setVisible] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
     const onClose = () => {
-        setVisible(false);
-        setIsLoading(true);
+        if (!isLoading && visible) {
+            setVisible(false);
+            setIsLoading(true);
+        }
     };
     // const SideBarHeader = (props: SidebarProps): ReactNode => {
     //     //const {} = props;
@@ -38,6 +40,7 @@ export const MenuModel = () => {
                     top: '2rem',
                     right: '2rem',
                     padding: '5px',
+                    zIndex: 999,
                 }}
                 pt={{
                     root: {
