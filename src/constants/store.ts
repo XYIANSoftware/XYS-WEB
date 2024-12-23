@@ -3,73 +3,82 @@ import { Item } from '@/types';
 export const STORE_ITEMS: Item[] = [
     {
         id: 1,
-        name: 'Vintage Leather Jacket',
-        price: 89.99,
+        name: 'XYS Brushed Hoodie',
+        price: 55.0,
         imageUrl:
             'https://github.com/XYIANSoftware/images/blob/main/logos_XYIAN/Primary.png?raw=true',
-        description:
-            'Stylish and durable leather jacket perfect for any occasion.',
+        description: 'Show your software pride with brushed XYS look.',
         longDescription:
-            'This vintage leather jacket is crafted from premium-quality leather and features a sleek design that pairs well with casual or formal outfits. Available in various sizes, it’s perfect for all seasons.',
-        size: 'large',
+            'Soft 50/50 blend, pre-shrunk/washed. These typically run a bit small, we suggest getting one size up from your normal size.',
+        quantity: 0,
+        priceId: '',
+        subTitle: 'Clean Black Hoodie with two distinct XYS designs',
     },
     {
         id: 2,
-        name: 'Wireless Bluetooth Headphones',
-        price: 59.99,
+        name: 'Start-Up Bro Mug',
+        price: 17.76,
         imageUrl:
             'https://github.com/XYIANSoftware/images/blob/main/logos_XYIAN/Primary.png?raw=true',
         description:
-            'Experience high-quality sound with these comfortable headphones.',
-        longDescription:
-            'These wireless Bluetooth headphones offer exceptional audio quality with noise-cancellation and a comfortable, lightweight design. Enjoy up to 20 hours of playtime on a single charge.',
-        size: undefined,
+            'Classic, effective and clear communication with an obvious interest in crypto.',
+        longDescription: `Meet your new ride-or-die mug: it’s classic, it’s bold, and it holds just enough coffee to fuel your next billion-dollar crypto idea. Perfect for flexing on Zoom calls or dramatically sipping while the market dips. Because nothing says ‘I’m in the blockchain game’ like caffeine and unshakable optimism.`,
+        quantity: 0,
+        priceId: '',
+        subTitle: 'Do you even crypto bro?',
     },
     {
         id: 3,
-        name: 'Modern Office Chair',
-        price: 149.99,
+        name: 'XYS Drone Tee',
+        price: 30.0,
         imageUrl:
             'https://github.com/XYIANSoftware/images/blob/main/logos_XYIAN/Primary.png?raw=true',
-        description:
-            'Ergonomic office chair for maximum comfort during work hours.',
-        longDescription:
-            'The modern office chair features adjustable height, lumbar support, and a breathable mesh backrest for optimal comfort and productivity. Ideal for home offices and professional setups.',
-        size: undefined,
+        description: `Your go-to tee for looking cool while explaining Web3 to people who didn’t ask.`,
+        longDescription: `This t-shirt isn’t just fabric; it’s a lifestyle. Soft, comfy, and versatile enough for brainstorming the next decentralized revolution or grabbing overpriced cold brew. Pairs well with confidence, ambition, and the occasional market rally. Wear it like you mean business... startup business.`,
+        quantity: 0,
+        priceId: '',
+        subTitle: 'Coffee 4 lyfe',
     },
-    {
-        id: 4,
-        name: 'Cotton Graphic T-Shirt',
-        price: 24.99,
-        imageUrl:
-            'https://github.com/XYIANSoftware/images/blob/main/logos_XYIAN/Primary.png?raw=true',
-        description: 'Soft and breathable cotton t-shirt with a trendy design.',
-        longDescription:
-            'Made from 100% premium cotton, this graphic t-shirt combines style and comfort. Available in multiple colors and sizes, it’s perfect for casual outings.',
-        size: 'medium',
-    },
-    {
-        id: 5,
-        name: 'Stainless Steel Water Bottle',
-        price: 19.99,
-        imageUrl:
-            'https://github.com/XYIANSoftware/images/blob/main/logos_XYIAN/Primary.png?raw=true',
-        description:
-            'Insulated water bottle that keeps drinks hot or cold for hours.',
-        longDescription:
-            'This stainless steel water bottle features double-wall insulation to maintain temperature for extended periods. Its sleek design makes it ideal for travel, gym, or office use.',
-        size: undefined,
-    },
-    {
-        id: 6,
-        name: 'Running Shoes',
-        price: 79.99,
-        imageUrl:
-            'https://github.com/XYIANSoftware/images/blob/main/logos_XYIAN/Primary.png?raw=true',
-        description:
-            'Lightweight and durable running shoes designed for comfort.',
-        longDescription:
-            'These running shoes are crafted with breathable mesh material and cushioned soles to enhance performance and reduce fatigue. Perfect for both beginners and seasoned runners.',
-        size: 'x-large',
-    },
+    // {
+    //     id: 4,
+    //     name: 'Cotton Graphic T-Shirt',
+    //     price: 24.99,
+    //     imageUrl:
+    //         'https://github.com/XYIANSoftware/images/blob/main/logos_XYIAN/Primary.png?raw=true',
+    //     description: 'Soft and breathable cotton t-shirt with a trendy design.',
+    //     longDescription:
+    //         'Made from 100% premium cotton, this graphic t-shirt combines style and comfort. Available in multiple colors and sizes, itâ€™s perfect for casual outings.',
+    //     quantity: 0,
+    //     priceId: '',
+    //     subTitle: '',
+    // },
+    // {
+    //     id: 5,
+    //     name: 'Stainless Steel Water Bottle',
+    //     price: 19.99,
+    //     imageUrl:
+    //         'https://github.com/XYIANSoftware/images/blob/main/logos_XYIAN/Primary.png?raw=true',
+    //     description:
+    //         'Insulated water bottle that keeps drinks hot or cold for hours.',
+    //     longDescription:
+    //         'This stainless steel water bottle features double-wall insulation to maintain temperature for extended periods. Its sleek design makes it ideal for travel, gym, or office use.',
+    //     quantity: 0,
+    //     priceId: '',
+    //     subTitle: '',
+    // },
+    // {
+    //     id: 6,
+    //     name: 'Running Shoes',
+    //     price: 79.99,
+    //     imageUrl:
+    //         'https://github.com/XYIANSoftware/images/blob/main/logos_XYIAN/Primary.png?raw=true',
+    //     description:
+    //         'Lightweight and durable running shoes designed for comfort.',
+    //     longDescription:
+    //         'These running shoes are crafted with breathable mesh material and cushioned soles to enhance performance and reduce fatigue. Perfect for both beginners and seasoned runners.',
+    //     size: 'x-large',
+    //     quantity: 0,
+    //     priceId: '',
+    //     subTitle: '',
+    // },
 ];
