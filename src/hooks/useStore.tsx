@@ -21,7 +21,7 @@ export const useStore = () => {
             rejectLabel: 'CLOSE',
             //reject: () => closeItemDetailPopup(),
             accept: () => addToCart(item),
-            acceptLabel: 'Add to Cart',
+            acceptLabel: `Add to Cart $${item.price}`,
         });
 
         return;
