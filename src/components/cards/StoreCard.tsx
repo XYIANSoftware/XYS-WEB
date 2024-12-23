@@ -16,14 +16,21 @@ export const StoreCard = ({
 StoreCardProps) => {
     const { name, price, imageUrl, description } = item;
     const header = (
-        <Image
-            alt={`${name}-{${price}}`}
-            src={`${
-                imageUrl.length > 2
-                    ? imageUrl
-                    : 'https://primefaces.org/cdn/primereact/images/usercard.png'
-            }`}
-        />
+        <div className='flex justify-content-center align-items-center'>
+            <div className='p-1 flex justify-content-center align-items-center'>
+                <Image
+                    className=''
+                    alt={`${name}-{${price}}`}
+                    src={`${
+                        imageUrl.length > 2
+                            ? imageUrl
+                            : 'https://github.com/XYIANSoftware/images/blob/main/logos_XYIAN/Primary.png?raw=true'
+                    }`}
+                    width={50}
+                    height={100}
+                />
+            </div>
+        </div>
     );
     const footer = (
         <>

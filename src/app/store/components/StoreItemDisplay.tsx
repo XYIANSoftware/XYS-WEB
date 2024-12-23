@@ -8,7 +8,7 @@ interface StoreItemDisplayProps {
 const StoreItemDisplay = ({ storeItemList }: StoreItemDisplayProps) => {
     //TODO mobile & desktop grid scss mobile first design
     return (
-        <div>
+        <div className='flex flex-column justify-content-center align-items-center gap-4'>
             {storeItemList.map((item) => {
                 return (
                     <div key={item.id}>

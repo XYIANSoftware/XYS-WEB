@@ -6,7 +6,7 @@ export const STORE_ITEMS: Item[] = [
         name: 'Vintage Leather Jacket',
         price: 89.99,
         imageUrl:
-            'https://via.placeholder.com/300x400?text=Vintage+Leather+Jacket',
+            'https://github.com/XYIANSoftware/images/blob/main/logos_XYIAN/Primary.png?raw=true',
         description:
             'Stylish and durable leather jacket perfect for any occasion.',
         longDescription:
@@ -18,7 +18,7 @@ export const STORE_ITEMS: Item[] = [
         name: 'Wireless Bluetooth Headphones',
         price: 59.99,
         imageUrl:
-            'https://via.placeholder.com/300x400?text=Wireless+Headphones',
+            'https://github.com/XYIANSoftware/images/blob/main/logos_XYIAN/Primary.png?raw=true',
         description:
             'Experience high-quality sound with these comfortable headphones.',
         longDescription:
@@ -30,7 +30,7 @@ export const STORE_ITEMS: Item[] = [
         name: 'Modern Office Chair',
         price: 149.99,
         imageUrl:
-            'https://via.placeholder.com/300x400?text=Modern+Office+Chair',
+            'https://github.com/XYIANSoftware/images/blob/main/logos_XYIAN/Primary.png?raw=true',
         description:
             'Ergonomic office chair for maximum comfort during work hours.',
         longDescription:
@@ -41,7 +41,8 @@ export const STORE_ITEMS: Item[] = [
         id: 4,
         name: 'Cotton Graphic T-Shirt',
         price: 24.99,
-        imageUrl: 'https://via.placeholder.com/300x400?text=Graphic+T-Shirt',
+        imageUrl:
+            'https://github.com/XYIANSoftware/images/blob/main/logos_XYIAN/Primary.png?raw=true',
         description: 'Soft and breathable cotton t-shirt with a trendy design.',
         longDescription:
             'Made from 100% premium cotton, this graphic t-shirt combines style and comfort. Available in multiple colors and sizes, it’s perfect for casual outings.',
@@ -51,7 +52,8 @@ export const STORE_ITEMS: Item[] = [
         id: 5,
         name: 'Stainless Steel Water Bottle',
         price: 19.99,
-        imageUrl: 'https://via.placeholder.com/300x400?text=Steel+Water+Bottle',
+        imageUrl:
+            'https://github.com/XYIANSoftware/images/blob/main/logos_XYIAN/Primary.png?raw=true',
         description:
             'Insulated water bottle that keeps drinks hot or cold for hours.',
         longDescription:
@@ -62,7 +64,8 @@ export const STORE_ITEMS: Item[] = [
         id: 6,
         name: 'Running Shoes',
         price: 79.99,
-        imageUrl: 'https://via.placeholder.com/300x400?text=Running+Shoes',
+        imageUrl:
+            'https://github.com/XYIANSoftware/images/blob/main/logos_XYIAN/Primary.png?raw=true',
         description:
             'Lightweight and durable running shoes designed for comfort.',
         longDescription:
