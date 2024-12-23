@@ -1,9 +1,7 @@
 'use client';
-import { NextPage } from 'next';
+import React from 'react';
 
-interface Props {}
-
-const New: NextPage<Props> = ({}) => {
+const page = () => {
     return (
         <div className='h-full w-full'>
             <h1>Become a Xyianian!</h1>
@@ -18,4 +16,4 @@ const New: NextPage<Props> = ({}) => {
     );
 };
 
-export default New;
+export default page;
