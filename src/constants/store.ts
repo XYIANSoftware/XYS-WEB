@@ -6,7 +6,7 @@ export const STORE_ITEMS: Item[] = [
         name: 'XYS Brushed Hoodie',
         price: 55.0,
         imageUrl:
-            'https://github.com/XYIANSoftware/images/blob/main/logos_XYIAN/Primary.png?raw=true',
+            'https://github.com/XYIANSoftware/images/blob/main/products/xyianbrushedhoodie.png?raw=true',
         description: 'Show your software pride with brushed XYS look.',
         longDescription:
             'Soft 50/50 blend, pre-shrunk/washed. These typically run a bit small, we suggest getting one size up from your normal size.',
@@ -19,7 +19,7 @@ export const STORE_ITEMS: Item[] = [
         name: 'Start-Up Bro Mug',
         price: 17.76,
         imageUrl:
-            'https://github.com/XYIANSoftware/images/blob/main/logos_XYIAN/Primary.png?raw=true',
+            'https://github.com/XYIANSoftware/images/blob/main/products/xys-cfee-1-2.png?raw=true',
         description:
             'Classic, effective and clear communication with an obvious interest in crypto.',
         longDescription: `Meet your new ride-or-die mug: it’s classic, it’s bold, and it holds just enough coffee to fuel your next billion-dollar crypto idea. Perfect for flexing on Zoom calls or dramatically sipping while the market dips. Because nothing says ‘I’m in the blockchain game’ like caffeine and unshakable optimism.`,
@@ -32,7 +32,7 @@ export const STORE_ITEMS: Item[] = [
         name: 'XYS Drone Tee',
         price: 30.0,
         imageUrl:
-            'https://github.com/XYIANSoftware/images/blob/main/logos_XYIAN/Primary.png?raw=true',
+            'https://github.com/XYIANSoftware/images/blob/main/products/xys-tshirt1.png?raw=true',
         description: `Your go-to tee for looking cool while explaining Web3 to people who didn’t ask.`,
         longDescription: `This t-shirt isn’t just fabric; it’s a lifestyle. Soft, comfy, and versatile enough for brainstorming the next decentralized revolution or grabbing overpriced cold brew. Pairs well with confidence, ambition, and the occasional market rally. Wear it like you mean business... startup business.`,
         quantity: 0,
