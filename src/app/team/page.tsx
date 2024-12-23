@@ -1,5 +1,5 @@
 'use client'; // This marks the entire file as a Client Component
-import { MenuModel } from '@/components/menu/MenuModel';
+import { MenuModel } from '@/components';
 import { NextPage } from 'next';
 import OurTeam from './components/OurTeam';
 import { XYSToTop } from '@/components';

@@ -1,7 +1,7 @@
 'use client'; // This marks the entire file as a Client Component
 import { XYLabelModel } from '@/types';
 import XYButton from '@/components/inputs/XYButton';
-import { MenuModel } from '@/components/menu/MenuModel';
+import { MenuModel } from '@/components';
 import { PrimeReactProvider } from 'primereact/api';
 import { confirmDialog } from 'primereact/confirmdialog';
 import { Password } from 'primereact/password';

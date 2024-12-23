@@ -6,14 +6,14 @@ import { Item } from '@/types';
 
 export interface StoreCardProps {
     item: Item;
-    showDetails: (itemDetails: Item) => void;
-    closeDetails: () => void;
+    // showDetails: (itemDetails: Item) => void;
+    // closeDetails: () => void;
 }
 export const StoreCard = ({
     item,
-    showDetails,
-    closeDetails,
-}: StoreCardProps) => {
+}: // showDetails,
+// closeDetails,
+StoreCardProps) => {
     const { name, price, imageUrl, description } = item;
     const header = (
         <Image
@@ -30,14 +30,14 @@ export const StoreCard = ({
             <XYButton
                 label={`Buy $${price}`}
                 icon='pi pi-cart-plus'
-                onClick={() => showDetails(item)}
+                //onClick={() => showDetails(item)}
             />
             <XYButton
                 label='Cancel'
                 severity='secondary'
                 icon='pi pi-times'
                 //style={{ marginLeft: '0.5em' }}
-                onClick={() => closeDetails()}
+                //onClick={() => closeDetails()}
             />
         </>
     );

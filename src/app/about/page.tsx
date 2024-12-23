@@ -1,4 +1,4 @@
-import { MenuModel } from '@/components/menu/MenuModel';
+import { MenuModel } from '@/components';
 import { NextPage } from 'next';
 import { XYSToTop } from '@/components';
 import LeftBulletPoints from './components/leftbulletpoints';
