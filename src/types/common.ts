@@ -1,4 +1,4 @@
-export type XYType = 'primary' | 'secondary';
+export type XYType = 'primary' | 'secondary' | 'quote';
 export interface XYCard {
     id: number;
     title: string;

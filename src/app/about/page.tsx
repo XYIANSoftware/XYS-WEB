@@ -1,10 +1,14 @@
+'use client';
 import { MenuModel } from '@/components';
 import { NextPage } from 'next';
 import { XYSToTop } from '@/components';
 import LeftBulletPoints from './components/leftbulletpoints';
 import RightBulletPoints from './components/rightbulletpoints';
 import '../../styles/about/aboutStyles.scss';
-import { ABOUT_US } from '@/constants';
+import { ABOUT_US, ABOUT_US_SPLIT } from '@/constants';
+import FullDisplay from './components/FullDisplay';
+import AboutUsDynamic from './components/AboutUsDynamic';
+import AboutUsSplit from './components/AboutUsSplit';
 
 interface Props {}
 
@@ -15,6 +19,15 @@ const AboutXYS: NextPage<Props> = ({}) => {
             <div className='flex flex-column justify-content-center w-full align-items-center w-full h-full p-1'>
                 <h1 className='mb-2 pt-7 mint'>About XYS</h1>
                 <p>(AKA Xyian Software)</p>
+            </div>
+            <div>
+                <AboutUsSplit data={ABOUT_US_SPLIT} />
+            </div>
+            <div>
+                <AboutUsDynamic data={ABOUT_US} />
+            </div>
+            <div>
+                <FullDisplay data={ABOUT_US} />
             </div>
             <div className='bullet'>
                 {ABOUT_US.map((item) => (
