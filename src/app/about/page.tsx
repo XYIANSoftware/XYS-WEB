@@ -14,6 +14,7 @@ const AboutXYS: NextPage<Props> = ({}) => {
             <MenuModel />
             <div className='flex flex-column justify-content-center w-full align-items-center w-full h-full p-1'>
                 <h1 className='mb-2 pt-7 mint'>About XYS</h1>
+                <p>(AKA Xyian Software)</p>
             </div>
             <div className='bullet'>
                 {ABOUT_US.map((item) => (
