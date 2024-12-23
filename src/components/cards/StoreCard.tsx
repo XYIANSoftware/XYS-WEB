@@ -2,19 +2,22 @@ import { Card } from 'primereact/card';
 import React from 'react';
 import XYButton from '../inputs/XYButton';
 import Image from 'next/image';
-import { Item } from '@/types';
+import { Item, StoreFunctionType } from '@/types';
 
 export interface StoreCardProps {
     item: Item;
-    // showDetails: (itemDetails: Item) => void;
-    // closeDetails: () => void;
+    storeFunctionType: StoreFunctionType;
+    showDetails: (itemDetails: Item) => void;
+    closeDetails: () => void;
 }
 export const StoreCard = ({
     item,
-}: // showDetails,
-// closeDetails,
-StoreCardProps) => {
-    const { name, price, imageUrl, description } = item;
+    showDetails,
+    closeDetails,
+    storeFunctionType,
+}: StoreCardProps) => {
+    const { name, price, imageUrl, description, subTitle, longDescription } =
+        item;
     const header = (
         <div className='flex justify-content-center align-items-center'>
             <div className='p-1 flex justify-content-center align-items-center'>
@@ -26,37 +29,42 @@ StoreCardProps) => {
                             ? imageUrl
                             : 'https://github.com/XYIANSoftware/images/blob/main/logos_XYIAN/Primary.png?raw=true'
                     }`}
-                    width={50}
-                    height={100}
+                    width={200}
+                    height={200}
                 />
             </div>
         </div>
     );
-    const footer = (
-        <>
+    const CartFooter = () => <div></div>;
+    const StoreFooter = () => (
+        <div className='w-full flex justify-content-between'>
             <XYButton
                 label={`Buy $${price}`}
                 icon='pi pi-cart-plus'
-                //onClick={() => showDetails(item)}
+                onClick={() => showDetails(item)}
             />
             <XYButton
-                label='Cancel'
-                severity='secondary'
-                icon='pi pi-times'
-                //style={{ marginLeft: '0.5em' }}
-                //onClick={() => closeDetails()}
+                label='Details'
+                icon='pi pi-info-circle'
+                onClick={() => closeDetails()}
+                outlined
             />
-        </>
+        </div>
     );
+    const footer = () => {
+        if (storeFunctionType === 'cart') {
+            return <CartFooter />;
+        } else return <StoreFooter />;
+    };
     return (
         <Card
-            title='Advanced Card'
-            subTitle='Card subtitle'
+            title={name}
+            subTitle={subTitle}
             footer={footer}
             header={header}
             className='md:w-25rem'
         >
-            <p className='m-0'></p>
+            <p className='m-0'>{description}</p>
         </Card>
     );
 };
