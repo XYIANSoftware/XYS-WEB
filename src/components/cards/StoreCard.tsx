@@ -20,7 +20,7 @@ export const StoreCard = ({
         item;
     const header = (
         <div className='flex justify-content-center align-items-center'>
-            <div className='p-1 flex justify-content-center align-items-center'>
+            <div className='p-3 flex justify-content-center align-items-center'>
                 <Image
                     className=''
                     alt={`${name}-{${price}}`}
@@ -39,9 +39,10 @@ export const StoreCard = ({
     const StoreFooter = () => (
         <div className='w-full flex justify-content-between'>
             <XYButton
-                label={`Buy $${price}`}
+                label={`Add to Cart $${price}`}
                 icon='pi pi-cart-plus'
                 onClick={() => showDetails(item)}
+                // loading add loading true while adding to cart
             />
             <XYButton
                 label='Details'
@@ -64,7 +65,9 @@ export const StoreCard = ({
             header={header}
             className='md:w-25rem'
         >
-            <p className='m-0'>{description}</p>
+            <p className='m-0'>
+                {storeFunctionType === 'cart' ? longDescription : description}
+            </p>
         </Card>
     );
 };

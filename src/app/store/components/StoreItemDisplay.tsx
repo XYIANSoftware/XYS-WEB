@@ -20,7 +20,7 @@ const StoreItemDisplay = ({ type, storeItemList }: StoreItemDisplayProps) => {
         <div className='flex flex-column justify-content-center align-items-center gap-4'>
             {storeItemList.map((item) => {
                 return (
-                    <div key={item.id}>
+                    <div key={item.id} className='pb-1'>
                         <StoreCard
                             item={item}
                             storeFunctionType={functionType}
