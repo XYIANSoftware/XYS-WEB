@@ -13,29 +13,31 @@ interface AboutUsProps {
 }
 
 const AboutUsDynamic: React.FC<AboutUsProps> = ({ data }) => {
+    const getComponentByIndex = (item: (typeof ABOUT_US)[0], index: number) => {
+        const components = [
+            <HeroSection key={item.id} data={item} />,
+            <SplitSection
+                key={item.id}
+                data={item}
+                reverse={index % 2 !== 0}
+            />,
+            <ListCard key={item.id} data={item} />,
+            <QuoteSection key={item.id} data={item} />,
+            <ImageTextOverlay key={item.id} data={item} />,
+        ];
+
+        // Ensure no consecutive reuse of the same component
+        return components[index % components.length];
+    };
+
     return (
         <div className='about-us-dynamic'>
-            {data.map((item, index) => {
-                if (item.type === 'primary' && index === 0) {
-                    return <HeroSection key={item.id} data={item} />;
-                } else if (item.type === 'primary') {
-                    return (
-                        <SplitSection
-                            key={item.id}
-                            data={item}
-                            reverse={index % 2 !== 0}
-                        />
-                    );
-                } else if (item.type === 'secondary') {
-                    return <ListCard key={item.id} data={item} />;
-                }
-                return null;
-            })}
+            {data.map((item, index) => getComponentByIndex(item, index))}
         </div>
     );
 };
 
-// HeroSection with a sleek gradient and modern design
+// HeroSection for prominent display
 const HeroSection: React.FC<{ data: (typeof ABOUT_US)[0] }> = ({ data }) => {
     return (
         <div
@@ -69,7 +71,7 @@ const HeroSection: React.FC<{ data: (typeof ABOUT_US)[0] }> = ({ data }) => {
     );
 };
 
-// SplitSection with smooth alternating layout and animations
+// SplitSection for alternating layouts
 const SplitSection: React.FC<{
     data: (typeof ABOUT_US)[0];
     reverse?: boolean;
@@ -112,7 +114,7 @@ const SplitSection: React.FC<{
     );
 };
 
-// ListCard for modern card-like display
+// ListCard for card-like display
 const ListCard: React.FC<{ data: (typeof ABOUT_US)[0] }> = ({ data }) => {
     return (
         <div className='list-card py-3 px-3'>
@@ -135,6 +137,51 @@ const ListCard: React.FC<{ data: (typeof ABOUT_US)[0] }> = ({ data }) => {
                     {data.text}
                 </p>
             </Card>
+        </div>
+    );
+};
+
+// QuoteSection for highlighting quotes or mission statements
+const QuoteSection: React.FC<{ data: (typeof ABOUT_US)[0] }> = ({ data }) => {
+    return (
+        <div
+            className='quote-section text-center py-8 px-6'
+            style={{
+                fontStyle: 'italic',
+                background: 'linear-gradient(135deg, #f3f4f6, #ffffff)',
+                borderRadius: '12px',
+                margin: '20px 0',
+                padding: '20px',
+            }}
+        >
+            <p className='text-2xl leading-relaxed text-gray-800'>
+                {data.text}
+            </p>
+        </div>
+    );
+};
+
+// ImageTextOverlay for modern overlay styles
+const ImageTextOverlay: React.FC<{ data: (typeof ABOUT_US)[0] }> = ({
+    data,
+}) => {
+    return (
+        <div
+            className='image-text-overlay relative w-full h-96'
+            style={{
+                backgroundImage: `url(${data.imageSrc})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                borderRadius: '12px',
+                overflow: 'hidden',
+            }}
+        >
+            <div
+                className='absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-center px-6'
+                style={{ backdropFilter: 'blur(5px)' }}
+            >
+                <p className='text-lg leading-relaxed'>{data.text}</p>
+            </div>
         </div>
     );
 };

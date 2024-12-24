@@ -5,7 +5,7 @@ import { useState } from 'react';
 // import LoadMask from '../LoadMask';
 import SVGBackground from '../backgrounds/svg/SVGBackground';
 import { MobileMenu } from './MobileMenu';
-
+import HamburgerIcon from '../../../public/images/XYIAN LOGO_ALL_SVG/hamburgerSVG.svg';
 export const MenuModel = () => {
     const [visible, setVisible] = useState(false);
     // const [isLoading, setIsLoading] = useState(false);
@@ -33,7 +33,7 @@ export const MenuModel = () => {
     return (
         <>
             <Button
-                icon={'fa-solid fa-bars'}
+                icon={HamburgerIcon}
                 onClick={() => setVisible(true)}
                 style={{
                     position: 'fixed',
