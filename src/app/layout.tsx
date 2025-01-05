@@ -9,6 +9,7 @@ import 'primereact/resources/themes/md-dark-indigo/theme.css';
 import Script from 'next/script';
 import { PrimeReactProvider } from 'primereact/api';
 import { MenuModel, XYConfirmDialog } from '@/components';
+import { StoreProvider } from '@/context';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -41,7 +42,7 @@ export default function RootLayout({
             </head>
             <PrimeReactProvider>
                 <body className={inter.className}>
-                    {children}
+                    <StoreProvider>{children}</StoreProvider>
                     <XYConfirmDialog />
                     <MenuModel />
                 </body>

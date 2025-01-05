@@ -1,5 +1,5 @@
 import { StoreCard } from '@/components';
-import { useStore } from '@/hooks';
+import { useStoreFunctions } from '@/hooks';
 import { Item, StoreFunctionType } from '@/types';
 import React from 'react';
 
@@ -13,7 +13,7 @@ const StoreItemDisplay = ({ type, storeItemList }: StoreItemDisplayProps) => {
         closeItemDetailPopup,
         addToCart,
         detailsPopup,
-    } = useStore();
+    } = useStoreFunctions();
     const functionType: StoreFunctionType = type ? type : 'store';
 
     return (

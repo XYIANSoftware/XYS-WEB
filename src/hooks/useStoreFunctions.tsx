@@ -1,20 +1,32 @@
 import { StoreCard } from '@/components';
 import ItemDetails from '@/components/cards/ItemDetails';
+import { useStore } from '@/context';
 import { Item } from '@/types';
 import { confirmDialog } from 'primereact/confirmdialog';
 import { useState } from 'react';
 
-export const useStore = () => {
+export const useStoreFunctions = () => {
+    const { cart, setCart } = useStore();
     const [detailsPopup, setDetailsPopup] = useState(false);
+
+    const emptyCart = () => {
+        setCart([]);
+    };
+    const addToCart = (item: Item) => {
+        // const newCart: Item[] = cart;
+        // newCart.push(item);
+        //TODO add toast for cart adition.
+        setCart([...cart, item]);
+        return;
+    };
+    const removeFromCart = (item: Item) => {
+        setCart([item, ...cart]);
+    };
     const closeItemDetailPopup = () => {
         setDetailsPopup(false);
         return;
     };
-    const addToCart = (item: Item) => {
-        console.log('add to cart hit for item:', item);
-        alert('add to cart hit');
-        return;
-    };
+
     const showItemDetailPopup = (item: Item) => {
         confirmDialog({
             message: <ItemDetails item={item} />,
@@ -26,10 +38,13 @@ export const useStore = () => {
 
         return;
     };
+
     return {
         showItemDetailPopup,
         detailsPopup,
         closeItemDetailPopup,
         addToCart,
+        removeFromCart,
+        emptyCart,
     };
 };

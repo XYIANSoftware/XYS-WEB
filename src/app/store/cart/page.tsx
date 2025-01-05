@@ -1,18 +1,35 @@
+'use client';
+
 import { Item } from '@/types';
 import { Panel } from 'primereact/panel';
 import React from 'react';
+import { useStore } from '@/context';
+import CartItem from '../components/CartItem';
 
-export interface CartProps {
-    userId: number;
-    selectedItems: Item[];
-    //cookies?: string[] | undefined;
-}
-export const Cart = ({ userId, selectedItems }: CartProps) => {
+const Cart = () => {
+    const { cart, setCart } = useStore();
     return (
-        <div className='w-full h-full'>
-            <Panel title='XYS Shopping Cart'>
-                <div></div>
+        <div className='w-full h-full pt-6'>
+            <Panel title='XYS Shopping Cart' className='m-4'>
+                <div>
+                    {cart && cart.length > 0 ? (
+                        cart.map((item: Item) => {
+                            return (
+                                <CartItem
+                                    cartItemToDisplay={item}
+                                    key={item.id}
+                                />
+                            );
+                        })
+                    ) : (
+                        <div>
+                            <h2 className='p-2 text-center'>Cart is Empty</h2>
+                        </div>
+                    )}
+                </div>
             </Panel>
         </div>
     );
 };
+
+export default Cart;
