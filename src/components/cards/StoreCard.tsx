@@ -9,12 +9,14 @@ export interface StoreCardProps {
     storeFunctionType: StoreFunctionType;
     showDetails: (itemDetails: Item) => void;
     closeDetails: () => void;
+    addToCart: (item: Item) => void;
 }
 export const StoreCard = ({
     item,
     showDetails,
     closeDetails,
     storeFunctionType,
+    addToCart,
 }: StoreCardProps) => {
     const { name, price, imageUrl, description, subTitle, longDescription } =
         item;
@@ -41,13 +43,13 @@ export const StoreCard = ({
             <XYButton
                 label={`Add to Cart $${price}`}
                 icon='pi pi-cart-plus'
-                onClick={() => showDetails(item)}
+                onClick={() => addToCart(item)}
                 // loading add loading true while adding to cart
             />
             <XYButton
                 label='Details'
                 icon='pi pi-info-circle'
-                onClick={() => closeDetails()}
+                onClick={() => showDetails(item)}
                 outlined
             />
         </div>

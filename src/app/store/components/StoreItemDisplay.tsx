@@ -26,6 +26,7 @@ const StoreItemDisplay = ({ type, storeItemList }: StoreItemDisplayProps) => {
                             storeFunctionType={functionType}
                             showDetails={showItemDetailPopup}
                             closeDetails={closeItemDetailPopup}
+                            addToCart={addToCart}
                         />
                     </div>
                 );
