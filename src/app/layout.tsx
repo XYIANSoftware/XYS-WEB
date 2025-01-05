@@ -10,6 +10,7 @@ import Script from 'next/script';
 import { PrimeReactProvider } from 'primereact/api';
 import { MenuModel, XYConfirmDialog } from '@/components';
 import { StoreProvider } from '@/context';
+import Providers from '@/context/Providers';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -42,9 +43,7 @@ export default function RootLayout({
             </head>
             <PrimeReactProvider>
                 <body className={inter.className}>
-                    <StoreProvider>{children}</StoreProvider>
-                    <XYConfirmDialog />
-                    <MenuModel />
+                    <Providers>{children}</Providers>
                 </body>
             </PrimeReactProvider>
         </html>
