@@ -1,11 +1,12 @@
 import { StoreCard } from '@/components';
 import ItemDetails from '@/components/cards/ItemDetails';
-import { useStore } from '@/context';
+import { useApplication, useStore } from '@/context';
 import { Item } from '@/types';
 import { confirmDialog } from 'primereact/confirmdialog';
 import { useState } from 'react';
 
 export const useStoreFunctions = () => {
+    const { toastMessage } = useApplication();
     const { cart, setCart } = useStore();
     const [detailsPopup, setDetailsPopup] = useState(false);
 
@@ -13,13 +14,23 @@ export const useStoreFunctions = () => {
         setCart([]);
     };
     const addToCart = (item: Item) => {
-        // const newCart: Item[] = cart;
-        // newCart.push(item);
-        //TODO add toast for cart adition.
+        toastMessage({
+            severity: 'success',
+            content: `Successfully added ${item.name} to your cart!`,
+        });
         setCart([...cart, item]);
         return;
     };
     const removeFromCart = (item: Item) => {
+        toastMessage({
+            severity: 'error',
+            content: `Removed ${
+                item.name
+            } from your cart, remaining quantity: ${
+                item.quantity ? item.quantity : 0
+            }`,
+        });
+
         setCart([item, ...cart]);
     };
     const closeItemDetailPopup = () => {
