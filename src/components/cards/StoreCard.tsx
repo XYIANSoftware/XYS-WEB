@@ -1,9 +1,8 @@
 import { Card } from 'primereact/card';
 import React from 'react';
-import Image from 'next/image';
 import { Item, StoreFunctionType } from '@/types';
 import XYButton from '../inputs/XYButton';
-
+import { Image } from 'primereact/image';
 export interface StoreCardProps {
     item: Item;
     storeFunctionType: StoreFunctionType;
@@ -24,15 +23,15 @@ export const StoreCard = ({
         <div className='flex justify-content-center align-items-center'>
             <div className='p-3 flex justify-content-center align-items-center'>
                 <Image
-                    className=''
+                    className='cursor-pointer'
                     alt={`${name}-{${price}}`}
                     src={`${
                         imageUrl.length > 2
                             ? imageUrl
                             : 'https://github.com/XYIANSoftware/images/blob/main/logos_XYIAN/Primary.png?raw=true'
                     }`}
-                    width={200}
-                    height={200}
+                    width={'200'}
+                    preview
                 />
             </div>
         </div>
