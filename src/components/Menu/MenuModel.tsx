@@ -1,14 +1,24 @@
 'use client';
 import { Button } from 'primereact/button';
 import { Sidebar } from 'primereact/sidebar';
-import { useState } from 'react';
-// import LoadMask from '../LoadMask';
+import { useEffect, useState } from 'react';
+import LoadMask from '../LoadMask';
 import SVGBackground from '../backgrounds/svg/SVGBackground';
 import { MobileMenu } from './MobileMenu';
-import HIcon from '../../../public/images/XYIAN LOGO_ALL_SVG/hamburgerSVG.svg';
+// import HIcon from '../../../public/images/XYIAN LOGO_ALL_SVG/hamburgerSVG.svg';
+import { usePathname, useSearchParams } from 'next/navigation';
 export const MenuModel = () => {
     const [visible, setVisible] = useState(false);
     // const [isLoading, setIsLoading] = useState(false);
+    const [loading, setLoading] = useState(false);
+    const pathname = usePathname();
+    const searchParams = useSearchParams();
+
+    // const toggleLoadMask = () => {
+    //     if (loading) {
+    //         setLoading(false);
+    //     } else setLoading(true);
+    // };
     const onClose = () => {
         // if (!isLoading && visible) {
         //     setVisible(false);
@@ -30,6 +40,20 @@ export const MenuModel = () => {
     //         />
     //     );
     // };
+    useEffect(() => {
+        function removeLoadMask() {
+            setLoading(false);
+        }
+        setLoading(true);
+        if (document.readyState === 'complete') {
+            setLoading(false);
+        } else {
+            window.addEventListener('load', removeLoadMask);
+        }
+        return () => {
+            window.removeEventListener('load', removeLoadMask);
+        };
+    }, [pathname, searchParams]);
     return (
         <>
             <Button
@@ -65,7 +89,7 @@ export const MenuModel = () => {
             >
                 <SVGBackground />
                 <MobileMenu onClose={onClose} />
-                {/* <LoadMask loading={isLoading} /> */}
+                <LoadMask loading={loading} />
             </Sidebar>
         </>
     );
