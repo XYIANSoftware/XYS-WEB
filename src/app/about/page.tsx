@@ -2,13 +2,13 @@
 import { MenuModel } from '@/components';
 import { NextPage } from 'next';
 import { XYSToTop } from '@/components';
-import LeftBulletPoints from './components/leftbulletpoints';
-import RightBulletPoints from './components/rightbulletpoints';
+// import LeftBulletPoints from './components/leftbulletpoints';
+// import RightBulletPoints from './components/rightbulletpoints';
 import '../../styles/about/aboutStyles.scss';
 import { ABOUT_US, ABOUT_US_SPLIT } from '@/constants';
-import FullDisplay from './components/FullDisplay';
+// import FullDisplay from './components/FullDisplay';
 import AboutUsDynamic from './components/AboutUsDynamic';
-import AboutUsSplit from './components/AboutUsSplit';
+// import AboutUsSplit from './components/AboutUsSplit';
 import AboutUsTitle from './components/AboutUsTitle';
 
 interface Props {}
@@ -16,44 +16,10 @@ interface Props {}
 const AboutXYS: NextPage<Props> = ({}) => {
     return (
         <main className='p-6'>
-            <MenuModel />
-            {/* <div className='flex flex-column justify-content-center w-full align-items-center w-full h-full p-1'>
-                <h1 className='mb-2 pt-7 mint'>About XYS</h1>
-                <p>(AKA Xyian Software)</p>
-            </div> */}
             <AboutUsTitle />
             <div>
                 <AboutUsDynamic data={ABOUT_US_SPLIT} />
             </div>
-            {/* <div>
-                <AboutUsSplit data={ABOUT_US_SPLIT} />
-            </div> */}
-            {/* <div>
-                <AboutUsDynamic data={ABOUT_US} />
-            </div> */}
-            {/* <div>
-                <FullDisplay data={ABOUT_US} />
-            </div> */}
-            {/* <div className='bullet'>
-                {ABOUT_US.map((item) => (
-                    <div key={item.id}>
-                        {item.id % 2 === 0 ? (
-                            // Render RightBulletPoints if the id is even
-                            <RightBulletPoints
-                                message={item.text}
-                                src={item.imageSrc}
-                            />
-                        ) : (
-                            // Render LeftBulletPoints if the id is odd
-                            <LeftBulletPoints
-                                message={item.text}
-                                src={item.imageSrc}
-                            />
-                        )}
-                    </div>
-                ))}
-            </div> */}
-            {/* <AboutUs type={'primary'} /> <AboutUs type={'secondary'} /> */}
             <XYSToTop />
         </main>
     );

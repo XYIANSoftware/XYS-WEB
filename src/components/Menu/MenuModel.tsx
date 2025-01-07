@@ -4,9 +4,9 @@ import { Sidebar } from 'primereact/sidebar';
 import { useEffect, useState } from 'react';
 import LoadMask from '../LoadMask';
 import SVGBackground from '../backgrounds/svg/SVGBackground';
-import { MobileMenu } from './MobileMenu';
 // import HIcon from '../../../public/images/XYIAN LOGO_ALL_SVG/hamburgerSVG.svg';
 import { usePathname, useSearchParams } from 'next/navigation';
+import { MobileMenu } from './MobileMenu';
 export const MenuModel = () => {
     const [visible, setVisible] = useState(false);
     // const [isLoading, setIsLoading] = useState(false);

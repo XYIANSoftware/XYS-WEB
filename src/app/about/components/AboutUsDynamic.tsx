@@ -1,3 +1,4 @@
+'use client';
 // components/AboutUsDynamic.tsx
 
 import React from 'react';
@@ -7,6 +8,7 @@ import { Button } from 'primereact/button';
 import { classNames } from 'primereact/utils';
 import { AboutUsModel } from '@/types';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 interface AboutUsProps {
     data: AboutUsModel[];
@@ -39,11 +41,16 @@ const AboutUsDynamic: React.FC<AboutUsProps> = ({ data }) => {
 
 // HeroSection for prominent display
 const HeroSection: React.FC<{ data: (typeof ABOUT_US)[0] }> = ({ data }) => {
+    const router = useRouter();
+    const handleNavigateClick = (to: string) => {
+        router.push(`/${to}`);
+    };
     return (
         <div
             className='hero-section text-center py-8 px-6'
             style={{
-                background: 'linear-gradient(135deg, #1e3a8a, #3b82f6)',
+                background:
+                    'linear-gradient(135deg,rgb(63, 65, 69),rgb(134, 134, 134))',
                 color: '#fff',
                 borderRadius: '12px',
                 boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.1)',
@@ -62,10 +69,11 @@ const HeroSection: React.FC<{ data: (typeof ABOUT_US)[0] }> = ({ data }) => {
             </h1>
             <p className='text-lg leading-relaxed'>{data.text}</p>
             <Button
-                label='Discover More'
+                label='See Our Team'
                 icon='pi pi-arrow-right'
                 className='p-button-rounded p-button-outlined mt-5'
                 style={{ color: '#fff', borderColor: '#fff' }}
+                onClick={() => handleNavigateClick('team')}
             />
         </div>
     );
@@ -84,7 +92,8 @@ const SplitSection: React.FC<{
                 { 'gap-8 md:gap-12': true }
             )}
             style={{
-                backgroundColor: '#f9fafb',
+                backgroundColor: 'black',
+                color: 'white',
                 borderRadius: '12px',
                 boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.05)',
                 margin: '20px 0',
@@ -106,9 +115,7 @@ const SplitSection: React.FC<{
                 />
             </div>
             <div className='flex-1'>
-                <p className='text-lg leading-relaxed text-gray-700'>
-                    {data.text}
-                </p>
+                <p className='text-lg leading-relaxed '>{data.text}</p>
             </div>
         </div>
     );
@@ -123,19 +130,18 @@ const ListCard: React.FC<{ data: (typeof ABOUT_US)[0] }> = ({ data }) => {
                 style={{
                     borderRadius: '12px',
                     boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.05)',
-                    background: '#ffffff',
+                    background: 'rgba(255,255,255, .75)',
+                    color: 'black',
                 }}
             >
                 <i
                     className='pi pi-star text-4xl mb-4'
                     style={{
-                        color: '#f59e0b',
+                        color: 'black',
                         textShadow: '0px 2px 6px rgba(0, 0, 0, 0.1)',
                     }}
                 ></i>
-                <p className='text-lg leading-relaxed text-gray-700'>
-                    {data.text}
-                </p>
+                <p className='text-lg leading-relaxed '>{data.text}</p>
             </Card>
         </div>
     );
@@ -148,15 +154,15 @@ const QuoteSection: React.FC<{ data: (typeof ABOUT_US)[0] }> = ({ data }) => {
             className='quote-section text-center py-8 px-6'
             style={{
                 fontStyle: 'italic',
-                background: 'linear-gradient(135deg, #f3f4f6, #ffffff)',
+                background:
+                    'linear-gradient(135deg,rgb(10, 10, 10),rgb(0, 0, 0))',
                 borderRadius: '12px',
                 margin: '20px 0',
                 padding: '20px',
+                color: 'white',
             }}
         >
-            <p className='text-2xl leading-relaxed text-gray-800'>
-                {data.text}
-            </p>
+            <p className='text-2xl leading-relaxed '>{data.text}</p>
         </div>
     );
 };
