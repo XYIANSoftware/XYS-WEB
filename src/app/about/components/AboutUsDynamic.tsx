@@ -64,9 +64,9 @@ const HeroSection: React.FC<{ data: (typeof ABOUT_US)[0] }> = ({ data }) => {
                 className='mb-4'
                 style={{ maxWidth: '180px', borderRadius: '50%' }}
             />
-            <h1 className='text-4xl font-bold mb-4'>
-                Welcome to XYIAN Software
-            </h1>
+            {data.title.length > 1 && (
+                <h1 className='text-4xl font-bold mb-4'>{data.title}</h1>
+            )}
             <p className='text-lg leading-relaxed'>{data.text}</p>
             <Button
                 label='See Our Team'
