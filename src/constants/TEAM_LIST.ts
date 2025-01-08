@@ -2,6 +2,14 @@ import { MemberDetail } from '@/types';
 
 export const TEAM_LIST: MemberDetail[] = [
     {
+        name: 'Kyle Dilbeck',
+        id: 1,
+        imageSrc:
+            'https://github.com/XYIAN/headshots/blob/main/headshot%20-%208.png?raw=true',
+        position: 'Founder & Developer',
+        bio: 'Passion for building cutting-edge solutions, driving technical innovation, and leading teams to deliver high-quality products.',
+    },
+    {
         name: 'Rogelio Rodriguez',
         id: 2,
         imageSrc:
@@ -10,14 +18,7 @@ export const TEAM_LIST: MemberDetail[] = [
         position: 'Co Founder & Developer',
         bio: 'Expertise in crafting robust software solutions, collaborating on product vision, and bringing ideas to life through code.',
     },
-    {
-        name: 'Kyle Dilbeck',
-        id: 1,
-        imageSrc:
-            'https://github.com/XYIAN/headshots/blob/main/headshot%20-%208.png?raw=true',
-        position: 'Founder & Developer',
-        bio: 'Passion for building cutting-edge solutions, driving technical innovation, and leading teams to deliver high-quality products.',
-    },
+
     {
         name: 'Gabriel Villadpudua',
         id: 4,
