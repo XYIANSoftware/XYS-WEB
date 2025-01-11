@@ -11,5 +11,6 @@ export interface AboutUsModel {
     id: number;
     text: string;
     type: XYType;
-    imageSrc : string;
+    imageSrc: string;
+    title: string;
 }

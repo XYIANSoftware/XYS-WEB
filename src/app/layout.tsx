@@ -4,15 +4,11 @@ import './globals.scss';
 import 'primeicons/primeicons.css';
 import '/node_modules/primeflex/primeflex.css';
 import 'primereact/resources/primereact.min.css';
-import 'primeicons/primeicons.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'primereact/resources/themes/md-dark-indigo/theme.css';
-import 'primereact/resources/primereact.min.css';
-import 'primeicons/primeicons.css';
 import Script from 'next/script';
 import { PrimeReactProvider } from 'primereact/api';
-import XYConfirmDialog from '@/common/popups/XYConfirmDialog';
-import { MenuModel } from '@/common/Menu/MenuModel';
+import Providers from '@/context/Providers';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -45,9 +41,7 @@ export default function RootLayout({
             </head>
             <PrimeReactProvider>
                 <body className={inter.className}>
-                    {children}
-                    <XYConfirmDialog />
-                    <MenuModel />
+                    <Providers>{children}</Providers>
                 </body>
             </PrimeReactProvider>
         </html>

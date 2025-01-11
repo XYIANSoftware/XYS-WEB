@@ -1,0 +1,6 @@
+.gen-link {
+    text-decoration: underline;
+    &:hover {
+        color: blue;
+    }
+}

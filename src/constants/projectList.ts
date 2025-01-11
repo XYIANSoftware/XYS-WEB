@@ -20,7 +20,7 @@ export const PROJECT_LIST: ProjectModel[] = [
         id: 13,
         title: 'XYIAN Portfolio',
         description: 'XYIAN Software Example for a personal portfolio. ',
-        imgSrc: 'https://github.com/XYIANSoftware/images/blob/main/projects/coming%20soon%20square.png?raw=true', //use one from logo?
+        imgSrc: 'https://raw.githubusercontent.com/XYIANSoftware/images/refs/heads/main/logos_XYIAN/352071BE-C25D-419E-AC0F-6D25A28DF4F3.webp', //use one from logo?
         url: 'https://xyian.com/',
     },
     {
@@ -34,7 +34,7 @@ export const PROJECT_LIST: ProjectModel[] = [
         id: 15,
         title: 'XYIAN AI',
         description: 'XYIAN Software basic AI integration Example',
-        imgSrc: 'https://github.com/XYIANSoftware/images/blob/main/projects/coming%20soon%20square.png?raw=true', //use one from logo?
+        imgSrc: 'https://raw.githubusercontent.com/XYIANSoftware/images/refs/heads/main/logos_XYIAN/0FFFF9EB-A62A-44FB-87EA-8D21A33D2E01.webp', //use one from logo?
         url: 'https://xyian.com/',
     },
     {

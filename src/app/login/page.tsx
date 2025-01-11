@@ -1,11 +1,11 @@
-'use client'; // This marks the entire file as a Client Component
+'use client';
 import { XYLabelModel } from '@/types';
-import XYButton from '@/common/Inputs/XYButton';
-import { MenuModel } from '@/common/Menu/MenuModel';
+import XYButton from '@/components/inputComponents/XYButton';
 import { PrimeReactProvider } from 'primereact/api';
 import { confirmDialog } from 'primereact/confirmdialog';
 import { Password } from 'primereact/password';
 import { useState } from 'react';
+import '../../styles/_links.scss';
 
 export default function Login() {
     const labelModel: XYLabelModel = {
@@ -35,7 +35,6 @@ export default function Login() {
     return (
         <PrimeReactProvider>
             <main>
-                <MenuModel />
                 <h1 className='text-center pt-8'>XYS Client Portal</h1>
                 <div className='card flex justify-content-center flex-column align-items-center'>
                     <div className='flex justify-content-center align-content-center gap-2'>
@@ -91,6 +90,17 @@ export default function Login() {
                             }
                         />
                     </div>
+                </div>
+                <div className='w-full flex justify-content-center align-items-center'>
+                    <p>
+                        Not an existing client?&nbsp;
+                        <a
+                            href='https://www.xyian.com/new'
+                            className='cursor-pointer underline gen-link'
+                        >
+                            Check out our onboarding page
+                        </a>
+                    </p>
                 </div>
             </main>
         </PrimeReactProvider>

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+  <!-- Background -->
+  <rect width="500" height="500" fill="#000000" />
+
+  <!-- Horizontal Bars -->
+  <rect x="50" y="100" width="150" height="20" rx="10" fill="cyan" />
+  <rect x="300" y="100" width="150" height="20" rx="10" fill="cyan" />
+
+  <rect x="50" y="240" width="150" height="20" rx="10" fill="magenta" />
+  <rect x="300" y="240" width="150" height="20" rx="10" fill="magenta" />
+
+  <rect x="50" y="380" width="150" height="20" rx="10" fill="purple" />
+  <rect x="300" y="380" width="150" height="20" rx="10" fill="purple" />
+
+  <!-- "X" from the Logo -->
+  <text x="50%" y="40%" text-anchor="middle" fill="cyan" font-family="Arial, sans-serif" font-size="180" font-weight="bold" dy=".35em">X</text>
+
+  <!-- "Y" Element -->
+  <path d="M250 200 L220 350 L280 350 Z" fill="magenta" />
+
+  <!-- Neon Glow Effects -->
+  <filter id="neonGlow">
+    <feGaussianBlur stdDeviation="8" result="blur" />
+    <feMerge>
+      <feMergeNode in="blur" />
+      <feMergeNode in="SourceGraphic" />
+    </feMerge>
+  </filter>
+  <g filter="url(#neonGlow)">
+    <!-- Repeat "X" and "Y" with glow -->
+    <text x="50%" y="40%" text-anchor="middle" fill="cyan" font-family="Arial, sans-serif" font-size="180" font-weight="bold" dy=".35em">X</text>
+    <path d="M250 200 L220 350 L280 350 Z" fill="magenta" />
+  </g>
+</svg>

@@ -1,0 +1,75 @@
+// Define variables for consistent styling
+$line-color: rgba(255, 255, 255, 0.9); // Bright white line
+$text-color: #ffffff;
+
+// Scoped styles for the title container
+.title-container {
+    position: relative;
+    text-align: center;
+    padding: 2rem 1rem;
+    overflow: hidden;
+
+    // The animated line background
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%; // Center the line vertically
+        left: -150%; // Start far outside the viewport
+        width: 200%; // Extend width for smooth entry and exit
+        height: 2px; // Thin, fast-moving line
+        background: linear-gradient(
+            to right,
+            transparent 0%,
+            $line-color 50%,
+            transparent 100%
+        );
+        animation: shooting-star 2.5s linear infinite; // Faster animation for shooting star effect
+        transform: translateY(10px); // Align with the subheading
+    }
+
+    // Styling for the main heading
+    &__heading {
+        font-size: 3rem;
+        font-weight: bold;
+        color: $text-color;
+        position: relative; // Ensure it sits above the line
+        z-index: 1; // Layer above the line
+        background: transparent;
+
+        @media (max-width: 768px) {
+            font-size: 2.5rem;
+        }
+    }
+
+    // Styling for the subheading
+    &__subheading {
+        font-size: 1.2rem;
+        color: $text-color;
+        margin-top: 0.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+        opacity: 0.9;
+        position: relative; // Ensure it sits above the animated line
+        z-index: 1; // Layer above the line
+        transform: translateY(
+            -10px
+        ); // Align closer to the line for visual impact
+
+        @media (max-width: 768px) {
+            font-size: 1rem;
+        }
+    }
+}
+
+// Keyframes for shooting star animation
+@keyframes shooting-star {
+    0% {
+        left: -150%; // Start far outside the viewport
+    }
+    50% {
+        left: 50%; // Line is centered across the viewport
+    }
+    100% {
+        left: 150%; // Exit far outside the viewport
+    }
+}
