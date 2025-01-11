@@ -7,7 +7,7 @@ import SVGBackground from '../backgrounds/svg/SVGBackground';
 import { usePathname, useSearchParams } from 'next/navigation';
 import { HamburgerMenuList } from './HamburgerMenuList';
 
-const HamburgerMenu = () => {
+export const HamburgerMenu = () => {
     const [visible, setVisible] = useState(false);
     const [loading, setLoading] = useState(false);
     const pathname = usePathname();
@@ -70,5 +70,3 @@ const HamburgerMenu = () => {
         </>
     );
 };
-
-export default HamburgerMenu;

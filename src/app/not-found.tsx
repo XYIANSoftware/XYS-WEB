@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
-import XYButton from '@/components/inputs/XYButton';
+import XYButton from '@/components/inputComponents/XYButton';
 import { useRouter } from 'next/navigation';
 import { MainLinks } from '@/components';
 

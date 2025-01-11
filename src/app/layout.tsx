@@ -8,8 +8,6 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'primereact/resources/themes/md-dark-indigo/theme.css';
 import Script from 'next/script';
 import { PrimeReactProvider } from 'primereact/api';
-import { MenuModel, XYConfirmDialog } from '@/components';
-import { StoreProvider } from '@/context';
 import Providers from '@/context/Providers';
 
 const inter = Inter({ subsets: ['latin'] });

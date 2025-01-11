@@ -1,12 +1,10 @@
 import { useRouter } from 'next/navigation';
 import { Ripple } from 'primereact/ripple';
-import XYButton from '../inputs/XYButton';
+import XYButton from '../inputComponents/XYButton';
 import { MENU_LINKS } from '@/constants';
+import { MenuItem } from '@/types';
 const BUTTON_SYLE = 'p-2 font-bold w-11';
-interface MenuItem {
-    label: string;
-    route: string;
-}
+
 interface HamburgerMenuListProps {
     closeMenu: () => void;
 }

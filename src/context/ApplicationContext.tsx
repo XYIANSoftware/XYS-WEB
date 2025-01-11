@@ -1,6 +1,6 @@
 'use client'; // important for context
 
-import { MenuModel, XYConfirmDialog } from '@/components';
+import { XYConfirmDialog, HamburgerMenu } from '@/components';
 import { Toast, ToastMessage } from 'primereact/toast';
 import { createContext, useContext, useRef, useState } from 'react';
 
@@ -29,7 +29,7 @@ export function ApplicationProvider({
     return (
         <ApplicationContext.Provider value={{ toastMessage }}>
             <XYConfirmDialog />
-            <MenuModel />
+            <HamburgerMenu />
             <Toast ref={toast} />
             {children}
         </ApplicationContext.Provider>

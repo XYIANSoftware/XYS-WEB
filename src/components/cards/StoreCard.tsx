@@ -1,7 +1,7 @@
 import { Card } from 'primereact/card';
 import React from 'react';
 import { Item, StoreFunctionType } from '@/types';
-import XYButton from '../inputs/XYButton';
+import XYButton from '../inputComponents/XYButton';
 import { Image } from 'primereact/image';
 export interface StoreCardProps {
     item: Item;

@@ -1,7 +1,7 @@
 'use client';
 import { useRouter } from 'next/navigation';
 import React from 'react';
-import XYButton from '../inputs/XYButton';
+import XYButton from '../inputComponents/XYButton';
 
 const LoginLink = () => {
     const router = useRouter();
