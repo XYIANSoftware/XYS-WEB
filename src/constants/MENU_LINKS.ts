@@ -1,6 +1,6 @@
 import { MenuItem } from '@/types';
 
-export const MENU: MenuItem[] = [
+export const MENU_LINKS: MenuItem[] = [
     { label: 'Home', route: '' },
     {
         label: 'Project Gallery',

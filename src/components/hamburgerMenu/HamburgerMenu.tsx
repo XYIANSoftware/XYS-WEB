@@ -5,41 +5,16 @@ import { useEffect, useState } from 'react';
 import LoadMask from '../LoadMask';
 import SVGBackground from '../backgrounds/svg/SVGBackground';
 import { usePathname, useSearchParams } from 'next/navigation';
-import { MobileMenu } from './MobileMenu';
+import { HamburgerMenuList } from './HamburgerMenuList';
 
-export const MenuModel = () => {
+const HamburgerMenu = () => {
     const [visible, setVisible] = useState(false);
-    // const [isLoading, setIsLoading] = useState(false);
     const [loading, setLoading] = useState(false);
     const pathname = usePathname();
     const searchParams = useSearchParams();
 
-    // const toggleLoadMask = () => {
-    //     if (loading) {
-    //         setLoading(false);
-    //     } else setLoading(true);
-    // };
-    const onClose = () => {
-        // if (!isLoading && visible) {
-        //     setVisible(false);
-        //     setIsLoading(true);
-        // }
-        //alert('hit');
-        setVisible(false);
-    };
-    // const SideBarHeader = (props: SidebarProps): ReactNode => {
-    //     //const {} = props;
-    //     return (
-    //         <Toolbar
-    //             end={
-    //                 <XYButton
-    //                     icon='pi-times'
-    //                     onClick={() => setVisible(false)}
-    //                 />
-    //             }
-    //         />
-    //     );
-    // };
+    const closeMenu = () => setVisible(false);
+
     useEffect(() => {
         function removeLoadMask() {
             setLoading(false);
@@ -54,6 +29,7 @@ export const MenuModel = () => {
             window.removeEventListener('load', removeLoadMask);
         };
     }, [pathname, searchParams]);
+
     return (
         <>
             <Button
@@ -88,9 +64,11 @@ export const MenuModel = () => {
                 }
             >
                 <SVGBackground />
-                <MobileMenu onClose={onClose} />
+                <HamburgerMenuList closeMenu={closeMenu} />
                 <LoadMask loading={loading} />
             </Sidebar>
         </>
     );
 };
+
+export default HamburgerMenu;

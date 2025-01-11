@@ -1,7 +1,6 @@
 'use client';
 import { XYLabelModel } from '@/types';
 import XYButton from '@/components/inputs/XYButton';
-import { MenuModel } from '@/components';
 import { PrimeReactProvider } from 'primereact/api';
 import { confirmDialog } from 'primereact/confirmdialog';
 import { Password } from 'primereact/password';
@@ -36,7 +35,6 @@ export default function Login() {
     return (
         <PrimeReactProvider>
             <main>
-                <MenuModel />
                 <h1 className='text-center pt-8'>XYS Client Portal</h1>
                 <div className='card flex justify-content-center flex-column align-items-center'>
                     <div className='flex justify-content-center align-content-center gap-2'>

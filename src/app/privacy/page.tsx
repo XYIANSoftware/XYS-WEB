@@ -1,5 +1,4 @@
 'use client'; // This marks the entire file as a Client Component
-import { MenuModel } from '@/components';
 import { NextPage } from 'next';
 import { PrimeReactProvider } from 'primereact/api';
 
@@ -25,7 +24,6 @@ const Privacy: NextPage<Props> = ({}) => {
     return (
         <PrimeReactProvider>
             <main>
-                <MenuModel />
                 <div className='flex flex-column justify-content-center pt-5 m-5'>
                     <h4>Privacy Policy</h4>
                     <p>

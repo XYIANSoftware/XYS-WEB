@@ -1,12 +1,10 @@
 'use client';
 import { ProjectDisplay } from './components/ProjectDisplay';
-import { MenuModel } from '@/components';
 import { PROJECT_LIST } from '@/constants';
 import '../../styles/_gallery.scss';
 export default function ProjectGallery() {
     return (
         <main>
-            <MenuModel />
             <div
                 className='flex flex-column justify-content-center align-items-center h-screen w-screen gallery-wrapper'
                 //style={{ height: '98vh !important' }}
