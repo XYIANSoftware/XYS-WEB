@@ -7,7 +7,7 @@ export const ABOUT_US: AboutUsModel[] = [
         text: `At XYIAN Software, we're passionate about helping
         businesses - especially small businesses - unlock their
         potential through transformative digital solutions. `,
-        title: '',
+        title: 'Welcome to XYS',
         imageSrc:
             'https://github.com/XYIANSoftware/images/blob/main/logos_XYIAN/xLogo_black%20-%202.png?raw=true',
     },
