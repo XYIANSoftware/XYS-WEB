@@ -1,34 +1,34 @@
 'use client';
 import { Button } from 'primereact/button';
 import { Sidebar } from 'primereact/sidebar';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import LoadMask from '../LoadMask';
 import SVGBackground from '../backgrounds/svg/SVGBackground';
-import { usePathname, useSearchParams } from 'next/navigation';
+// import { usePathname, useSearchParams } from 'next/navigation';
 import { HamburgerMenuList } from './HamburgerMenuList';
 
 export const HamburgerMenu = () => {
     const [visible, setVisible] = useState(false);
-    const [loading, setLoading] = useState(false);
-    const pathname = usePathname();
-    const searchParams = useSearchParams();
+    // const [loading, setLoading] = useState(false);
+    // const pathname = usePathname();
+    // const searchParams = useSearchParams();
 
     const closeMenu = () => setVisible(false);
 
-    useEffect(() => {
-        function removeLoadMask() {
-            setLoading(false);
-        }
-        setLoading(true);
-        if (document.readyState === 'complete') {
-            setLoading(false);
-        } else {
-            window.addEventListener('load', removeLoadMask);
-        }
-        return () => {
-            window.removeEventListener('load', removeLoadMask);
-        };
-    }, [pathname, searchParams]);
+    // useEffect(() => {
+    //     function removeLoadMask() {
+    //         setLoading(false);
+    //     }
+    //     setLoading(true);
+    //     if (document.readyState === 'complete') {
+    //         setLoading(false);
+    //     } else {
+    //         window.addEventListener('load', removeLoadMask);
+    //     }
+    //     return () => {
+    //         window.removeEventListener('load', removeLoadMask);
+    //     };
+    // }, [pathname, searchParams]);
 
     return (
         <>
@@ -65,7 +65,7 @@ export const HamburgerMenu = () => {
             >
                 <SVGBackground />
                 <HamburgerMenuList closeMenu={closeMenu} />
-                <LoadMask loading={loading} />
+                {/* <LoadMask loading={loading} /> */}
             </Sidebar>
         </>
     );
