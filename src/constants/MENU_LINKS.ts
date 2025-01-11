@@ -10,10 +10,11 @@ export const MENU_LINKS: MenuItem[] = [
         label: 'Our Team',
         route: 'team',
     },
-    {
-        label: 'About XYS',
-        route: 'about',
-    },
+    // {
+    //     label: 'About XYS',
+    //     route: 'about',
+    // },
+    { label: 'Client Login', route: 'login' },
     {
         label: 'Privacy & Terms',
         route: 'privacy',
