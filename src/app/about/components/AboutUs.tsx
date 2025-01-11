@@ -1,5 +1,5 @@
 import React from 'react';
-import { ABOUT_US } from '../../team/constants/ABOUT_US';
+import { ABOUT_US } from '@/constants';
 import { XYType } from '@/types';
 interface AboutUsProps {
     type: XYType;
